@@ -1,6 +1,6 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react"
 
 const CITIES = [
   "NYC","Miami","Las Vegas","Los Angeles","San Francisco",
@@ -8,7 +8,7 @@ const CITIES = [
   "Paris","Cannes","Barcelona","Milan","London",
   "Boston","Chicago","Scottsdale","Santa Monica","Venice CA",
   "Menlo Park","Palo Alto","Washington DC","Mykonos","West Palm Beach","Fort Lauderdale"
-];
+]
 
 const FILTERS = [
   { key:"michelin", label:"Michelin" },
@@ -19,7 +19,7 @@ const FILTERS = [
   { key:"liveMusic", label:"Live Music" },
   { key:"hardToGet", label:"Hard to Get" },
   { key:"quiet", label:"Quiet" },
-];
+]
 
 const TAG_COLORS = {
   michelin:   { bg:"#EEEDFE", color:"#3C3489", label:"Michelin" },
@@ -30,7 +30,7 @@ const TAG_COLORS = {
   liveMusic:  { bg:"#EAF3DE", color:"#3B6D11", label:"Live Music" },
   hardToGet:  { bg:"#FCEBEB", color:"#A32D2D", label:"Hard to Get" },
   quiet:      { bg:"#F1EFE8", color:"#5F5E5A", label:"Quiet" },
-};
+}
 
 const STATUS_COLORS = {
   open:            { bg:"#EAF3DE", color:"#3B6D11" },
@@ -39,7 +39,7 @@ const STATUS_COLORS = {
   "michelin award":{ bg:"#EEEDFE", color:"#3C3489" },
   "new chef":      { bg:"#FAEEDA", color:"#854F0B" },
   update:          { bg:"#E6F1FB", color:"#185FA5" },
-};
+}
 
 const INITIAL_DATA = {
   "NYC": [
@@ -180,18 +180,18 @@ const INITIAL_DATA = {
     { name:"The Boatyard", type:"Seafood", desc:"Waterfront seafood, yachts docking at your table", stars:4.4, michelin:false, classic:true, hardToGet:false, quiet:false, newBuzz:false, trendy:false, celebrity:false, liveMusic:true, url:"https://boatyardrestaurant.com", lat:26.0998, lng:-80.1140, status:"", notes:"" },
     { name:"Batch Gastropub", type:"Gastropub", desc:"Craft beer and burgers, vibrant Las Olas staple", stars:4.3, michelin:false, classic:false, hardToGet:false, quiet:false, newBuzz:false, trendy:true, celebrity:false, liveMusic:true, url:"https://batchgastropub.com", lat:26.1188, lng:-80.1381, status:"", notes:"" },
   ],
-};
+}
 
 function StarRating({ val }) {
   return (
     <span style={{ fontSize:13, color:"#BA7517", fontWeight:500 }}>
       {"★".repeat(Math.round(val))}{"☆".repeat(5-Math.round(val))} {val.toFixed(1)}
     </span>
-  );
+  )
 }
 
 function Tags({ venue }) {
-  const tags = Object.keys(TAG_COLORS).filter(k => venue[k]);
+  const tags = Object.keys(TAG_COLORS).filter(k => venue[k])
   return (
     <div style={{ display:"flex", flexWrap:"wrap", gap:4, marginTop:6 }}>
       {tags.map(t => (
@@ -200,150 +200,81 @@ function Tags({ venue }) {
         </span>
       ))}
     </div>
-  );
+  )
 }
 
 function StatusBadge({ status }) {
-  if (!status) return null;
-  const key = status.toLowerCase();
-  const style = STATUS_COLORS[key] || STATUS_COLORS.update;
+  if (!status) return null
+  const key = status.toLowerCase()
+  const style = STATUS_COLORS[key] || STATUS_COLORS.update
   return (
     <span style={{ fontSize:11, padding:"2px 10px", borderRadius:99, background:style.bg, color:style.color, fontWeight:500, whiteSpace:"nowrap" }}>
       {status}
     </span>
-  );
+  )
 }
 
 function VenueCard({ v, onEditNote }) {
   return (
-    <div style={{ background:"var(--color-background-primary)", border:`0.5px solid ${v.status ? "#378ADD" : "var(--color-border-tertiary)"}`,
-      borderRadius:12, padding:"14px 16px", display:"flex", flexDirection:"column", gap:4,
-      position:"relative" }}>
-      {v.status && (
-        <div style={{ position:"absolute", top:10, right:10 }}>
-          <StatusBadge status={v.status} />
-        </div>
-      )}
+    <div style={{ background:"#fff", border:`0.5px solid ${v.status ? "#378ADD" : "#e5e5e5"}`, borderRadius:12, padding:"14px 16px", display:"flex", flexDirection:"column", gap:4, position:"relative" }}>
+      {v.status && <div style={{ position:"absolute", top:10, right:10 }}><StatusBadge status={v.status} /></div>}
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:8, paddingRight: v.status ? 100 : 0 }}>
         <div>
-          <a href={v.url} target="_blank" rel="noopener noreferrer"
-            style={{ fontSize:15, fontWeight:500, color:"var(--color-text-primary)", textDecoration:"none" }}>
-            {v.name}
-          </a>
-          <div style={{ fontSize:12, color:"var(--color-text-secondary)", marginTop:1 }}>{v.type}</div>
+          <a href={v.url} target="_blank" rel="noopener noreferrer" style={{ fontSize:15, fontWeight:500, color:"#111", textDecoration:"none" }}>{v.name}</a>
+          <div style={{ fontSize:12, color:"#666", marginTop:1 }}>{v.type}</div>
         </div>
         <StarRating val={v.stars} />
       </div>
-      <p style={{ fontSize:13, color:"var(--color-text-secondary)", margin:0, lineHeight:1.5 }}>{v.desc}</p>
-      {v.notes && (
-        <div style={{ fontSize:12, color:"var(--color-text-info)", background:"var(--color-background-info)",
-          borderRadius:6, padding:"6px 10px", marginTop:4, lineHeight:1.5 }}>
-          {v.notes}
-        </div>
-      )}
+      <p style={{ fontSize:13, color:"#555", margin:0, lineHeight:1.5 }}>{v.desc}</p>
+      {v.notes && <div style={{ fontSize:12, color:"#185FA5", background:"#E6F1FB", borderRadius:6, padding:"6px 10px", marginTop:4, lineHeight:1.5 }}>{v.notes}</div>}
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-end" }}>
         <Tags venue={v} />
-        <button onClick={() => onEditNote(v)}
-          style={{ fontSize:11, color:"var(--color-text-tertiary)", background:"none", border:"none", cursor:"pointer", padding:"4px 0 0", whiteSpace:"nowrap" }}>
-          {v.notes ? "edit note" : "+ note"}
-        </button>
+        <button onClick={() => onEditNote(v)} style={{ fontSize:11, color:"#999", background:"none", border:"none", cursor:"pointer", padding:"4px 0 0", whiteSpace:"nowrap" }}>{v.notes ? "edit note" : "+ note"}</button>
       </div>
     </div>
-  );
+  )
 }
 
-function MapView({ venues }) {
-  const mapRef = useRef(null);
-  const mapInstanceRef = useRef(null);
-  const markersRef = useRef([]);
-
-  useEffect(() => {
-    if (!mapRef.current || venues.length === 0) return;
-    const center = { lat: venues[0].lat, lng: venues[0].lng };
-    if (!mapInstanceRef.current) {
-      mapInstanceRef.current = new window.google.maps.Map(mapRef.current, {
-        zoom:13, center, mapTypeControl:false, streetViewControl:false,
-        styles:[{ featureType:"poi", elementType:"labels", stylers:[{visibility:"off"}] }]
-      });
-    } else {
-      mapInstanceRef.current.setCenter(center);
-    }
-    markersRef.current.forEach(m => m.setMap(null));
-    markersRef.current = [];
-    venues.forEach(v => {
-      const marker = new window.google.maps.Marker({ position:{lat:v.lat,lng:v.lng}, map:mapInstanceRef.current, title:v.name });
-      const iw = new window.google.maps.InfoWindow({
-        content:`<div style="max-width:220px;font-family:sans-serif"><strong style="font-size:14px">${v.name}</strong><br><span style="font-size:12px;color:#666">${v.type}</span><br><span style="font-size:12px">${v.desc}</span><br><span style="font-size:12px;color:#BA7517">${"★".repeat(Math.round(v.stars))} ${v.stars.toFixed(1)}</span>${v.status ? `<br><span style="font-size:11px;color:#185FA5;font-weight:500">${v.status}</span>` : ""}${v.notes ? `<br><span style="font-size:11px;color:#555">${v.notes}</span>` : ""}<br><a href="${v.url}" target="_blank" style="font-size:12px;color:#185FA5">Visit website</a></div>`
-      });
-      marker.addListener("click", () => iw.open(mapInstanceRef.current, marker));
-      markersRef.current.push(marker);
-    });
-    if (venues.length > 1) {
-      const bounds = new window.google.maps.LatLngBounds();
-      venues.forEach(v => bounds.extend({lat:v.lat,lng:v.lng}));
-      mapInstanceRef.current.fitBounds(bounds);
-    }
-  }, [venues]);
-
-  return <div ref={mapRef} style={{ width:"100%", height:400, borderRadius:8, border:"0.5px solid var(--color-border-tertiary)" }} />;
-}
-
-export default function App() {
-  const [city, setCity] = useState("NYC");
-  const [activeFilters, setActiveFilters] = useState([]);
-  const [search, setSearch] = useState("");
-  const [view, setView] = useState("list");
-  const [mapsLoaded, setMapsLoaded] = useState(!!window.google);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const [data, setData] = useState(INITIAL_DATA);
-  const [recentUpdates, setRecentUpdates] = useState([]);
-  const [lastRefresh, setLastRefresh] = useState(null);
-  const [activeTab, setActiveTab] = useState("cities");
-  const [editingVenue, setEditingVenue] = useState(null);
-  const [noteText, setNoteText] = useState("");
-
-  useEffect(() => {
-    if (!window.google && !document.getElementById("gmaps-script")) {
-      const s = document.createElement("script");
-      s.id = "gmaps-script";
-      s.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBVIwqZ4L7ACGvcqgVXc0ZvOJZVw1VBDhU";
-      s.async = true;
-      s.onload = () => setMapsLoaded(true);
-      document.head.appendChild(s);
-    }
-  }, []);
-
-  const allVenues = Object.entries(data).flatMap(([c, vs]) => vs.map(v => ({...v, city:c})));
+function App() {
+  const [city, setCity] = useState("NYC")
+  const [activeFilters, setActiveFilters] = useState([])
+  const [search, setSearch] = useState("")
+  const [view, setView] = useState("list")
+  const [isRefreshing, setIsRefreshing] = useState(false)
+  const [data, setData] = useState(INITIAL_DATA)
+  const [recentUpdates, setRecentUpdates] = useState([])
+  const [lastRefresh, setLastRefresh] = useState(null)
+  const [activeTab, setActiveTab] = useState("cities")
+  const [editingVenue, setEditingVenue] = useState(null)
+  const [noteText, setNoteText] = useState("")
 
   const venues = (data[city] || []).filter(v => {
-    const matchFilter = activeFilters.length === 0 || activeFilters.every(f => v[f]);
-    const matchSearch = search === "" || v.name.toLowerCase().includes(search.toLowerCase()) || v.type.toLowerCase().includes(search.toLowerCase());
-    return matchFilter && matchSearch;
-  });
+    const matchFilter = activeFilters.length === 0 || activeFilters.every(f => v[f])
+    const matchSearch = search === "" || v.name.toLowerCase().includes(search.toLowerCase()) || v.type.toLowerCase().includes(search.toLowerCase())
+    return matchFilter && matchSearch
+  })
 
   function toggleFilter(k) {
-    setActiveFilters(prev => prev.includes(k) ? prev.filter(x => x !== k) : [...prev, k]);
+    setActiveFilters(prev => prev.includes(k) ? prev.filter(x => x !== k) : [...prev, k])
   }
 
   function openEditNote(v) {
-    setEditingVenue(v);
-    setNoteText(v.notes || "");
+    setEditingVenue({...v, city})
+    setNoteText(v.notes || "")
   }
 
   function saveNote() {
-    if (!editingVenue) return;
+    if (!editingVenue) return
     setData(prev => {
-      const updated = { ...prev };
-      updated[editingVenue.city || city] = (updated[editingVenue.city || city] || []).map(v =>
-        v.name === editingVenue.name ? { ...v, notes: noteText } : v
-      );
-      return updated;
-    });
-    setEditingVenue(null);
+      const updated = JSON.parse(JSON.stringify(prev))
+      updated[editingVenue.city] = (updated[editingVenue.city] || []).map(v => v.name === editingVenue.name ? {...v, notes: noteText} : v)
+      return updated
+    })
+    setEditingVenue(null)
   }
 
   async function runDailyRefresh() {
-    setIsRefreshing(true);
+    setIsRefreshing(true)
     try {
       const resp = await fetch("https://api.anthropic.com/v1/messages", {
         method:"POST",
@@ -352,230 +283,138 @@ export default function App() {
           model:"claude-sonnet-4-20250514",
           max_tokens:1000,
           tools:[{ type:"web_search_20250305", name:"web_search" }],
-          messages:[{
-            role:"user",
-            content:`You are a restaurant intelligence agent. Search for major restaurant news from the past 2 weeks across these cities: NYC, Miami, Los Angeles, Las Vegas, San Francisco, Paris, London, Barcelona, Milan, Washington DC, Chicago, Boston, Mykonos, Palo Alto, Scottsdale, West Palm Beach, Fort Lauderdale.
-
-Look for: new Michelin awards, notable openings, closures, new chefs, buzz-worthy news.
-
-Return ONLY a JSON array (no markdown, no preamble) of update objects. Each object must have exactly these fields:
-- "city": city name matching the list above
-- "name": restaurant or bar name
-- "status": one of: "new opening", "closed", "michelin award", "new chef", "update"
-- "note": one sentence summary of the news
-
-Example format:
-[{"city":"NYC","name":"Carbone","status":"update","note":"Expanded to new location in Tribeca."}]
-
-Return 5-10 updates maximum. If nothing notable found, return an empty array [].`
-          }]
+          messages:[{ role:"user", content:`Search for major restaurant news from the past 2 weeks across NYC, Miami, Los Angeles, Las Vegas, San Francisco, Paris, London, Barcelona, Milan, Washington DC, Chicago, Boston, Mykonos, Palo Alto, Scottsdale, West Palm Beach, Fort Lauderdale. Look for Michelin awards, notable openings, closures, new chefs, buzz-worthy news. Return ONLY a JSON array (no markdown) with objects containing: city, name, status (one of: new opening/closed/michelin award/new chef/update), note (one sentence). Return 5-10 updates max. If nothing found return [].` }]
         })
-      });
-      const d = await resp.json();
-      const text = d.content?.filter(b => b.type === "text").map(b => b.text).join("") || "[]";
-      let updates = [];
-      try {
-        const clean = text.replace(/```json|```/g,"").trim();
-        updates = JSON.parse(clean);
-      } catch(e) { updates = []; }
-
+      })
+      const d = await resp.json()
+      const text = d.content?.filter(b => b.type === "text").map(b => b.text).join("") || "[]"
+      let updates = []
+      try { updates = JSON.parse(text.replace(/```json|```/g,"").trim()) } catch(e) { updates = [] }
       if (updates.length > 0) {
-        const ts = new Date().toLocaleString();
-        const stamped = updates.map(u => ({...u, ts}));
-        setRecentUpdates(prev => [...stamped, ...prev].slice(0, 50));
+        const ts = new Date().toLocaleString()
+        setRecentUpdates(prev => [...updates.map(u => ({...u, ts})), ...prev].slice(0, 50))
         setData(prev => {
-          const updated = JSON.parse(JSON.stringify(prev));
+          const updated = JSON.parse(JSON.stringify(prev))
           updates.forEach(u => {
-            const cityData = updated[u.city];
+            const cityData = updated[u.city]
             if (cityData) {
-              const idx = cityData.findIndex(v => v.name.toLowerCase() === u.name.toLowerCase());
-              if (idx !== -1) {
-                cityData[idx].status = u.status;
-                cityData[idx].notes = u.note;
-              }
+              const idx = cityData.findIndex(v => v.name.toLowerCase() === u.name.toLowerCase())
+              if (idx !== -1) { cityData[idx].status = u.status; cityData[idx].notes = u.note }
             }
-          });
-          return updated;
-        });
+          })
+          return updated
+        })
       }
-      setLastRefresh(new Date().toLocaleString());
-    } catch(e) {
-      console.error(e);
-    }
-    setIsRefreshing(false);
+      setLastRefresh(new Date().toLocaleString())
+    } catch(e) { console.error(e) }
+    setIsRefreshing(false)
   }
 
-  const tabStyle = (t) => ({
+  const tabStyle = t => ({
     fontSize:13, padding:"6px 16px", borderRadius:99, cursor:"pointer", fontWeight: activeTab===t ? 500 : 400,
-    border:`0.5px solid ${activeTab===t ? "var(--color-border-primary)" : "var(--color-border-tertiary)"}`,
-    background: activeTab===t ? "var(--color-background-secondary)" : "transparent",
-    color: activeTab===t ? "var(--color-text-primary)" : "var(--color-text-secondary)"
-  });
+    border:`0.5px solid ${activeTab===t ? "#888" : "#ddd"}`,
+    background: activeTab===t ? "#f5f5f5" : "transparent",
+    color: activeTab===t ? "#111" : "#666"
+  })
 
   return (
-    <div style={{ padding:"1rem 0", fontFamily:"var(--font-sans)" }}>
+    <div style={{ padding:"24px", fontFamily:"system-ui, sans-serif", maxWidth:1100, margin:"0 auto" }}>
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:4 }}>
         <div>
-          <h2 style={{ fontSize:22, fontWeight:500, margin:0, color:"var(--color-text-primary)" }}>Restaurant & Bar Guide</h2>
-          <p style={{ fontSize:14, color:"var(--color-text-secondary)", margin:"2px 0 0" }}>27 cities · restaurants, bars & buzz</p>
+          <h1 style={{ fontSize:22, fontWeight:500, margin:0, color:"#111" }}>Restaurant & Bar Guide</h1>
+          <p style={{ fontSize:14, color:"#666", margin:"2px 0 0" }}>27 cities · restaurants, bars & buzz</p>
         </div>
-        <div style={{ display:"flex", gap:8, alignItems:"center" }}>
-          <button onClick={runDailyRefresh} disabled={isRefreshing}
-            style={{ fontSize:13, padding:"6px 14px", borderRadius:8, border:"0.5px solid var(--color-border-secondary)",
-              background:"transparent", color: isRefreshing ? "var(--color-text-tertiary)" : "var(--color-text-secondary)", cursor: isRefreshing ? "not-allowed":"pointer" }}>
-            {isRefreshing ? "Refreshing..." : "Daily Refresh ↗"}
-          </button>
-        </div>
+        <button onClick={runDailyRefresh} disabled={isRefreshing}
+          style={{ fontSize:13, padding:"6px 14px", borderRadius:8, border:"0.5px solid #ccc", background:"transparent", color: isRefreshing ? "#aaa" : "#555", cursor: isRefreshing ? "not-allowed":"pointer" }}>
+          {isRefreshing ? "Refreshing..." : "Daily Refresh"}
+        </button>
       </div>
-
-      {lastRefresh && (
-        <p style={{ fontSize:11, color:"var(--color-text-tertiary)", margin:"0 0 12px" }}>Last refreshed: {lastRefresh}</p>
-      )}
+      {lastRefresh && <p style={{ fontSize:11, color:"#aaa", margin:"0 0 12px" }}>Last refreshed: {lastRefresh}</p>}
 
       <div style={{ display:"flex", gap:8, marginBottom:20 }}>
         <button style={tabStyle("cities")} onClick={() => setActiveTab("cities")}>Cities</button>
         <button style={tabStyle("updates")} onClick={() => setActiveTab("updates")}>
-          Recently Updated {recentUpdates.length > 0 && (
-            <span style={{ marginLeft:4, fontSize:11, background:"#E1F5EE", color:"#0F6E56", padding:"1px 6px", borderRadius:99, fontWeight:500 }}>
-              {recentUpdates.length}
-            </span>
-          )}
+          Recently Updated {recentUpdates.length > 0 && <span style={{ marginLeft:4, fontSize:11, background:"#E1F5EE", color:"#0F6E56", padding:"1px 6px", borderRadius:99, fontWeight:500 }}>{recentUpdates.length}</span>}
         </button>
       </div>
 
       {activeTab === "updates" ? (
         <div>
           {recentUpdates.length === 0 ? (
-            <div style={{ padding:"2rem", textAlign:"center", color:"var(--color-text-secondary)", fontSize:14,
-              background:"var(--color-background-secondary)", borderRadius:8, border:"0.5px solid var(--color-border-tertiary)" }}>
+            <div style={{ padding:"2rem", textAlign:"center", color:"#888", fontSize:14, background:"#f9f9f9", borderRadius:8, border:"0.5px solid #eee" }}>
               No updates yet. Hit Daily Refresh to check for news across all cities.
             </div>
-          ) : (
-            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-              {recentUpdates.map((u, i) => (
-                <div key={i} style={{ background:"var(--color-background-primary)", border:"0.5px solid var(--color-border-tertiary)",
-                  borderRadius:10, padding:"12px 16px", display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:12 }}>
-                  <div style={{ flex:1 }}>
-                    <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
-                      <span style={{ fontSize:14, fontWeight:500, color:"var(--color-text-primary)" }}>{u.name}</span>
-                      <span style={{ fontSize:12, color:"var(--color-text-tertiary)" }}>·</span>
-                      <span style={{ fontSize:12, color:"var(--color-text-secondary)" }}>{u.city}</span>
-                      <StatusBadge status={u.status} />
-                    </div>
-                    <p style={{ fontSize:13, color:"var(--color-text-secondary)", margin:0, lineHeight:1.5 }}>{u.note}</p>
-                  </div>
-                  <span style={{ fontSize:11, color:"var(--color-text-tertiary)", whiteSpace:"nowrap", paddingTop:2 }}>{u.ts}</span>
+          ) : recentUpdates.map((u, i) => (
+            <div key={i} style={{ background:"#fff", border:"0.5px solid #eee", borderRadius:10, padding:"12px 16px", display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:12, marginBottom:8 }}>
+              <div style={{ flex:1 }}>
+                <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4, flexWrap:"wrap" }}>
+                  <span style={{ fontSize:14, fontWeight:500, color:"#111" }}>{u.name}</span>
+                  <span style={{ fontSize:12, color:"#aaa" }}>·</span>
+                  <span style={{ fontSize:12, color:"#666" }}>{u.city}</span>
+                  <StatusBadge status={u.status} />
                 </div>
-              ))}
+                <p style={{ fontSize:13, color:"#555", margin:0, lineHeight:1.5 }}>{u.note}</p>
+              </div>
+              <span style={{ fontSize:11, color:"#aaa", whiteSpace:"nowrap", paddingTop:2 }}>{u.ts}</span>
             </div>
-          )}
+          ))}
         </div>
       ) : (
         <>
-          <div style={{ display:"flex", gap:8, flexWrap:"wrap", marginBottom:16 }}>
+          <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:16 }}>
             {CITIES.map(c => {
-              const hasUpdates = (data[c]||[]).some(v => v.status);
+              const hasUpdates = (data[c]||[]).some(v => v.status)
               return (
-                <button key={c} onClick={() => { setCity(c); setSearch(""); }}
-                  style={{ fontSize:13, padding:"5px 12px", borderRadius:99,
-                    border:`0.5px solid ${c===city ? "var(--color-border-primary)" : "var(--color-border-tertiary)"}`,
-                    background: c===city ? "var(--color-background-secondary)" : "transparent",
-                    color: c===city ? "var(--color-text-primary)" : "var(--color-text-secondary)",
-                    cursor:"pointer", fontWeight: c===city ? 500 : 400, position:"relative" }}>
+                <button key={c} onClick={() => { setCity(c); setSearch("") }}
+                  style={{ fontSize:13, padding:"5px 12px", borderRadius:99, border:`0.5px solid ${c===city ? "#888" : "#ddd"}`, background: c===city ? "#f0f0f0" : "transparent", color: c===city ? "#111" : "#666", cursor:"pointer", fontWeight: c===city ? 500 : 400 }}>
                   {c}{hasUpdates && <span style={{ display:"inline-block", width:6, height:6, borderRadius:99, background:"#1D9E75", marginLeft:5, verticalAlign:"middle", marginTop:-2 }} />}
                 </button>
-              );
+              )
             })}
           </div>
 
           <div style={{ display:"flex", gap:8, marginBottom:12, flexWrap:"wrap", alignItems:"center" }}>
             <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search name or type..."
-              style={{ flex:"1 1 160px", minWidth:140, fontSize:13, padding:"6px 12px", borderRadius:8,
-                border:"0.5px solid var(--color-border-tertiary)", background:"var(--color-background-primary)", color:"var(--color-text-primary)" }} />
+              style={{ flex:"1 1 160px", minWidth:140, fontSize:13, padding:"6px 12px", borderRadius:8, border:"0.5px solid #ddd", color:"#111" }} />
             {FILTERS.map(f => (
               <button key={f.key} onClick={() => toggleFilter(f.key)}
-                style={{ fontSize:12, padding:"5px 12px", borderRadius:99,
-                  border:`0.5px solid ${activeFilters.includes(f.key) ? TAG_COLORS[f.key].color : "var(--color-border-tertiary)"}`,
-                  background: activeFilters.includes(f.key) ? TAG_COLORS[f.key].bg : "transparent",
-                  color: activeFilters.includes(f.key) ? TAG_COLORS[f.key].color : "var(--color-text-secondary)",
-                  cursor:"pointer", fontWeight: activeFilters.includes(f.key) ? 500 : 400 }}>
+                style={{ fontSize:12, padding:"5px 12px", borderRadius:99, border:`0.5px solid ${activeFilters.includes(f.key) ? TAG_COLORS[f.key].color : "#ddd"}`, background: activeFilters.includes(f.key) ? TAG_COLORS[f.key].bg : "transparent", color: activeFilters.includes(f.key) ? TAG_COLORS[f.key].color : "#888", cursor:"pointer", fontWeight: activeFilters.includes(f.key) ? 500 : 400 }}>
                 {f.label}
               </button>
             ))}
           </div>
 
-          <div style={{ display:"flex", gap:8, marginBottom:16, alignItems:"center" }}>
-            <button onClick={() => setView(v => v==="list"?"map":"list")}
-              style={{ fontSize:13, padding:"6px 14px", borderRadius:8, border:"0.5px solid var(--color-border-secondary)",
-                background:"transparent", color:"var(--color-text-primary)", cursor:"pointer" }}>
-              {view==="list" ? "Show Map" : "Show List"}
-            </button>
-            <span style={{ fontSize:12, color:"var(--color-text-tertiary)" }}>
-              {venues.length} venue{venues.length !== 1 ? "s" : ""} in {city}
-            </span>
+          <div style={{ display:"flex", gap:8, marginBottom:16 }}>
+            <span style={{ fontSize:12, color:"#aaa", alignSelf:"center" }}>{venues.length} venue{venues.length !== 1 ? "s" : ""} in {city}</span>
           </div>
 
-          {view === "map" ? (
-            mapsLoaded ? (
-              <MapView venues={venues} />
-            ) : (
-              <div style={{ background:"var(--color-background-secondary)", borderRadius:8, padding:"2rem", textAlign:"center",
-                border:"0.5px solid var(--color-border-tertiary)", color:"var(--color-text-secondary)", fontSize:14 }}>
-                <div style={{ marginBottom:8, fontWeight:500 }}>Map view requires a Google Maps API key</div>
-                <div style={{ fontSize:13, marginBottom:12 }}>Replace <code>YOUR_API_KEY_HERE</code> in the source with your key from Google Cloud Console.</div>
-                <div style={{ fontSize:12, color:"var(--color-text-tertiary)", textAlign:"left", maxWidth:400, margin:"0 auto" }}>
-                  {venues.map(v => (
-                    <div key={v.name} style={{ marginBottom:3 }}>
-                      <strong>{v.name}</strong> — {v.lat.toFixed(4)}, {v.lng.toFixed(4)}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )
-          ) : (
-            <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(280px, 1fr))", gap:12 }}>
-              {venues.length === 0 ? (
-                <div style={{ gridColumn:"1/-1", padding:"2rem", textAlign:"center", color:"var(--color-text-secondary)", fontSize:14 }}>
-                  No venues match your filters.
-                </div>
-              ) : venues.map(v => (
-                <VenueCard key={v.name} v={v} onEditNote={openEditNote} />
-              ))}
-            </div>
-          )}
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(280px, 1fr))", gap:12 }}>
+            {venues.length === 0 ? (
+              <div style={{ gridColumn:"1/-1", padding:"2rem", textAlign:"center", color:"#888", fontSize:14 }}>No venues match your filters.</div>
+            ) : venues.map(v => <VenueCard key={v.name} v={v} onEditNote={openEditNote} />)}
+          </div>
         </>
       )}
 
       {editingVenue && (
         <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.35)", display:"flex", alignItems:"center", justifyContent:"center", zIndex:999 }}
-          onClick={e => { if (e.target === e.currentTarget) setEditingVenue(null); }}>
-          <div style={{ background:"var(--color-background-primary)", borderRadius:12, padding:"20px 24px", width:"min(420px, 90vw)",
-            border:"0.5px solid var(--color-border-tertiary)" }}>
+          onClick={e => { if (e.target === e.currentTarget) setEditingVenue(null) }}>
+          <div style={{ background:"#fff", borderRadius:12, padding:"20px 24px", width:"min(420px, 90vw)", border:"0.5px solid #eee" }}>
             <p style={{ fontWeight:500, fontSize:15, margin:"0 0 4px" }}>{editingVenue.name}</p>
-            <p style={{ fontSize:12, color:"var(--color-text-secondary)", margin:"0 0 12px" }}>Add a note or status update</p>
-            <textarea value={noteText} onChange={e => setNoteText(e.target.value)}
-              placeholder="e.g. Temporarily closed for renovation, reopening May 2026..."
-              style={{ width:"100%", minHeight:80, fontSize:13, padding:"8px 10px", borderRadius:8, resize:"vertical",
-                border:"0.5px solid var(--color-border-secondary)", background:"var(--color-background-secondary)",
-                color:"var(--color-text-primary)", fontFamily:"var(--font-sans)", boxSizing:"border-box" }} />
+            <p style={{ fontSize:12, color:"#888", margin:"0 0 12px" }}>Add a note or status update</p>
+            <textarea value={noteText} onChange={e => setNoteText(e.target.value)} placeholder="e.g. Temporarily closed for renovation..."
+              style={{ width:"100%", minHeight:80, fontSize:13, padding:"8px 10px", borderRadius:8, resize:"vertical", border:"0.5px solid #ddd", fontFamily:"system-ui, sans-serif", boxSizing:"border-box" }} />
             <div style={{ display:"flex", gap:8, marginTop:12, justifyContent:"flex-end" }}>
-              <button onClick={() => setEditingVenue(null)}
-                style={{ fontSize:13, padding:"6px 16px", borderRadius:8, border:"0.5px solid var(--color-border-tertiary)",
-                  background:"transparent", color:"var(--color-text-secondary)", cursor:"pointer" }}>
-                Cancel
-              </button>
-              <button onClick={saveNote}
-                style={{ fontSize:13, padding:"6px 16px", borderRadius:8, border:"0.5px solid var(--color-border-secondary)",
-                  background:"var(--color-background-secondary)", color:"var(--color-text-primary)", cursor:"pointer", fontWeight:500 }}>
-                Save note
-              </button>
+              <button onClick={() => setEditingVenue(null)} style={{ fontSize:13, padding:"6px 16px", borderRadius:8, border:"0.5px solid #ddd", background:"transparent", color:"#666", cursor:"pointer" }}>Cancel</button>
+              <button onClick={saveNote} style={{ fontSize:13, padding:"6px 16px", borderRadius:8, border:"0.5px solid #ccc", background:"#f5f5f5", color:"#111", cursor:"pointer", fontWeight:500 }}>Save note</button>
             </div>
           </div>
         </div>
       )}
     </div>
-  );
+  )
 }
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
