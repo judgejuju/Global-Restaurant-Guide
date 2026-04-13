@@ -1,3 +1,5 @@
+import { StrictMode } from "react"
+import { createRoot } from "react-dom/client"
 import { useState, useEffect, useRef } from "react";
 
 const CITIES = [
@@ -574,3 +576,8 @@ Return 5-10 updates maximum. If nothing notable found, return an empty array [].
     </div>
   );
 }
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+)
