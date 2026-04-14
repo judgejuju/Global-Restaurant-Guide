@@ -492,12 +492,22 @@ const INITIAL_DATA = {
   ],
 
   "Calistoga": [
-    v("Solbar","California Cuisine","Michelin-starred Solage Auberge resort restaurant",4.8,f(true,false,true,false,false,false,false,true),"https://aubergeresorts.com/solage/dine",38.5788,-122.5803),
-    v("Evangeline","New Orleans Creole","Southern charm in wine country, live music",4.6,f(false,true,true,false,false,true,false,false),"https://evangelinecalistoga.com",38.5786,-122.5795),
+    v("Solbar","California Cuisine","Michelin-starred Solage Auberge resort restaurant — Parker House rolls, truffle fries, petrale sole fish tacos, bonfire seats with mountain views",4.8,f(true,false,true,false,false,false,false,true),"https://aubergeresorts.com/solage/dine",38.5788,-122.5803),
+    v("Evangeline","New Orleans Creole","Southern charm in wine country, live music — chef trained at French Laundry and Bouchon, cozy bar you'll want to sit at all night, lovely outdoor patio",4.6,f(false,true,true,false,false,true,false,false),"https://evangelinecalistoga.com",38.5786,-122.5795),
+    v("Lovina","Californian","Beloved downtown Calistoga staple — SF and Wine Country pedigree chefs, eclectic seasonal fare, weekend brunch, locals and visitors equally happy here",4.6,f(false,false,true,false,false,false,false,true),"https://lovinacalistoga.com",38.5786,-122.5795),
     v("JoLē","Californian","Calistoga's beloved local fine dining",4.6,f(false,false,false,true,false,false,false,true),"https://jolecalistoga.com",38.5786,-122.5795),
-    v("Sam's Social Club","Californian","Indian Springs Resort's casual but excellent restaurant",4.5,f(false,false,true,false,false,false,false,false),"https://indianspringsresort.com/sams-social-club",38.5786,-122.5805),
+    v("TRUSS Restaurant + Bar","American Mediterranean","Four Seasons' all-day brasserie with sweeping Palisades Mountain views — seasonal dishes, renowned pizzas, Wine Spectator award-winning list, lively bar scene",4.6,f(false,false,true,false,true,false,false,false),"https://trussrestaurant.com",38.5788,-122.5803),
+    v("Bricco Osteria","Italian","Downtown Cal-Italian farm-to-table gem — house-made pasta, fresh locally sourced ingredients, seafood linguine is a menu mainstay, warm neighborhood feel",4.5,f(false,false,true,false,false,false,false,false),"https://briccocalistoga.com",38.5786,-122.5795),
+    v("Eight North","Wine Bar & Restaurant","Lawer Estates' new tasting room-meets-restaurant, opened late 2025 — wild halibut, Syrah-marinated flank steak, oak-grilled burger, beautiful setting",4.6,f(false,true,true,false,false,false,false,true),"https://eightnorthwine.com",38.5786,-122.5795,"bar"),
+    v("Buster's BBQ","Southern BBQ","Best BBQ in Napa Valley — Louisiana-style smoked meats that fill the streets with aroma, live jazz on weekends, locals' treasure since forever",4.5,f(false,false,false,true,false,true,false,false),"https://busterssouthernbbq.com",38.5796,-122.5795),
+    v("House of Better","Southwest American","Wilkinson's wellness meets comfort food — New Mexican and Southwest-inspired dishes, green chile roasting, house margaritas and kombucha, fabulous all-day brunch",4.5,f(false,true,true,false,false,false,false,false),"https://houseofbetter.com",38.5786,-122.5795),
+    v("Calistoga Inn Restaurant & Brewery","American","Can't-miss riverside institution — huge patio along the Napa River, bonfire, wraparound bar, award-winning microbrewery in the historic water tower, live music May–October",4.5,f(false,false,false,true,false,true,false,false),"https://calistogainn.com",38.5796,-122.5795),
+    v("Pacifico","Mexican","Best Mexican in Calistoga — traditional cooking and cocktails, brightly colored space, large bar area and pleasant patio",4.4,f(false,false,true,false,false,false,false,false),"https://pacifico-restaurant.com",38.5786,-122.5795),
+    v("Sam's Social Club","Californian","Indian Springs Resort's casual but excellent all-day restaurant — farm-fresh seasonal menu, great bar and lounge with pizzas, tacos and burgers",4.5,f(false,false,true,false,false,false,false,false),"https://indianspringsresort.com/sams-social-club",38.5786,-122.5805),
+    v("Sushi Mambo","Japanese","Relaxed Calistoga sushi gem — two pages of sashimi and creative rolls, the Diablo (spicy tuna, hamachi, topped with salmon and albacore) is a must",4.5,f(false,false,false,true,false,false,false,true),"https://sushimambo.com",38.5786,-122.5795,"sushi"),
+    v("Sam's General Store","All-Day Café","Coffees and pastries inside an original 1862 cottage built by Calistoga founder Sam Brannan — egg sandwiches, avocado toast, most charming breakfast spot in town",4.5,f(false,false,false,true,false,false,false,false),"https://samsgeneralstore.com",38.5796,-122.5795),
     v("Tank Garage Winery","Wine Bar","Gas station wine bar, cool Calistoga hangout",4.5,f(false,false,true,false,false,false,false,false),"https://tankgaragewinery.com",38.5796,-122.5795,"bar"),
-    v("Hydro Bar & Grill","Bar","Calistoga's classic local bar, draft beer and burgers",4.2,f(false,false,false,true,false,false,false,false),"https://hydrobarandgrill.com",38.5786,-122.5795,"bar"),
+    v("Hydro Bar & Grill","Bar","Calistoga's classic local bar in a historic building — terrific bar food, great burgers and ribs, live music some nights, neighborhood watering hole since forever",4.2,f(false,false,false,true,false,true,false,false),"https://hydrobarandgrill.com",38.5786,-122.5795,"bar"),
     v("Auro Sushi Counter","Japanese","Four Seasons' intimate Japanese counter, exceptional sourcing",4.7,f(false,false,false,false,false,false,true,true,false,true),"https://auronapavalley.com",38.5788,-122.5803,"sushi"),
   ],
 
@@ -1949,13 +1959,13 @@ function App() {
                       fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
                       fontWeight: isActive ? 500 : 400,
                       background: isActive
-                        ? (isLyons ? "#ebebeb" : isA16z ? "#fdf0d9" : "#f0f0f0")
+                        ? (isLyons ? "#ebebeb" : isA16z ? "#fdf0d9" : "#dbeafe")
                         : (isLyons ? "#f5f5f5" : isA16z ? "#fdf8ef" : "transparent"),
                       border: `0.5px solid ${isActive
-                        ? (isLyons ? "#999999" : isA16z ? "#cf7f00" : "#888")
+                        ? (isLyons ? "#999999" : isA16z ? "#cf7f00" : "#3b82f6")
                         : (isLyons ? "#d1d1d1" : isA16z ? "#e8c47a" : "#ddd")}`,
                       color: isActive
-                        ? (isLyons ? "#111111" : isA16z ? "#7a4a00" : "#111")
+                        ? (isLyons ? "#111111" : isA16z ? "#7a4a00" : "#1d4ed8")
                         : (isLyons ? "#666666" : isA16z ? "#9a5f00" : "#666"),
                     }}>
                     {c === "Lyons NYC" ? "⭐ Lyons NYC" : c}
@@ -2030,13 +2040,13 @@ function App() {
                       fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
                       fontWeight: isActive ? 500 : 400,
                       background: isActive
-                        ? (isLyons ? "#ebebeb" : isA16z ? "#fdf0d9" : "#f0f0f0")
+                        ? (isLyons ? "#ebebeb" : isA16z ? "#fdf0d9" : "#dbeafe")
                         : (isLyons ? "#f5f5f5" : isA16z ? "#fdf8ef" : "transparent"),
                       border: `0.5px solid ${isActive
-                        ? (isLyons ? "#999999" : isA16z ? "#cf7f00" : "#888")
+                        ? (isLyons ? "#999999" : isA16z ? "#cf7f00" : "#3b82f6")
                         : (isLyons ? "#d1d1d1" : isA16z ? "#e8c47a" : "#ddd")}`,
                       color: isActive
-                        ? (isLyons ? "#111111" : isA16z ? "#7a4a00" : "#111")
+                        ? (isLyons ? "#111111" : isA16z ? "#7a4a00" : "#1d4ed8")
                         : (isLyons ? "#666666" : isA16z ? "#9a5f00" : "#666"),
                     }}>
                     {c === "Lyons NYC" ? "⭐ Lyons NYC" : c}{hasUpdates && <span style={{ display:"inline-block", width:6, height:6, borderRadius:99, background:"#1D9E75", marginLeft:5, verticalAlign:"middle", marginTop:-2 }} />}
