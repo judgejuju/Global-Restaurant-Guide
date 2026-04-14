@@ -959,7 +959,7 @@ const PDR_DATA = {
     "Friends Only": "10-seat counter; full buyout for private events.",
     "Ozumo": "Private dining rooms available for groups; contact restaurant.",
     "Sushi Ran": "Contact restaurant for private events (Sausalito).",
-  },,
+  },
   "Menlo Park": {
     "Madera": "Two private dining rooms with private terraces and fireplaces. Lemon Room: up to 10 guests. Orange Room: up to 14–16 guests. Both overlook Santa Cruz mountains. events@rosewoodhotels.com",
     "Village Pub": "Three private dining rooms + outdoor veranda. Rooms accommodate 12, 24, and 48. Full buyout up to 120. thevillagepub.net/private-dining",
