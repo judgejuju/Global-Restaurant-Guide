@@ -93,6 +93,7 @@ const INITIAL_DATA = {
     v("Raoul's","French Bistro","SoHo institution, dark and romantic, steak frites perfection",4.4,f(false,false,false,true,true,false,false,false),"https://raouls.com",40.7229,-73.9993),
     v("Russ & Daughters Cafe","Jewish Deli","Lower East Side institution, best smoked fish in America",4.3,f(false,false,false,true,true,false,false,false),"https://russanddaughterscafe.com",40.7226,-73.9873),
     v("Monkey Bar","American","Midtown power scene, Graydon Carter's celebrity haunt",4.3,f(false,false,false,true,true,false,false,false),"https://monkeybarnewyork.com",40.7576,-73.9726),
+    v("Sant Ambroeus SoHo","Italian Milanese","NYC's most reliable celebrity sighting, Milanese institution since 1936 — vitello tonnato, cotoletta, freddo cappuccino, the best Lafayette terrace in downtown",4.5,f(false,false,true,false,true,false,false,false),"https://santambroeus.com/pages/location-soho",40.7233,-74.0020),
     // Bars
     v("Employees Only","Cocktail Bar","Legendary speakeasy-style cocktail bar, West Village",4.6,f(false,false,false,true,true,false,false,false),"https://employeesonlynyc.com",40.7339,-74.0051,"bar"),
     v("Death & Co","Cocktail Bar","Craft cocktail pioneer, East Village institution",4.6,f(false,false,false,true,false,false,false,false),"https://deathandcompany.com",40.7254,-73.9831,"bar"),
@@ -102,6 +103,7 @@ const INITIAL_DATA = {
     v("The Dead Rabbit","Cocktail Bar","Five-time world's best bar, Irish pub meets craft cocktails",4.4,f(false,false,false,true,false,false,false,false),"https://thedeadrabbitnyc.com",40.7033,-74.0135,"bar"),
     v("Four Horsemen","Wine Bar","James Murphy's natural wine bar, Michelin starred, Williamsburg",4.4,f(true,false,true,false,true,false,false,true),"https://fourhorsemenbk.com",40.7158,-73.9500,"bar"),
     v("Maison Premiere","Oyster Bar","New Orleans-inspired oysters and absinthe, Williamsburg",4.5,f(false,false,true,false,true,false,false,true),"https://maisonpremiere.com",40.7156,-73.9572,"bar"),
+    v("The Crosby Bar","Hotel Bar & Restaurant","Firmdale's eclectic SoHo brasserie inside Crosby Street Hotel — ivy-covered sunken terrace, Kit Kemp design, afternoon tea with caviar, all-day scene",4.5,f(false,false,true,false,true,false,false,false),"https://firmdalehotels.com/hotels/crosby-street-hotel/restaurant-bar",40.7233,-73.9973,"bar"),
     // Sushi
     v("Sushi Sho","Japanese Omakase","Three Michelin stars, Keiji Nakazawa — one of the world's best sushi masters, $450pp",4.9,f(true,false,false,false,false,false,true,true,false,true),"https://sushishonyc.com",40.7580,-73.9835,"sushi"),
     v("Masa","Japanese Omakase","Three-star counter, America's most expensive and most extraordinary sushi",4.9,f(true,false,false,true,true,false,true,true,false,true),"https://masanyc.com",40.7685,-73.9822,"sushi"),
@@ -613,9 +615,6 @@ const INITIAL_DATA = {
     v("Nobu Barcelona","Japanese-Peruvian","Celebrity sushi at Nobu's Barcelona outpost",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/barcelona",41.3921,-2.1638,"sushi"),
   ],
 
-  // ============================================================
-  // CANNES — MASSIVELY EXPANDED
-  // ============================================================
   "Cannes": [
     v("La Palme d'Or","French Riviera","Two Michelin stars, Hotel Martinez, film festival icon, pinnacle of Cannes dining",4.9,f(true,false,false,true,true,false,true,true),"https://hotel-martinez.hyatt.com",43.5490,-7.0186),
     v("Mantel","French Contemporary","One Michelin star, Nicolas Decherchi's inventive Riviera cuisine, intimate and exceptional",4.8,f(true,false,true,false,false,false,true,true),"https://restaurantmantel.com",43.5508,-7.0176),
@@ -637,7 +636,6 @@ const INITIAL_DATA = {
     v("Morrison's Irish Pub","Pub","The festival crowd's go-to late night pub, lively after-parties, live music",4.3,f(false,false,false,true,false,true,false,false),"https://morrisonspub.com",43.5508,-7.0196,"bar"),
     v("Hôtel Barrière Le Majestic Bar","Hotel Bar","The Croisette's most glamorous hotel bar, perfect for festival season Champagne",4.6,f(false,false,false,true,true,false,false,false),"https://hotelsbarriere.com/fr/cannes/le-majestic",43.5490,-7.0176,"bar"),
     v("Bar des Célébrités at Hotel Martinez","Hotel Bar","Legendary festival bar inside the iconic Art Deco Martinez, Champagne and cocktails",4.6,f(false,false,false,true,true,false,false,false),"https://hotel-martinez.hyatt.com",43.5490,-7.0186,"bar"),
-    // Sushi
     v("Nobu Cannes","Japanese-Peruvian","Nobu's Festival season outpost, celebrity sushi on the Croisette",4.6,f(false,false,true,false,true,false,true,false,false,true),"https://noburestaurants.com/cannes",43.5490,-7.0186,"sushi"),
     v("Matsuhisa Cannes","Japanese","Nobu Matsuhisa's intimate Cannes sushi counter, exceptional quality",4.7,f(false,false,false,true,true,false,true,true,false,true),"https://matsuhisarestaurants.com/cannes",43.5490,-7.0196,"sushi"),
     v("Kinugawa Cannes","Japanese","Chic Japanese from the acclaimed Paris brand, Riviera outpost",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://kinugawa.fr",43.5508,-7.0186,"sushi"),
@@ -686,9 +684,6 @@ const INITIAL_DATA = {
     v("Nobu Milan","Japanese-Peruvian","Nobu's Milan outpost, celebrity sushi in the fashion capital",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/milan",45.4659,-9.1921,"sushi"),
   ],
 
-  // ============================================================
-  // PARIS — MASSIVELY EXPANDED
-  // ============================================================
   "Paris": [
     v("Guy Savoy","French","Three Michelin stars, best tasting menu in Paris",4.9,f(true,false,false,true,true,false,true,true),"https://guysavoy.com",48.8607,-2.3322),
     v("Arpège","French","Three Michelin stars, Alain Passard's vegetable paradise",4.9,f(true,false,false,true,false,false,true,true),"https://alain-passard.com",48.8556,-2.3177),
@@ -702,7 +697,6 @@ const INITIAL_DATA = {
     v("Taillevent","French","Two Michelin stars, institution since 1946",4.8,f(true,false,false,true,true,false,true,true),"https://taillevent.com",48.8748,-2.3026),
     v("Frenchie","French Contemporary","One Michelin star, Rue du Nil, impossible to book",4.7,f(true,false,true,false,false,false,true,false),"https://frenchierestaurant.com",48.8627,-2.3466),
     v("Le Châteaubriand","French Contemporary","Natural wine bistro pioneer, innovative and iconic",4.7,f(false,false,true,false,true,false,true,false),"https://lechateaubriand.net",48.8678,-2.3728),
-    // NEW PARIS ADDITIONS
     v("Le Grand Café at Grand Palais","French Brasserie","2025's most spectacular opening — Loulou Groupe restores the Grand Palais brasserie, stunning Belle Époque setting",4.8,f(false,true,true,false,true,false,true,false),"https://grandcafegrandpalais.fr",48.8660,-2.3122),
     v("Billie","French Contemporary","Paris's beautiful people and their resident DJ — leather and marble, open till 2am, instant fashion crowd destination",4.7,f(false,true,true,false,true,true,true,false),"https://billieparis.com",48.8636,-2.3126),
     v("Casa Pregonda","Mediterranean","Fashion crowd's new HQ, Balearic-inspired, best sangria in Paris, stunning Marais setting",4.7,f(false,true,true,false,true,false,true,false),"https://casapregonda.com",48.8566,-2.3536),
@@ -714,7 +708,6 @@ const INITIAL_DATA = {
     v("David Toutain","French Contemporary","One Michelin star, inventive seasonal tasting menus, quiet and exceptional",4.8,f(true,false,false,false,false,false,true,true),"https://davidtoutain.com",48.8576,-2.3177),
     v("Hakuba","Japanese Omakase","Omakase at Cheval Blanc hotel — Paris's most rarefied sushi experience, extraordinary",4.8,f(true,false,false,false,true,false,true,true,false,true),"https://chevalblanc.com/paris",48.8536,-2.3476,"sushi"),
     v("Café de Flore","French Café","Saint-Germain café institution, Sartre and de Beauvoir",4.4,f(false,false,false,true,true,false,false,false),"https://cafedeflore.fr",48.8536,-2.3336),
-    // Bars
     v("Harry's New York Bar","Cocktail Bar","Hemingway's Paris bar since 1911, Bloody Mary birthplace",4.5,f(false,false,false,true,true,false,false,false),"https://harrysbar.fr",48.8698,-2.3296,"bar"),
     v("Prescription Cocktail Club","Cocktail Bar","Saint-Germain speakeasy, craft cocktails done right",4.6,f(false,false,true,false,true,false,false,false),"https://prescriptioncocktailclub.com",48.8536,-2.3376,"bar"),
     v("Candelaria","Cocktail Bar","Hidden taqueria with speakeasy cocktail bar behind",4.5,f(false,false,true,false,true,false,false,false),"https://quixotic-projects.com/venue/candelaria",48.8598,-2.3526,"bar"),
@@ -726,16 +719,12 @@ const INITIAL_DATA = {
     v("Le Perchoir","Rooftop Bar","Paris's most beloved rooftop bar, Oberkampf panoramic views, always packed",4.6,f(false,false,true,false,true,false,true,false),"https://leperchoir.fr",48.8648,-2.3768,"rooftop"),
     v("Bisou Canal","Bar","Canal Saint-Martin's best bar, laid-back natural wine and cocktails, local crowd",4.6,f(false,false,true,false,false,false,false,false),"https://bisoucanal.com",48.8718,-2.3648,"bar"),
     v("Bristol After Dark","Hotel Bar","Le Bristol's legendary late-night bar, old-money Paris glamour, serious cocktails",4.7,f(false,false,false,true,true,false,false,true),"https://lebristolparis.com",48.8728,-2.3136,"bar"),
-    // Sushi
     v("Sushi Yoshitake","Japanese Omakase","Three Michelin stars in Tokyo; the Paris outpost maintains extraordinary standards",4.8,f(true,false,false,false,false,false,true,true,false,true),"https://sushi-yoshitake.com",48.8668,-2.3296,"sushi"),
     v("Akami","Japanese Omakase","One Michelin star, outstanding omakase in the Marais, exceptional fish",4.8,f(true,false,true,false,false,false,true,true,false,true),"https://akami.fr",48.8568,-2.3556,"sushi"),
     v("Isami","Japanese","Paris's most celebrated traditional sushi, Île Saint-Louis institution",4.7,f(false,false,false,true,false,false,true,true,false,true),"https://isami-paris.com",48.8516,-2.3536,"sushi"),
     v("Nobu Paris","Japanese-Peruvian","Nobu's elegant Paris outpost, celebrity sushi",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/paris",48.8668,-2.3296,"sushi"),
   ],
 
-  // ============================================================
-  // MYKONOS — TRIPLED IN SIZE
-  // ============================================================
   "Mykonos": [
     v("Nobu Mykonos","Japanese-Peruvian","Glamorous clifftop Nobu, jet-set crowd, stunning Aegean views",4.8,f(false,false,true,false,true,false,true,false),"https://noburestaurants.com/mykonos",37.4467,-25.3289),
     v("Spilia","Seafood","Sea cave setting, dramatic cliffside, most romantic restaurant on the island",4.8,f(false,false,true,false,true,false,true,true),"https://spilia.gr",37.4312,-25.3195),
@@ -753,18 +742,17 @@ const INITIAL_DATA = {
     v("Matsuhisa Mykonos","Japanese-Peruvian","Nobu Matsuhisa's Belvedere Hotel outpost, excellent omakase experience",4.6,f(false,false,true,false,true,false,true,false),"https://belvedere.com/matsuhisa-mykonos",37.4464,-25.3313),
     v("Fokos Taverna","Greek","Remote beach taverna, traditional and magical, no menus — just whatever the boat brought in",4.7,f(false,false,false,true,false,false,false,true),"https://fokostaveran.gr",37.4801,-25.3551),
     v("Katrin","Greek","Old Town institution since 1969, traditional and beloved by every Mykonos local",4.5,f(false,false,false,true,false,false,false,true),"https://katrinmykonos.gr",37.4454,-25.3283),
-    // Bars
     v("Galleraki","Cocktail Bar","Little Venice's most beautiful cocktail bar, waves crashing beneath, sunset institution",4.7,f(false,false,true,false,true,false,false,false),"https://gallerakimykonos.com",37.4452,-25.3274,"bar"),
     v("Remezzo","Cocktail Bar","Iconic Little Venice waterfront bar, legendary sunsets, classic Mykonos",4.5,f(false,false,false,true,true,false,false,false),"https://remezzomykonos.com",37.4452,-25.3274,"bar"),
     v("180° Sunset Bar","Rooftop Bar","Panoramic 180-degree views over the Aegean, DJ sets at sunset, spectacular",4.7,f(false,false,true,false,true,false,false,false),"https://180mykonos.com",37.4452,-25.3264,"rooftop"),
     v("Cavo Paradiso","Nightclub","Mykonos's legendary clifftop nightclub, world-class DJs, open-air and iconic",4.6,f(false,false,true,false,true,true,false,false),"https://cavoparadiso.gr",37.4201,-25.3311,"bar"),
     v("Pierro's","Bar","The original Mykonos nightlife institution since 1976, the after-hours destination",4.4,f(false,false,true,false,true,true,false,false),"https://pierrosmykonos.gr",37.4454,-25.3283,"bar"),
     v("Babylon","Bar","Little Venice gay bar, legendary sunset cocktails, Mykonos classic",4.3,f(false,false,true,false,true,false,false,false),"https://babylonmykonos.gr",37.4452,-25.3264,"bar"),
-    // Sushi
     v("Nobu Mykonos Omakase","Japanese-Peruvian Omakase","Glamorous clifftop Nobu omakase experience, jet-set island sushi",4.8,f(false,false,true,false,true,false,true,false,false,true),"https://noburestaurants.com/mykonos",37.4467,-25.3289,"sushi"),
     v("Matsuhisa Mykonos","Japanese Omakase","Nobu Matsuhisa's intimate Belvedere Hotel counter, best sushi on the island",4.7,f(false,false,true,false,true,false,true,false,false,true),"https://belvedere.com/matsuhisa-mykonos",37.4464,-25.3313,"sushi"),
     v("Zuma Mykonos","Japanese Robatayaki","Seasonal Zuma outpost at Santa Marina, stunning robatayaki",4.6,f(false,false,true,false,true,false,true,false,false,true),"https://zumarestaurant.com/zuma-mykonos",37.4501,-25.3443,"sushi"),
   ],
+
   "Seoul": [
     v("Mingles","Korean Contemporary","Chef Kang Min-goo's only Michelin 3-star in Korea. Asia's 50 Best #5 2025. Fermented sauces, Korean ceramic tableware, extraordinary tasting menus",5.0,f(true,false,false,false,false,false,true,true),"https://restaurant-mingles.com",37.5246,127.0430),
     v("La Yeon","Korean Royal Cuisine","Shilla Hotel 23rd floor, breathtaking Seoul Tower views, Hansik court cuisine by Chef Sung Il Kim — two Michelin stars",4.9,f(true,false,false,true,true,false,true,true),"https://www.shilla.net/en/restaurants/laYeon.do",37.5580,126.9985),
@@ -810,6 +798,7 @@ const INITIAL_DATA = {
     v("Pine and Co","Cocktail Bar","Futuristic R&D lab aesthetic, molecular cocktails, Asia's 50 Best Bars entry, Gangnam",4.7,f(false,true,true,false,false,false,true,false),"https://www.instagram.com/pineandco_seoul",37.5246,127.0430,"bar"),
     v("Bar Jangsaeng","Cocktail Bar","Gangnam. Korean ingredient cocktails, exceptional service, knowledgeable English-speaking team",4.7,f(false,false,true,false,false,false,false,false),"https://www.instagram.com/bar_jangsaeng",37.5246,127.0430,"bar"),
   ],
+
   "Martha's Vineyard": [
     v("Detente","American Seasonal","Edgartown's best restaurant since 2005. Twinkle-lit courtyard, Menemsha lobster risotto, minimal-intervention wine list",4.8,f(false,false,true,false,false,false,false,true),"https://detentevineyard.com",41.3882,-70.5133),
     v("19 Raw","Raw Bar / Seafood","Best raw bar on island. Local oysters, Lobster Caviar Slider, dry-aged steaks, cozy patio",4.7,f(false,false,true,false,false,false,false,false),"https://19rawoysterbar.com",41.3882,-70.5130),
@@ -850,6 +839,31 @@ const INITIAL_DATA = {
 
 // ── Private Dining Room data ─────────────────────────────────────────────────
 const PDR_DATA = {
+  "NYC": {
+    "Le Bernardin": "Les Salons Bernardin (above main room, overlooks 51st St): 2 rooms, up to 36 seated combined. Full buyout available. events@le-bernardin.com / (212) 554-1515",
+    "Eleven Madison Park": "3 PDRs: Room A (18 seated, floor-to-ceiling windows overlooking dining room), Room B (34 seated, Sol LeWitt installation), Room C (50 seated). Full buyout available. events@elevenmadisonpark.com",
+    "Per Se": "East Room: up to 10 seated, overlooks Central Park. West Room: up to 66 seated / 120 standing, Parisian living room design. Full buyout: 88 seated / 350 standing. thomaskeller.com/perseny/private-dining",
+    "Gramercy Tavern": "PDR: up to 20 seated, single artisan table, wood-beamed ceiling (Maine artisan Greg Lipton). Full restaurant buyout available. privatedining@gramercytavern.com",
+    "Daniel": "Bellecour Room: up to 90 seated / 150 standing, natural light from East 65th St windows. Chef's Table: up to 4 guests. Full buyout: 150 seated. Contact Jean Christophe Le Picart: (212) 737-2224",
+    "Gabriel Kreuther": "Two combinable PDRs: 8–150 guests. In-Kitchen Table: up to 8 guests (immersive experience). Events@gknyc.com",
+    "Atomix": "Chef's Counter buyout: up to 15 guests (full tasting menu + beverage). Bar Experience: up to 6 guests semi-private upstairs. 2 months' notice requested. atomixnyc.com/private-events",
+    "Carbone": "Full restaurant buyout: up to 100 guests. Contact restaurant directly — notoriously selective. carbonenewyork.com",
+    "La Tête d'Or": "Private dining available in elegant spaces at One Madison. Contact restaurant directly. latetedorbydaniel.com",
+    "Tatiana by Kwame Onwuachi": "Private dining at Lincoln Center; contact restaurant for buyout options. tatiananyc.com",
+    "Cote": "Undercote (subterranean speakeasy): dramatic private dining for groups. Full restaurant: up to 100 for corporate events. reservation@cotenyc.com",
+    "The Grill": "Historic Four Seasons landmark space; multiple private rooms. Contact restaurant directly. thegrillnewyork.com",
+    "Masa": "Full counter buyout for private events. Contact restaurant directly. masanyc.com",
+    "Sushi Nakazawa": "Full counter buyout for private omakase events. Contact restaurant directly. sushinakazawa.com",
+    "Sushi Noz": "Full counter buyout for private events; 2 Michelin stars. Contact restaurant directly. sushinoz.com",
+    "Don Angie": "Contact restaurant for private dining and buyout options. donangie.com",
+    "Lilia": "Full restaurant buyout available; contact restaurant directly. lilianewyork.com",
+    "Frenchette": "Contact restaurant for private dining options. frenchetteny.com",
+    "The Core Club": "Private members club — events and dining for members and approved guests only. thecoreclub.com",
+    "Casa Tua NYC": "Members club with main dining room open to public; private events for members. casatualifestyle.com/new-york",
+    "Rao's": "No private room; tables are semi-permanently assigned to regulars. Full buyout theoretically possible — contact directly. raos.com",
+    "Monkey Bar": "Semi-private spaces available for groups; contact restaurant. monkeybarnewyork.com",
+    "The Grill": "Historic Four Seasons Seagram Building space; multiple rooms. thegrillnewyork.com",
+  },
   "San Francisco": {
     "Quince": "Private rooms: North/South (up to 12 each), West Room (up to 18, cellar views). Full buyout available. events@quincerestaurant.com",
     "Atelier Crenn": "Full restaurant buyout for private events. privatedining@dominiquecrenn.com",
@@ -891,7 +905,7 @@ const PDR_DATA = {
     "Village Pub": "Three private dining rooms + outdoor veranda. Rooms accommodate 12, 24, and 48. Full buyout up to 120. thevillagepub.net/private-dining",
     "LB Steak": "Chef's Table: 18 guests. Meritage Room (PDR with French chandelier + stone fireplace): 36 guests. Contact: jegi@lbsteak.com / 408.244.1180",
     "Camper": "Maverick Room: 24 seated. Ridgeline Room: 14 seated. Full buyout available. hello@campermp.com",
-    "Donato Enoteca": "Colleoni Room: 70 guests (AV setup). Gaja Room: 24. Salsa Donizetti Room: 12. Enoteca Patio: 30. 3–5 course preset menus. contact restaurant directly.",
+    "Donato Enoteca": "Colleoni Room: 70 guests (AV setup). Gaja Room: 24. Salsa Donizetti Room: 12. Enoteca Patio: 30. 3–5 course preset menus. Contact restaurant directly.",
     "Flea St. Cafe": "Intimate restaurant inside a house; contact for buyout options.",
     "Refuge": "Casual sandwich/beer spot; no private room. Contact for large group options.",
     "Robin Menlo Park": "Private dining room seats up to 7 (exclusive omakase experience, one seating/night, $309pp). Full restaurant buyout also available. robinomakase.com/events",
