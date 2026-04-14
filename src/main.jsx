@@ -1071,7 +1071,15 @@ const MAP_COLORS = {
   f1:             { pin:"#e53935", label:"F1" },
 }
 
-function MapView({ venues }) {
+const A16Z_OFFICES = {
+  "Menlo Park":     { lat:37.4193, lng:-122.2021, address:"2865 Sand Hill Road, Suite 101" },
+  "San Francisco":  { lat:37.7765, lng:-122.3927, address:"180 Townsend Street" },
+  "NYC":            { lat:40.7233, lng:-74.0007,  address:"200 Lafayette Street, 3rd & 4th Floor" },
+  "Santa Monica":   { lat:34.0168, lng:-118.4914, address:"1305 2nd Street" },
+  "Washington DC":  { lat:38.9015, lng:-77.0422,  address:"800 17th St NW, 6th Floor" },
+}
+
+function MapView({ venues, city }) {
   const mapRef = useRef(null)
   const instanceRef = useRef(null)
   const markersRef = useRef([])
@@ -1146,13 +1154,36 @@ function MapView({ venues }) {
       markersRef.current.push(marker)
     })
 
-    if (validVenues.length > 1) {
-      const bounds = L.latLngBounds(validVenues.map(v => [v.lat, v.lng]))
+    // a16z office star marker
+    const office = A16Z_OFFICES[city]
+    if (office) {
+      const officeIcon = L.divIcon({
+        className: "",
+        html: `<div style="width:22px;height:22px;display:flex;align-items:center;justify-content:center;background:#111;border-radius:50%;border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.4);font-size:11px;color:white;line-height:1;">a16z</div>`,
+        iconSize: [22, 22],
+        iconAnchor: [11, 11],
+        popupAnchor: [0, -13],
+      })
+      const officePopup = `<div style="font-family:system-ui,sans-serif;min-width:160px">
+        <div style="font-size:13px;font-weight:500;color:#111;margin-bottom:3px">a16z Office</div>
+        <div style="font-size:12px;color:#666">${office.address}</div>
+      </div>`
+      const officeMarker = L.marker([office.lat, office.lng], { icon: officeIcon, zIndexOffset: 1000 })
+        .addTo(instanceRef.current)
+        .bindPopup(officePopup)
+      markersRef.current.push(officeMarker)
+    }
+
+    if (validVenues.length > 0) {
+      const allPoints = [...validVenues.map(v => [v.lat, v.lng])]
+      if (office) allPoints.push([office.lat, office.lng])
+      const bounds = L.latLngBounds(allPoints)
       instanceRef.current.fitBounds(bounds, { padding: [40, 40] })
     }
   }
 
   const categoriesPresent = [...new Set(venues.map(v => v.category))].filter(c => MAP_COLORS[c])
+  const hasOffice = !!A16Z_OFFICES[city]
 
   return (
     <div>
@@ -1163,6 +1194,14 @@ function MapView({ venues }) {
             {MAP_COLORS[cat].label}
           </div>
         ))}
+        {hasOffice && (
+          <div style={{ display:"flex", alignItems:"center", gap:5, fontSize:12, color:"#555" }}>
+            <div style={{ width:16, height:16, borderRadius:"50%", background:"#111", border:"1.5px solid white", boxShadow:"0 1px 3px rgba(0,0,0,0.25)", display:"flex", alignItems:"center", justifyContent:"center" }}>
+              <span style={{ fontSize:7, color:"white", fontWeight:500, letterSpacing:"-0.3px" }}>a16z</span>
+            </div>
+            a16z Office
+          </div>
+        )}
         <span style={{ fontSize:12, color:"#aaa", marginLeft:"auto" }}>{venues.filter(v => v.lat && v.lng).length} venues mapped</span>
       </div>
       <div
@@ -1329,7 +1368,7 @@ function App() {
               ))}
             </div>
           </div>
-          <MapView key={city} venues={allVenues} />
+          <MapView key={city} venues={allVenues} city={city} />
         </>
       ) : activeTab === "updates" ? (
         <div>
