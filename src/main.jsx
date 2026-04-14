@@ -973,7 +973,6 @@ const PDR_DATA = {
     "Sushi Sus": "Intimate omakase counter; contact for full buyout.",
     "Bucks of Woodside": "Iconic power breakfast diner; no dedicated PDR. Contact for large group seating.",
   },
-,
   "Seoul": {
     "Mingles": "Private dining available for exclusive events; contact restaurant. restaurant-mingles.com",
     "La Yeon": "Events at The Shilla Seoul; contact hotel events team. shilla.net",
@@ -1212,7 +1211,7 @@ function App() {
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:4 }}>
         <div>
           <h1 style={{ fontSize:22, fontWeight:500, margin:0, color:"#111" }}>Restaurant & Bar Guide</h1>
-          <p style={{ fontSize:14, color:"#666", margin:"2px 0 0" }}>26 cities · {totalVenues}+ venues · restaurants, sushi, bars & private clubs</p>
+          <p style={{ fontSize:14, color:"#666", margin:"2px 0 0" }}>{CITIES.length} cities · {totalVenues}+ venues · restaurants, sushi, bars & private clubs</p>
         </div>
         <button onClick={runDailyRefresh} disabled={isRefreshing}
           style={{ fontSize:13, padding:"6px 14px", borderRadius:8, border:"0.5px solid #ccc", background:"transparent", color: isRefreshing ? "#aaa":"#555", cursor: isRefreshing ? "not-allowed":"pointer" }}>
