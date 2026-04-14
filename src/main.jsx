@@ -1789,7 +1789,7 @@ function MapView({ venues, city }) {
 
 
 function App() {
-  const [city, setCity] = useState("NYC")
+  const [city, setCity] = useState("Boston")
   const [activeFilters, setActiveFilters] = useState([])
   const [search, setSearch] = useState("")
   const [isRefreshing, setIsRefreshing] = useState(false)
@@ -1973,9 +1973,9 @@ function App() {
                     style={{
                       fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
                       fontWeight: isActive ? 500 : 400,
-                      background: isActive ? (isA16z ? "#fdf0d9" : "#f0f0f0") : (isA16z ? "#fdf8ef" : "transparent"),
-                      border: `0.5px solid ${isActive ? (isA16z ? "#cf7f00" : "#888") : (isA16z ? "#e8c47a" : "#ddd")}`,
-                      color: isActive ? (isA16z ? "#7a4a00" : "#111") : (isA16z ? "#9a5f00" : "#666"),
+                      background: isActive ? (isA16z ? "#fdf0d9" : "#dbeafe") : (isA16z ? "#fdf8ef" : "transparent"),
+                      border: `0.5px solid ${isActive ? (isA16z ? "#cf7f00" : "#3b82f6") : (isA16z ? "#e8c47a" : "#ddd")}`,
+                      color: isActive ? (isA16z ? "#7a4a00" : "#1d4ed8") : (isA16z ? "#9a5f00" : "#666"),
                     }}>
                     {c}
                   </button>
@@ -2055,9 +2055,9 @@ function App() {
                     style={{
                       fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
                       fontWeight: isActive ? 500 : 400,
-                      background: isActive ? (isA16z ? "#fdf0d9" : "#f0f0f0") : (isA16z ? "#fdf8ef" : "transparent"),
-                      border: `0.5px solid ${isActive ? (isA16z ? "#cf7f00" : "#888") : (isA16z ? "#e8c47a" : "#ddd")}`,
-                      color: isActive ? (isA16z ? "#7a4a00" : "#111") : (isA16z ? "#9a5f00" : "#666"),
+                      background: isActive ? (isA16z ? "#fdf0d9" : "#dbeafe") : (isA16z ? "#fdf8ef" : "transparent"),
+                      border: `0.5px solid ${isActive ? (isA16z ? "#cf7f00" : "#3b82f6") : (isA16z ? "#e8c47a" : "#ddd")}`,
+                      color: isActive ? (isA16z ? "#7a4a00" : "#1d4ed8") : (isA16z ? "#9a5f00" : "#666"),
                     }}>
                     {c}{hasUpdates && <span style={{ display:"inline-block", width:6, height:6, borderRadius:99, background:"#1D9E75", marginLeft:5, verticalAlign:"middle", marginTop:-2 }} />}
                   </button>
