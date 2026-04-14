@@ -1,6 +1,6 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 
 const US_CITIES = [
   "Boston","Calistoga","Chicago","Fort Lauderdale","Healdsburg",
@@ -1065,6 +1065,16 @@ function App() {
   const [editingVenue, setEditingVenue] = useState(null)
   const [editField, setEditField] = useState("notes")
   const [noteText, setNoteText] = useState("")
+
+  useEffect(() => {
+    const last = localStorage.getItem("lastAutoRefresh")
+    const now = Date.now()
+    if (!last || now - parseInt(last) > 24 * 60 * 60 * 1000) {
+      runDailyRefresh().then(() => {
+        localStorage.setItem("lastAutoRefresh", String(now))
+      })
+    }
+  }, [])
 
   const allVenues = (data[city] || []).filter(venue => {
     const matchFilter = activeFilters.length === 0 || activeFilters.every(f => venue[f])
