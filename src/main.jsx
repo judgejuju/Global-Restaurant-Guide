@@ -22,6 +22,8 @@ const INTL_CITIES = [
 ]
 const CITIES = [...US_CITIES, ...INTL_CITIES]
 
+const A16Z_CITY_SET = new Set(["NYC","San Francisco","Menlo Park","Washington DC","Santa Monica","Seoul"])
+
 const FILTERS = [
   { key:"michelin", label:"Michelin" },
   { key:"newBuzz", label:"New & Buzzy" },
@@ -1320,7 +1322,7 @@ function App() {
     <div style={{ padding:"24px", fontFamily:"system-ui, sans-serif", maxWidth:1200, margin:"0 auto" }}>
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:4 }}>
         <div>
-          <h1 style={{ fontSize:22, fontWeight:500, margin:0, color:"#111" }}>Restaurant & Bar Guide</h1>
+          <h1 style={{ fontSize:22, fontWeight:500, margin:0, color:"#111" }}>Global Restaurant & Bar Guide</h1>
           <p style={{ fontSize:14, color:"#666", margin:"2px 0 0" }}>{CITIES.length} cities · {totalVenues}+ venues · restaurants, sushi, bars & private clubs</p>
         </div>
         <button onClick={runDailyRefresh} disabled={isRefreshing}
@@ -1343,21 +1345,41 @@ function App() {
           <div style={{ marginBottom:16 }}>
             <div style={{ fontSize:11, fontWeight:500, color:"#aaa", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>United States</div>
             <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:12 }}>
-              {US_CITIES.map(c => (
-                <button key={c} onClick={() => { setCity(c); setSearch("") }}
-                  style={{ fontSize:13, padding:"5px 12px", borderRadius:99, border:`0.5px solid ${c===city?"#888":"#ddd"}`, background: c===city?"#f0f0f0":"transparent", color: c===city?"#111":"#666", cursor:"pointer", fontWeight: c===city?500:400 }}>
-                  {c}
-                </button>
-              ))}
+              {US_CITIES.map(c => {
+                const isA16z = A16Z_CITY_SET.has(c)
+                const isActive = c === city
+                return (
+                  <button key={c} onClick={() => { setCity(c); setSearch("") }}
+                    style={{
+                      fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
+                      fontWeight: isActive ? 500 : 400,
+                      background: isActive ? (isA16z ? "#fdf0d9" : "#f0f0f0") : (isA16z ? "#fdf8ef" : "transparent"),
+                      border: `0.5px solid ${isActive ? (isA16z ? "#cf7f00" : "#888") : (isA16z ? "#e8c47a" : "#ddd")}`,
+                      color: isActive ? (isA16z ? "#7a4a00" : "#111") : (isA16z ? "#9a5f00" : "#666"),
+                    }}>
+                    {c}
+                  </button>
+                )
+              })}
             </div>
             <div style={{ fontSize:11, fontWeight:500, color:"#aaa", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>International</div>
             <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:16 }}>
-              {INTL_CITIES.map(c => (
-                <button key={c} onClick={() => { setCity(c); setSearch("") }}
-                  style={{ fontSize:13, padding:"5px 12px", borderRadius:99, border:`0.5px solid ${c===city?"#888":"#ddd"}`, background: c===city?"#f0f0f0":"transparent", color: c===city?"#111":"#666", cursor:"pointer", fontWeight: c===city?500:400 }}>
-                  {c}
-                </button>
-              ))}
+              {INTL_CITIES.map(c => {
+                const isA16z = A16Z_CITY_SET.has(c)
+                const isActive = c === city
+                return (
+                  <button key={c} onClick={() => { setCity(c); setSearch("") }}
+                    style={{
+                      fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
+                      fontWeight: isActive ? 500 : 400,
+                      background: isActive ? (isA16z ? "#fdf0d9" : "#f0f0f0") : (isA16z ? "#fdf8ef" : "transparent"),
+                      border: `0.5px solid ${isActive ? (isA16z ? "#cf7f00" : "#888") : (isA16z ? "#e8c47a" : "#ddd")}`,
+                      color: isActive ? (isA16z ? "#7a4a00" : "#111") : (isA16z ? "#9a5f00" : "#666"),
+                    }}>
+                    {c}
+                  </button>
+                )
+              })}
             </div>
             <div style={{ display:"flex", gap:8, flexWrap:"wrap", alignItems:"center", marginBottom:16 }}>
               {FILTERS.map(f => (
@@ -1398,9 +1420,17 @@ function App() {
             <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:12 }}>
               {US_CITIES.map(c => {
                 const hasUpdates = (data[c]||[]).some(v => v.status)
+                const isA16z = A16Z_CITY_SET.has(c)
+                const isActive = c === city
                 return (
                   <button key={c} onClick={() => { setCity(c); setSearch("") }}
-                    style={{ fontSize:13, padding:"5px 12px", borderRadius:99, border:`0.5px solid ${c===city?"#888":"#ddd"}`, background: c===city?"#f0f0f0":"transparent", color: c===city?"#111":"#666", cursor:"pointer", fontWeight: c===city?500:400 }}>
+                    style={{
+                      fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
+                      fontWeight: isActive ? 500 : 400,
+                      background: isActive ? (isA16z ? "#fdf0d9" : "#f0f0f0") : (isA16z ? "#fdf8ef" : "transparent"),
+                      border: `0.5px solid ${isActive ? (isA16z ? "#cf7f00" : "#888") : (isA16z ? "#e8c47a" : "#ddd")}`,
+                      color: isActive ? (isA16z ? "#7a4a00" : "#111") : (isA16z ? "#9a5f00" : "#666"),
+                    }}>
                     {c}{hasUpdates && <span style={{ display:"inline-block", width:6, height:6, borderRadius:99, background:"#1D9E75", marginLeft:5, verticalAlign:"middle", marginTop:-2 }} />}
                   </button>
                 )
@@ -1410,9 +1440,17 @@ function App() {
             <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
               {INTL_CITIES.map(c => {
                 const hasUpdates = (data[c]||[]).some(v => v.status)
+                const isA16z = A16Z_CITY_SET.has(c)
+                const isActive = c === city
                 return (
                   <button key={c} onClick={() => { setCity(c); setSearch("") }}
-                    style={{ fontSize:13, padding:"5px 12px", borderRadius:99, border:`0.5px solid ${c===city?"#888":"#ddd"}`, background: c===city?"#f0f0f0":"transparent", color: c===city?"#111":"#666", cursor:"pointer", fontWeight: c===city?500:400 }}>
+                    style={{
+                      fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
+                      fontWeight: isActive ? 500 : 400,
+                      background: isActive ? (isA16z ? "#fdf0d9" : "#f0f0f0") : (isA16z ? "#fdf8ef" : "transparent"),
+                      border: `0.5px solid ${isActive ? (isA16z ? "#cf7f00" : "#888") : (isA16z ? "#e8c47a" : "#ddd")}`,
+                      color: isActive ? (isA16z ? "#7a4a00" : "#111") : (isA16z ? "#9a5f00" : "#666"),
+                    }}>
                     {c}{hasUpdates && <span style={{ display:"inline-block", width:6, height:6, borderRadius:99, background:"#1D9E75", marginLeft:5, verticalAlign:"middle", marginTop:-2 }} />}
                   </button>
                 )
