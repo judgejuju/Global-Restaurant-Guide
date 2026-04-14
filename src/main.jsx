@@ -1949,14 +1949,14 @@ function App() {
                       fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
                       fontWeight: isActive ? 500 : 400,
                       background: isActive
-                        ? (isLyons ? "#dbeafe" : isA16z ? "#fdf0d9" : "#f0f0f0")
-                        : (isLyons ? "#eff6ff" : isA16z ? "#fdf8ef" : "transparent"),
+                        ? (isLyons ? "#ebebeb" : isA16z ? "#fdf0d9" : "#f0f0f0")
+                        : (isLyons ? "#f5f5f5" : isA16z ? "#fdf8ef" : "transparent"),
                       border: `0.5px solid ${isActive
-                        ? (isLyons ? "#3b82f6" : isA16z ? "#cf7f00" : "#888")
-                        : (isLyons ? "#93c5fd" : isA16z ? "#e8c47a" : "#ddd")}`,
+                        ? (isLyons ? "#999999" : isA16z ? "#cf7f00" : "#888")
+                        : (isLyons ? "#d1d1d1" : isA16z ? "#e8c47a" : "#ddd")}`,
                       color: isActive
-                        ? (isLyons ? "#1d4ed8" : isA16z ? "#7a4a00" : "#111")
-                        : (isLyons ? "#2563eb" : isA16z ? "#9a5f00" : "#666"),
+                        ? (isLyons ? "#111111" : isA16z ? "#7a4a00" : "#111")
+                        : (isLyons ? "#666666" : isA16z ? "#9a5f00" : "#666"),
                     }}>
                     {c === "Lyons NYC" ? "⭐ Lyons NYC" : c}
                   </button>
@@ -2030,14 +2030,14 @@ function App() {
                       fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
                       fontWeight: isActive ? 500 : 400,
                       background: isActive
-                        ? (isLyons ? "#dbeafe" : isA16z ? "#fdf0d9" : "#f0f0f0")
-                        : (isLyons ? "#eff6ff" : isA16z ? "#fdf8ef" : "transparent"),
+                        ? (isLyons ? "#ebebeb" : isA16z ? "#fdf0d9" : "#f0f0f0")
+                        : (isLyons ? "#f5f5f5" : isA16z ? "#fdf8ef" : "transparent"),
                       border: `0.5px solid ${isActive
-                        ? (isLyons ? "#3b82f6" : isA16z ? "#cf7f00" : "#888")
-                        : (isLyons ? "#93c5fd" : isA16z ? "#e8c47a" : "#ddd")}`,
+                        ? (isLyons ? "#999999" : isA16z ? "#cf7f00" : "#888")
+                        : (isLyons ? "#d1d1d1" : isA16z ? "#e8c47a" : "#ddd")}`,
                       color: isActive
-                        ? (isLyons ? "#1d4ed8" : isA16z ? "#7a4a00" : "#111")
-                        : (isLyons ? "#2563eb" : isA16z ? "#9a5f00" : "#666"),
+                        ? (isLyons ? "#111111" : isA16z ? "#7a4a00" : "#111")
+                        : (isLyons ? "#666666" : isA16z ? "#9a5f00" : "#666"),
                     }}>
                     {c === "Lyons NYC" ? "⭐ Lyons NYC" : c}{hasUpdates && <span style={{ display:"inline-block", width:6, height:6, borderRadius:99, background:"#1D9E75", marginLeft:5, verticalAlign:"middle", marginTop:-2 }} />}
                   </button>
