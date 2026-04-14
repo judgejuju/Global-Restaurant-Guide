@@ -1343,7 +1343,7 @@ function App() {
       {activeTab === "map" ? (
         <>
           <div style={{ marginBottom:16 }}>
-            <div style={{ fontSize:11, fontWeight:500, color:"#aaa", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>United States</div>
+            <div style={{ fontSize:13, fontWeight:700, color:"#4b4f54", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>United States</div>
             <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:12 }}>
               {US_CITIES.map(c => {
                 const isA16z = A16Z_CITY_SET.has(c)
@@ -1362,7 +1362,7 @@ function App() {
                 )
               })}
             </div>
-            <div style={{ fontSize:11, fontWeight:500, color:"#aaa", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>International</div>
+            <div style={{ fontSize:13, fontWeight:700, color:"#4b4f54", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>International</div>
             <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:16 }}>
               {INTL_CITIES.map(c => {
                 const isA16z = A16Z_CITY_SET.has(c)
@@ -1416,7 +1416,7 @@ function App() {
       ) : (
         <>
           <div style={{ marginBottom:16 }}>
-            <div style={{ fontSize:11, fontWeight:500, color:"#aaa", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>United States</div>
+            <div style={{ fontSize:13, fontWeight:700, color:"#4b4f54", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>United States</div>
             <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:12 }}>
               {US_CITIES.map(c => {
                 const hasUpdates = (data[c]||[]).some(v => v.status)
@@ -1436,7 +1436,7 @@ function App() {
                 )
               })}
             </div>
-            <div style={{ fontSize:11, fontWeight:500, color:"#aaa", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>International</div>
+            <div style={{ fontSize:13, fontWeight:700, color:"#4b4f54", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>International</div>
             <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
               {INTL_CITIES.map(c => {
                 const hasUpdates = (data[c]||[]).some(v => v.status)
@@ -1481,7 +1481,7 @@ function App() {
                 <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:14 }}>
                   <h2 style={{ fontSize:16, fontWeight:500, margin:0, color: cat === "f1" ? "#e53935" : "#111" }}>
                     {cat === "sushi" ? "🍣 " : cat === "bar" ? "🍸 " : cat === "rooftop" ? "🏙️ " : cat === "private club" ? "🔑 " : cat === "f1" ? "" : ""}
-                    {CATEGORY_LABELS[cat] || cat}
+                    {cat === "restaurant" ? `${city} Restaurants` : (CATEGORY_LABELS[cat] || cat)}
                   </h2>
                   <span style={{ fontSize:12, color:"#aaa" }}>{venues.length} spots</span>
                 </div>
