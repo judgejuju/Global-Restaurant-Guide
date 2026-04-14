@@ -2,6 +2,15 @@ import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { useState, useRef, useEffect } from "react"
 
+// Leaflet CSS injected once
+if (!document.getElementById("leaflet-css")) {
+  const link = document.createElement("link")
+  link.id = "leaflet-css"
+  link.rel = "stylesheet"
+  link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  document.head.appendChild(link)
+}
+
 const US_CITIES = [
   "Boston","Calistoga","Chicago","Fort Lauderdale","Healdsburg",
   "Las Vegas","Los Angeles","Martha's Vineyard","Menlo Park","Miami","Napa",
@@ -1053,6 +1062,118 @@ function VenueCard({ v: venue, onEditNote, rank }) {
   )
 }
 
+const MAP_COLORS = {
+  restaurant:     { pin:"#378ADD", label:"Restaurants" },
+  sushi:          { pin:"#E65100", label:"Sushi" },
+  bar:            { pin:"#0F6E56", label:"Bars" },
+  rooftop:        { pin:"#185FA5", label:"Rooftop Bars" },
+  "private club": { pin:"#6B21A8", label:"Private Clubs" },
+  f1:             { pin:"#e53935", label:"F1" },
+}
+
+function MapView({ venues }) {
+  const mapRef = useRef(null)
+  const instanceRef = useRef(null)
+  const markersRef = useRef([])
+
+  useEffect(() => {
+    if (!window.L) {
+      const script = document.createElement("script")
+      script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      script.onload = () => initMap()
+      document.head.appendChild(script)
+    } else {
+      initMap()
+    }
+    return () => {
+      if (instanceRef.current) {
+        instanceRef.current.remove()
+        instanceRef.current = null
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    if (instanceRef.current) updateMarkers()
+  }, [venues])
+
+  function initMap() {
+    if (!mapRef.current || instanceRef.current) return
+    const L = window.L
+    const validVenues = venues.filter(v => v.lat && v.lng)
+    if (!validVenues.length) return
+
+    const center = [
+      validVenues.reduce((s, v) => s + v.lat, 0) / validVenues.length,
+      validVenues.reduce((s, v) => s + v.lng, 0) / validVenues.length,
+    ]
+
+    const map = L.map(mapRef.current, { zoomControl: true }).setView(center, 13)
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "\u00a9 OpenStreetMap contributors",
+      maxZoom: 19,
+    }).addTo(map)
+    instanceRef.current = map
+    updateMarkers()
+  }
+
+  function updateMarkers() {
+    const L = window.L
+    if (!L || !instanceRef.current) return
+    markersRef.current.forEach(m => m.remove())
+    markersRef.current = []
+
+    const validVenues = venues.filter(v => v.lat && v.lng)
+    validVenues.forEach(v => {
+      const color = (MAP_COLORS[v.category] || MAP_COLORS.restaurant).pin
+      const icon = L.divIcon({
+        className: "",
+        html: `<div style="width:12px;height:12px;border-radius:50%;background:${color};border:2px solid white;box-shadow:0 1px 4px rgba(0,0,0,0.35);"></div>`,
+        iconSize: [12, 12],
+        iconAnchor: [6, 6],
+        popupAnchor: [0, -8],
+      })
+      const stars = "\u2605".repeat(Math.round(v.stars)) + "\u2606".repeat(5 - Math.round(v.stars))
+      const pdrBadge = v.privateDining ? `<div style="font-size:11px;color:#6B21A8;margin-top:5px;padding:4px 6px;background:#F0E6FB;border-radius:4px">\uD83C\uDF7D PDR available</div>` : ""
+      const notesBadge = v.notes ? `<div style="font-size:11px;color:#185FA5;margin-top:4px;padding:4px 6px;background:#E6F1FB;border-radius:4px">${v.notes}</div>` : ""
+      const popup = `<div style="font-family:system-ui,sans-serif;min-width:180px">
+        <a href="${v.url}" target="_blank" rel="noopener noreferrer" style="font-size:14px;font-weight:500;color:#111;text-decoration:none;display:block;margin-bottom:2px">${v.name}</a>
+        <div style="font-size:12px;color:#666;margin-bottom:4px">${v.type}</div>
+        <div style="font-size:12px;color:#BA7517">${stars} ${v.stars.toFixed(1)}</div>
+        ${pdrBadge}${notesBadge}
+      </div>`
+      const marker = L.marker([v.lat, v.lng], { icon }).addTo(instanceRef.current).bindPopup(popup)
+      markersRef.current.push(marker)
+    })
+
+    if (validVenues.length > 1) {
+      const bounds = L.latLngBounds(validVenues.map(v => [v.lat, v.lng]))
+      instanceRef.current.fitBounds(bounds, { padding: [40, 40] })
+    }
+  }
+
+  const categoriesPresent = [...new Set(venues.map(v => v.category))].filter(c => MAP_COLORS[c])
+
+  return (
+    <div>
+      <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginBottom:12, alignItems:"center" }}>
+        {categoriesPresent.map(cat => (
+          <div key={cat} style={{ display:"flex", alignItems:"center", gap:5, fontSize:12, color:"#555" }}>
+            <div style={{ width:10, height:10, borderRadius:"50%", background:MAP_COLORS[cat].pin, border:"1.5px solid white", boxShadow:"0 1px 3px rgba(0,0,0,0.25)" }} />
+            {MAP_COLORS[cat].label}
+          </div>
+        ))}
+        <span style={{ fontSize:12, color:"#aaa", marginLeft:"auto" }}>{venues.filter(v => v.lat && v.lng).length} venues mapped</span>
+      </div>
+      <div
+        ref={mapRef}
+        style={{ width:"100%", height:560, borderRadius:12, border:"0.5px solid #e5e5e5", overflow:"hidden" }}
+      />
+    </div>
+  )
+}
+
+
 function App() {
   const [city, setCity] = useState("NYC")
   const [activeFilters, setActiveFilters] = useState([])
@@ -1172,12 +1293,45 @@ function App() {
 
       <div style={{ display:"flex", gap:8, marginBottom:20 }}>
         <button style={tabStyle("cities")} onClick={() => setActiveTab("cities")}>Cities</button>
+        <button style={tabStyle("map")} onClick={() => setActiveTab("map")}>Map</button>
         <button style={tabStyle("updates")} onClick={() => setActiveTab("updates")}>
           Recently Updated {recentUpdates.length > 0 && <span style={{ marginLeft:4, fontSize:11, background:"#E1F5EE", color:"#0F6E56", padding:"1px 6px", borderRadius:99, fontWeight:500 }}>{recentUpdates.length}</span>}
         </button>
       </div>
 
-      {activeTab === "updates" ? (
+      {activeTab === "map" ? (
+        <>
+          <div style={{ marginBottom:16 }}>
+            <div style={{ fontSize:11, fontWeight:500, color:"#aaa", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>United States</div>
+            <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:12 }}>
+              {US_CITIES.map(c => (
+                <button key={c} onClick={() => { setCity(c); setSearch("") }}
+                  style={{ fontSize:13, padding:"5px 12px", borderRadius:99, border:`0.5px solid ${c===city?"#888":"#ddd"}`, background: c===city?"#f0f0f0":"transparent", color: c===city?"#111":"#666", cursor:"pointer", fontWeight: c===city?500:400 }}>
+                  {c}
+                </button>
+              ))}
+            </div>
+            <div style={{ fontSize:11, fontWeight:500, color:"#aaa", textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>International</div>
+            <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:16 }}>
+              {INTL_CITIES.map(c => (
+                <button key={c} onClick={() => { setCity(c); setSearch("") }}
+                  style={{ fontSize:13, padding:"5px 12px", borderRadius:99, border:`0.5px solid ${c===city?"#888":"#ddd"}`, background: c===city?"#f0f0f0":"transparent", color: c===city?"#111":"#666", cursor:"pointer", fontWeight: c===city?500:400 }}>
+                  {c}
+                </button>
+              ))}
+            </div>
+            <div style={{ display:"flex", gap:8, flexWrap:"wrap", alignItems:"center", marginBottom:16 }}>
+              {FILTERS.map(f => (
+                <button key={f.key} onClick={() => toggleFilter(f.key)}
+                  style={{ fontSize:12, padding:"5px 12px", borderRadius:99, border:`0.5px solid ${activeFilters.includes(f.key) ? TAG_COLORS[f.key].color:"#ddd"}`, background: activeFilters.includes(f.key) ? TAG_COLORS[f.key].bg:"transparent", color: activeFilters.includes(f.key) ? TAG_COLORS[f.key].color:"#888", cursor:"pointer", fontWeight: activeFilters.includes(f.key) ? 500:400 }}>
+                  {f.label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <MapView key={city} venues={allVenues} />
+        </>
+      ) : activeTab === "updates" ? (
         <div>
           {recentUpdates.length === 0 ? (
             <div style={{ padding:"2rem", textAlign:"center", color:"#888", fontSize:14, background:"#f9f9f9", borderRadius:8, border:"0.5px solid #eee" }}>
