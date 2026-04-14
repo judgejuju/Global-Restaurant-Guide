@@ -1008,7 +1008,7 @@ function StatusBadge({ status }) {
   )
 }
 
-function VenueCard({ v: venue, onEditNote, rank }) {
+function VenueCard({ v: venue, rank }) {
   const isF1 = venue.category === "f1"
   if (isF1) {
     return (
@@ -1027,9 +1027,6 @@ function VenueCard({ v: venue, onEditNote, rank }) {
         </div>
         <p style={{ fontSize:13, color: venue.name.includes("Hotspot") ? "#555" : "#ccc", margin:0, lineHeight:1.6 }}>{venue.desc}</p>
         {venue.notes && <div style={{ fontSize:12, color:"#185FA5", background:"#E6F1FB", borderRadius:6, padding:"6px 10px", lineHeight:1.5 }}>{venue.notes}</div>}
-        <div style={{ display:"flex", justifyContent:"flex-end" }}>
-          <button onClick={() => onEditNote(venue)} style={{ fontSize:11, color: venue.name.includes("Hotspot") ? "#999" : "#aaa", background:"none", border:"none", cursor:"pointer", padding:"4px 0 0" }}>{venue.notes ? "edit note":"+ note"}</button>
-        </div>
       </div>
     )
   }
@@ -1053,12 +1050,8 @@ function VenueCard({ v: venue, onEditNote, rank }) {
         </div>
       )}
       {venue.notes && <div style={{ fontSize:12, color:"#185FA5", background:"#E6F1FB", borderRadius:6, padding:"6px 10px", marginTop:2, marginLeft:26, lineHeight:1.5 }}>{venue.notes}</div>}
-      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-end", marginLeft:26 }}>
+      <div style={{ marginLeft:26 }}>
         <Tags venue={venue} />
-        <div style={{ display:"flex", gap:8, alignItems:"center" }}>
-          <button onClick={() => onEditNote(venue, "privateDining")} style={{ fontSize:11, color:"#9B59B6", background:"none", border:"none", cursor:"pointer", padding:"4px 0 0", whiteSpace:"nowrap" }}>{venue.privateDining ? "edit PDR":"+ PDR"}</button>
-          <button onClick={() => onEditNote(venue, "notes")} style={{ fontSize:11, color:"#999", background:"none", border:"none", cursor:"pointer", padding:"4px 0 0", whiteSpace:"nowrap" }}>{venue.notes ? "edit note":"+ note"}</button>
-        </div>
       </div>
     </div>
   )
@@ -1224,9 +1217,7 @@ function App() {
   const [recentUpdates, setRecentUpdates] = useState([])
   const [lastRefresh, setLastRefresh] = useState(null)
   const [activeTab, setActiveTab] = useState("cities")
-  const [editingVenue, setEditingVenue] = useState(null)
-  const [editField, setEditField] = useState("notes")
-  const [noteText, setNoteText] = useState("")
+
 
   useEffect(() => {
     const last = localStorage.getItem("lastAutoRefresh")
@@ -1252,24 +1243,6 @@ function App() {
 
   function toggleFilter(k) {
     setActiveFilters(prev => prev.includes(k) ? prev.filter(x => x !== k) : [...prev, k])
-  }
-
-  function openEditNote(venue, field = "notes") {
-    setEditingVenue({...venue, city})
-    setEditField(field)
-    setNoteText(venue[field] || "")
-  }
-
-  function saveNote() {
-    if (!editingVenue) return
-    setData(prev => {
-      const updated = JSON.parse(JSON.stringify(prev))
-      updated[editingVenue.city] = (updated[editingVenue.city] || []).map(v =>
-        v.name === editingVenue.name ? {...v, [editField]: noteText} : v
-      )
-      return updated
-    })
-    setEditingVenue(null)
   }
 
   async function runDailyRefresh() {
@@ -1486,7 +1459,7 @@ function App() {
                   <span style={{ fontSize:12, color:"#aaa" }}>{venues.length} spots</span>
                 </div>
                 <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(300px, 1fr))", gap:12 }}>
-                  {venues.map((venue, i) => <VenueCard key={venue.name} v={venue} onEditNote={openEditNote} rank={i+1} />)}
+                  {venues.map((venue, i) => <VenueCard key={venue.name} v={venue} rank={i+1} />)}
                 </div>
               </div>
             ))
@@ -1494,28 +1467,7 @@ function App() {
         </>
       )}
 
-      {editingVenue && (
-        <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.35)", display:"flex", alignItems:"center", justifyContent:"center", zIndex:999 }}
-          onClick={e => { if (e.target === e.currentTarget) setEditingVenue(null) }}>
-          <div style={{ background:"#fff", borderRadius:12, padding:"20px 24px", width:"min(420px, 90vw)", border:"0.5px solid #eee" }}>
-            <p style={{ fontWeight:500, fontSize:15, margin:"0 0 4px" }}>{editingVenue.name}</p>
-            <p style={{ fontSize:12, color:"#888", margin:"0 0 12px" }}>
-              {editField === "privateDining"
-                ? "Private dining capacity & buyout info (e.g. PDR fits 12, full buyout 80, available Mon-Thu)"
-                : "Add a note or status update"}
-            </p>
-            <textarea value={noteText} onChange={e => setNoteText(e.target.value)}
-              placeholder={editField === "privateDining"
-                ? "e.g. Private room seats 18, full buyout 120 guests available Sun–Thu. Contact events@..."
-                : "e.g. Visited March 2026 — incredible omakase, ask for the chef's selection sake pairing..."}
-              style={{ width:"100%", minHeight:80, fontSize:13, padding:"8px 10px", borderRadius:8, resize:"vertical", border:"0.5px solid #ddd", fontFamily:"system-ui, sans-serif", boxSizing:"border-box" }} />
-            <div style={{ display:"flex", gap:8, marginTop:12, justifyContent:"flex-end" }}>
-              <button onClick={() => setEditingVenue(null)} style={{ fontSize:13, padding:"6px 16px", borderRadius:8, border:"0.5px solid #ddd", background:"transparent", color:"#666", cursor:"pointer" }}>Cancel</button>
-              <button onClick={saveNote} style={{ fontSize:13, padding:"6px 16px", borderRadius:8, border:"0.5px solid #ccc", background:"#f5f5f5", color:"#111", cursor:"pointer", fontWeight:500 }}>Save</button>
-            </div>
-          </div>
-        </div>
-      )}
+
     </div>
   )
 }
