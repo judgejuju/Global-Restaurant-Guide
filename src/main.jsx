@@ -2055,21 +2055,40 @@ function App() {
                   </h2>
                   <span style={{ fontSize:12, color:"#aaa" }}>{venues.length} spots</span>
                 </div>
-                <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(300px, 1fr))", gap:12 }}>
-                  {city === "LA/WeHo"
-                    ? (() => {
-                        const groups = [["West Hollywood", venues.filter(v => v.neighborhood === "West Hollywood")], ["Los Angeles", venues.filter(v => v.neighborhood !== "West Hollywood")]]
-                        return groups.filter(([,g]) => g.length > 0).flatMap(([label, group], gi) => [
-                          <div key={label} style={{ gridColumn:"1/-1", display:"flex", alignItems:"center", gap:10, marginTop: gi > 0 ? 8 : 0, marginBottom:2 }}>
-                            <span style={{ fontSize:11, fontWeight:700, color:"#fff", background: label === "West Hollywood" ? "#8b5cf6" : "#3b82f6", borderRadius:99, padding:"2px 10px", letterSpacing:"0.04em", textTransform:"uppercase" }}>{label}</span>
+                {city === "LA/WeHo" ? (() => {
+                  const laVenues = venues.filter(v => v.neighborhood !== "West Hollywood")
+                  const wehoVenues = venues.filter(v => v.neighborhood === "West Hollywood")
+                  return (
+                    <>
+                      {laVenues.length > 0 && (
+                        <>
+                          <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:10 }}>
+                            <span style={{ fontSize:11, fontWeight:700, color:"#fff", background:"#3b82f6", borderRadius:99, padding:"3px 12px", letterSpacing:"0.05em", textTransform:"uppercase" }}>Los Angeles</span>
                             <div style={{ flex:1, height:"0.5px", background:"#e5e5e5" }} />
-                          </div>,
-                          ...group.map((venue, i) => <VenueCard key={venue.name} v={venue} rank={i+1} />)
-                        ])
-                      })()
-                    : venues.map((venue, i) => <VenueCard key={venue.name} v={venue} rank={i+1} />)
-                  }
-                </div>
+                          </div>
+                          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(300px, 1fr))", gap:12, marginBottom: wehoVenues.length > 0 ? 20 : 0 }}>
+                            {laVenues.map((venue, i) => <VenueCard key={venue.name} v={venue} rank={i+1} />)}
+                          </div>
+                        </>
+                      )}
+                      {wehoVenues.length > 0 && (
+                        <>
+                          <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:10, marginTop: laVenues.length > 0 ? 4 : 0 }}>
+                            <span style={{ fontSize:11, fontWeight:700, color:"#fff", background:"#8b5cf6", borderRadius:99, padding:"3px 12px", letterSpacing:"0.05em", textTransform:"uppercase" }}>West Hollywood</span>
+                            <div style={{ flex:1, height:"0.5px", background:"#e5e5e5" }} />
+                          </div>
+                          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(300px, 1fr))", gap:12 }}>
+                            {wehoVenues.map((venue, i) => <VenueCard key={venue.name} v={venue} rank={i+1} />)}
+                          </div>
+                        </>
+                      )}
+                    </>
+                  )
+                })() : (
+                  <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(300px, 1fr))", gap:12 }}>
+                    {venues.map((venue, i) => <VenueCard key={venue.name} v={venue} rank={i+1} />)}
+                  </div>
+                )}
               </div>
             ))
           )}
