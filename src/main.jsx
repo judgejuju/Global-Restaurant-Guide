@@ -881,7 +881,6 @@ const INITIAL_DATA = {
     v("The Galley","Nautical Dive Bar","Santa Monica's oldest restaurant since 1934 — bamboo booths, fishing nets, Christmas lights year-round, celebrity haunt where A-listers are treated like everyone else, steak and seafood, South Seas Bar",4.5,f(false,false,false,true,true,false,false,false),"https://thegalleyrestaurant.net",34.0133,-118.4812,"bar"),
     v("Ye Olde King's Head","British Pub","Santa Monica institution since 1974 — Led Zeppelin used it as a base, Oasis played the front bar, Rod Stewart, Anthony Hopkins, Noel Gallagher and Cary Grant all regulars, fish & chips, darts, karaoke Sundays",4.4,f(false,false,false,true,true,true,false,false),"https://yeoldekingshead.com",34.0178,-118.4914,"bar"),
     // Sushi
-    v("Nobu Malibu","Japanese-Peruvian","Oceanfront Nobu on PCH, celebrity central, stunning setting",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/malibu",34.0195,-118.6789,"sushi"),
     v("Sugarfish Santa Monica","Japanese Omakase","LA's best-value omakase, multiple locations, always outstanding",4.5,f(false,false,false,true,false,false,false,false,false,true),"https://sugarfishsushi.com",34.0175,-118.4922,"sushi"),
     v("Sushi Zo Santa Monica","Japanese Omakase","Pure omakase experience, beautifully fresh fish",4.7,f(false,false,false,true,false,false,true,true,false,true),"https://sushizo.us",34.0195,-118.4912,"sushi"),
   
@@ -1276,7 +1275,6 @@ const INITIAL_DATA = {
     v("Batch Gastropub","Gastropub","Craft beer and excellent burgers, Las Olas",4.4,f(false,false,true,false,false,true,false,false),"https://batchgastropub.com",26.1188,-80.1381,"bar"),
     v("Yasu Omakase Fort Lauderdale","Japanese Omakase","Intimate omakase counter, Fort Lauderdale's finest sushi experience",4.7,f(false,false,false,false,false,false,true,true,false,true),"https://yasuomakase.com",26.1192,-80.1375,"sushi"),
     v("Steak 954 Sushi Bar","Japanese","W Hotel's acclaimed sushi bar, excellent nigiri alongside steaks",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://steak954.com",26.1226,-80.1040,"sushi"),
-    v("Nobu Fort Lauderdale","Japanese-Peruvian","Nobu's Broward outpost, celebrity sushi destination",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/fort-lauderdale",26.1192,-80.1375,"sushi"),
   
     // ── Coffee & Cafés ───────────────────────────────────────────────────
     v("Subculture Coffee","Specialty Roaster","Las Olas — Fort Lauderdale outpost of WPB's best roaster, excellent espresso, beautiful Las Olas location ideal for a business coffee",4.7,f(false,false,true,false,false,false,false,true),"https://subculturecoffee.com",26.1201,-80.1390,"coffee"),
@@ -1377,8 +1375,6 @@ const INITIAL_DATA = {
     v("Morrison's Irish Pub","Pub","The festival crowd's go-to late night pub, lively after-parties, live music",4.3,f(false,false,false,true,false,true,false,false),"https://morrisonspub.com",43.5508,-7.0196,"bar"),
     v("Hôtel Barrière Le Majestic Bar","Hotel Bar","The Croisette's most glamorous hotel bar, perfect for festival season Champagne",4.6,f(false,false,false,true,true,false,false,false),"https://hotelsbarriere.com/fr/cannes/le-majestic",43.5490,-7.0176,"bar"),
     v("Bar des Célébrités at Hotel Martinez","Hotel Bar","Legendary festival bar inside the iconic Art Deco Martinez, Champagne and cocktails",4.6,f(false,false,false,true,true,false,false,false),"https://hotel-martinez.hyatt.com",43.5490,-7.0186,"bar"),
-    v("Nobu Cannes","Japanese-Peruvian","Nobu's Festival season outpost, celebrity sushi on the Croisette",4.6,f(false,false,true,false,true,false,true,false,false,true),"https://noburestaurants.com/cannes",43.5490,-7.0186,"sushi"),
-    v("Matsuhisa Cannes","Japanese","Nobu Matsuhisa's intimate Cannes sushi counter, exceptional quality",4.7,f(false,false,false,true,true,false,true,true,false,true),"https://matsuhisarestaurants.com/cannes",43.5490,-7.0196,"sushi"),
     v("Kinugawa Cannes","Japanese","Chic Japanese from the acclaimed Paris brand, Riviera outpost",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://kinugawa.fr",43.5508,-7.0186,"sushi"),
   
     // ── Coffee & Cafés ───────────────────────────────────────────────────
@@ -1485,7 +1481,7 @@ const INITIAL_DATA = {
     v("Sushi Yoshitake","Japanese Omakase","Three Michelin stars in Tokyo; the Paris outpost maintains extraordinary standards",4.8,f(true,false,false,false,false,false,true,true,false,true),"https://sushi-yoshitake.com",48.8668,-2.3296,"sushi"),
     v("Akami","Japanese Omakase","One Michelin star, outstanding omakase in the Marais, exceptional fish",4.8,f(true,false,true,false,false,false,true,true,false,true),"https://akami.fr",48.8568,-2.3556,"sushi"),
     v("Isami","Japanese","Paris's most celebrated traditional sushi, Île Saint-Louis institution",4.7,f(false,false,false,true,false,false,true,true,false,true),"https://isami-paris.com",48.8516,-2.3536,"sushi"),
-    v("Nobu Paris","Japanese-Peruvian","Nobu's elegant Paris outpost, celebrity sushi",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/paris",48.8668,-2.3296,"sushi"),
+    v("Matsuhisa Paris","Japanese-Peruvian","Chef Nobu Matsuhisa's only restaurant in France — inside Le Royal Monceau–Raffles Paris, black cod miso, wagyu tobanyaki, yellowtail jalapeño, celebrating 10 years in 2026, the Matsuhisa brand's most elevated outpost",4.7,f(false,false,true,false,true,false,true,true,false,true),"https://raffles.com/paris/dining/matsuhisa-paris",48.8668,-2.3296,"sushi"),
   
     // ── Coffee & Cafés ───────────────────────────────────────────────────
     v("Café de Flore","Iconic Café","Saint-Germain — 1887 literary institution, Sartre and Simone de Beauvoir's table, perfect café crème, the most famous café in the world",4.7,f(false,false,false,true,true,false,false,false),"https://cafedeflore.fr",48.8542,-2.3329,"coffee"),
@@ -1499,7 +1495,6 @@ const INITIAL_DATA = {
   ],
 
   "Mykonos": [
-    v("Nobu Mykonos","Japanese-Peruvian","Glamorous clifftop Nobu, jet-set crowd, stunning Aegean views",4.8,f(false,false,true,false,true,false,true,false),"https://noburestaurants.com/mykonos",37.4467,-25.3289),
     v("Spilia","Seafood","Sea cave setting, dramatic cliffside, most romantic restaurant on the island",4.8,f(false,false,true,false,true,false,true,true),"https://spilia.gr",37.4312,-25.3195),
     v("Nōema","Mediterranean","Former Semeli cinema reborn as Mykonos's sleekest restaurant — dinner that turns to dancing, the 2024 breakout",4.8,f(false,true,true,false,true,true,true,false),"https://noemamykonos.com",37.4454,-25.3283),
     v("M-eating","Greek Contemporary","Outstanding modern Greek in Mykonos Town, Michelin-cited, best food on the island",4.8,f(false,false,false,true,false,false,true,true),"https://m-eating.gr",37.4454,-25.3293),
@@ -1512,7 +1507,6 @@ const INITIAL_DATA = {
     v("COYA Mykonos","Pan-Asian Peruvian","London's acclaimed Peruvian-Asian concept arrives in Mykonos, vibrant and social",4.7,f(false,true,true,false,true,true,true,false),"https://coyarestaurant.com/mykonos",37.4454,-25.3283),
     v("Obati","Greek Contemporary","Chora's newest modern Greek taverna, wood-fired whole fish and Cycladic flavors",4.7,f(false,true,false,false,false,false,true,true),"https://obatimykonos.com",37.4454,-25.3293),
     v("Interni","Mediterranean","Romantic garden setting in Mykonos Town, consistently excellent",4.6,f(false,false,false,true,true,false,false,true),"https://internirestaurant.com",37.4454,-25.3283),
-    v("Matsuhisa Mykonos","Japanese-Peruvian","Nobu Matsuhisa's Belvedere Hotel outpost, excellent omakase experience",4.6,f(false,false,true,false,true,false,true,false),"https://belvedere.com/matsuhisa-mykonos",37.4464,-25.3313),
     v("Fokos Taverna","Greek","Remote beach taverna, traditional and magical, no menus — just whatever the boat brought in",4.7,f(false,false,false,true,false,false,false,true),"https://fokostaveran.gr",37.4801,-25.3551),
     v("Katrin","Greek","Old Town institution since 1969, traditional and beloved by every Mykonos local",4.5,f(false,false,false,true,false,false,false,true),"https://katrinmykonos.gr",37.4454,-25.3283),
     v("Galleraki","Cocktail Bar","Little Venice's most beautiful cocktail bar, waves crashing beneath, sunset institution",4.7,f(false,false,true,false,true,false,false,false),"https://gallerakimykonos.com",37.4452,-25.3274,"bar"),
