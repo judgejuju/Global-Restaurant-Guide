@@ -18,7 +18,7 @@ const US_CITIES = [
   "Sonoma","St. Helena","Venice CA","Washington DC","West Palm Beach","Lyons NYC"
 ]
 const INTL_CITIES = [
-  "Barcelona","Cannes","London","Milan","Mykonos","Paris","Seoul"
+  "Barcelona","Cabo Mexico","Cannes","London","Milan","Mykonos","Paris","Seoul"
 ]
 const CITIES = [...US_CITIES, ...INTL_CITIES]
 
@@ -999,6 +999,49 @@ const INITIAL_DATA = {
     v("Yasu Omakase Fort Lauderdale","Japanese Omakase","Intimate omakase counter, Fort Lauderdale's finest sushi experience",4.7,f(false,false,false,false,false,false,true,true,false,true),"https://yasuomakase.com",26.1192,-80.1375,"sushi"),
     v("Steak 954 Sushi Bar","Japanese","W Hotel's acclaimed sushi bar, excellent nigiri alongside steaks",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://steak954.com",26.1226,-80.1040,"sushi"),
     v("Nobu Fort Lauderdale","Japanese-Peruvian","Nobu's Broward outpost, celebrity sushi destination",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/fort-lauderdale",26.1192,-80.1375,"sushi"),
+  ],
+
+  "Cabo Mexico": [
+    // ── Cabo San Lucas — Fine Dining & Luxury ─────────────────────────────
+    v("Sunset Monalisa","Mediterranean","Perched on a cliff above the Pacific with panoramic views of El Arco at Land's End — voted one of the top 5 coolest restaurants in the world, chef Héctor Morales, private ocean terrace, mandatory sunset reservation, Jazz on the Rocks piano bar upstairs",4.8,f(false,false,true,false,true,true,true,true),"https://sunsetmonalisa.com",22.8905,-109.9167),
+    v("El Farallon","Mexican Seafood","The Resort at Pedregal's cliffside seafood sanctuary — carved into the rocks overlooking the Pacific, stocked daily with freshest local catch, lobster, grilled fish with fresh salsas, one of the most dramatic dinner settings in Mexico",4.8,f(false,false,false,true,true,false,true,true),"https://resortatpedregal.com/dining/el-farallon",22.8790,-109.9380),
+    v("Nobu Los Cabos","Japanese-Peruvian","Celebrity favorite on Medano Beach — glass interiors with ocean views, rock shrimp tempura, miso black cod, yellowtail sashimi with jalapeño, co-owned by Robert De Niro, A-list sightings guaranteed",4.7,f(false,false,true,false,true,false,true,false),"https://noburestaurants.com/loscabos",22.8871,-109.9143,"sushi"),
+    v("Edith's","Mexican Baja","Cabo institution with glowing lanterns and grand palapas — mesquite-grilled seafood platter, the legendary 'Wally Special,' romantic outdoor setting with clay chimneys, beloved by celebrities for decades",4.7,f(false,false,false,true,true,false,true,true),"https://edithscabo.com",22.8947,-109.9118),
+    v("Manta","Modern Oceanfront","The Cape Thompson Hotel's celebrated restaurant — design-forward oceanfront with panoramic El Arco views, MICHELIN-recommended, inventive Baja seafood, best for a special lunch with ocean views",4.7,f(true,false,true,false,true,false,true,false),"https://thompsonhotels.com/cabo/manta",22.8790,-109.9380),
+    v("Comal","Contemporary Mexican","Corridor restaurant with live-fire cooking and Sea of Cortez views — wood-fired tortillas, local fish, exceptional mezcal program, one of the most acclaimed new Baja dining experiences",4.7,f(false,true,true,false,false,false,true,false),"https://comaloscabos.com",22.9260,-109.8620),
+    v("Don Manuel's","Mexican Seafood","Pacific-side beachfront gem — spectacular views, flavorful Mexican cuisine, exceptional service, Cabo locals' favorite for a romantic dinner",4.7,f(false,false,false,true,true,false,false,true),"https://donmanuels.com",22.8790,-109.9380),
+    // ── Cabo San Lucas — Trendy, Hot & Social ────────────────────────────
+    v("RosaNegra","Latin American","Cabo's hottest restaurant — electric fire shows at your table, live DJs, Latin American cuisine with bold flavors, bottle happenings, bachelorette party central, cigar room, dancing after dinner",4.6,f(false,true,true,false,true,true,false,false),"https://gruporosanegra.com.mx",22.8921,-109.9126),
+    v("Bagatelle Los Cabos","French Mediterranean Beach Club","French Riviera-meets-Cabo on Medano Beach — see-and-be-seen jet-set energy, festive brunches that turn into DJ parties, famous themed events, casual chic dress code, open 11am–1am daily",4.6,f(false,true,true,false,true,true,false,false),"https://bagatelle.com/los-cabos",22.8871,-109.9130),
+    v("Taboo Beach Club","Mediterranean Beach Club","Grupo RosaNegra's exclusive ME Cabo beachclub — overlooking El Arco, international DJs, private islands and cabanas ($140–$2,200 minimum spend), sophisticated Mediterranean food and craft cocktails, the best party beach club in Cabo",4.6,f(false,true,true,false,true,true,false,false),"https://gruporosanegra.com.mx/taboo",22.8871,-109.9143,"rooftop"),
+    v("Funky Geisha","Asian Fusion","RosaNegra Group's oceanfront Asian-fusion — Japanese-Latin fusion on Medano Beach, lively dinner parties, great for groups",4.5,f(false,true,true,false,true,false,false,false),"https://gruporosanegra.com.mx/funky-geisha",22.8871,-109.9130),
+    v("Craft Rooftop","Rooftop Bar","ME Cabo's stunning rooftop with the most spectacular views of the Cabo Arch — craft cocktails, sunset DJ sets, al fresco dining, fire pits and sunken seating",4.6,f(false,true,true,false,true,true,false,false),"https://mecabo.com/craft",22.8871,-109.9143,"rooftop"),
+    v("The Rooftop at The Cape","Rooftop Lounge","Thompson Hotel's chic hilltop rooftop — panoramic Pacific and El Arco views, craft cocktails, DJs spinning house music at sunset, sophisticated crowd, perfect pre-dinner scene-setter",4.7,f(false,false,true,false,true,false,false,false),"https://thompsonhotels.com/cabo/the-rooftop",22.8790,-109.9380,"rooftop"),
+    v("SUR Beach House","Mediterranean Beach Bar","Medano Beach open-air restaurant with daily DJ sets — chilled rosé, fresh oysters, creative cocktails, international menu, day-to-night vibes overlooking the beach",4.5,f(false,true,true,false,true,true,false,false),"https://surcabo.com",22.8871,-109.9130),
+    v("Corazón Beach Club","Luxury Beach Club","Private cabanas on swimmable Medano Beach — specialty drinks, upscale resort setting, great for VIP day-drinking and celebrity watching",4.6,f(false,false,true,false,true,false,false,false),"https://corazonbeachclub.com",22.8871,-109.9143,"rooftop"),
+    v("OMNIA Dayclub","Dayclub","Vidanta's world-class dayclub — celebrity DJs (Steve Aoki, Calvin Harris, Zedd opened it), private cabanas, plunge pools, two-story VIP bungalows, open into the evening, the Vegas-style party experience in Cabo",4.6,f(false,true,true,false,true,true,false,false),"https://omnianightclub.com/loscabos",22.9600,-109.8500,"rooftop"),
+    v("Mi Casa","Traditional Mexican","Oldest adobe building in Cabo's heart — enchanting courtyard with folk art, murals, hanging lanterns, fresh tortillas daily, regional dishes from throughout Mexico, colorful and warm",4.5,f(false,false,false,true,false,false,false,false),"https://micasarestaurant.com",22.8921,-109.9090),
+    v("Baja Cantina Marina","Mexican Seafood","25 years on the marina — live music nightly from 6:30pm, authentic Mexican, sushi, pizza, burgers, fresh catch of the day, American-friendly, local expat institution",4.4,f(false,false,false,true,false,true,false,false),"https://bajacantinacabo.com",22.8905,-109.9106),
+    // ── Cabo San Lucas — Bars & Nightlife ────────────────────────────────
+    v("Cabo Wabo Cantina","Rock Bar","Sammy Hagar's legendary rock cantina since 1990 — live bands nightly covering classic rock to modern hits, legendary Waborita cocktails, walls covered in Van Halen memorabilia, iconic American institution in Cabo",4.5,f(false,false,true,false,true,true,false,false),"https://cabowabo.com",22.8910,-109.9100,"bar"),
+    v("El Squid Roe","Nightclub","35-year Cabo institution — three stories of neon, multiple dance floors, DJs, conga lines, Beyoncé and Drake spotted, open-air terrace, Tables 40, liter cocktails, the wild heart of Cabo nightlife",4.4,f(false,false,true,false,true,true,false,false),"https://elsquidroe.com",22.8905,-109.9105,"bar"),
+    v("Mango Deck","Beach Bar","Medano Beach's most famous party destination — Lovers Beach and El Arco views, bucket of Coronas, bikini contests, mechanical bull, daytime beach parties, quintessential spring-break-style Cabo fun",4.4,f(false,false,true,false,true,true,false,false),"https://mangodeckcabo.com",22.8871,-109.9143,"bar"),
+    v("Mandala","Nightclub","Late-night Las Vegas-style club — spacious dance floor, celebrity DJs, bottle service, best Halloween bash in Cabo, New Year's Eve institution, popular with industry crowd after midnight",4.4,f(false,true,true,false,true,true,false,false),"https://mandalacabo.com",22.8905,-109.9100,"bar"),
+    v("Arre Mango","Karaoke Bar","Best karaoke in Los Cabos — English and Spanish songs, nightly specials, alfresco dance hall, casual and fun, from the Mango family of bars",4.3,f(false,false,true,false,false,true,false,false),"https://arremango.com",22.8905,-109.9100,"bar"),
+    v("The Nowhere Bar","Marina Bar","Marina-side bar beloved by tourists and locals — great starting point for a night out, solid cocktails, friendly staff, relaxed vibe before heading to bigger clubs",4.4,f(false,false,true,false,false,false,false,false),"https://nowherebarcabo.com",22.8905,-109.9106,"bar"),
+    v("Baja Brewing Company","Craft Beer Bar","Cabo's original craft brewery — unique locally brewed beers, live acoustic music, relaxed atmosphere, great break from the party scene, also in SJD art district",4.5,f(false,false,true,false,false,true,false,false),"https://bajabrewingcompany.com",22.8905,-109.9100,"bar"),
+    v("The Giggling Marlin","Bar","Dirty-dancing floorshow, audience participation, full menu — Cabo's most interactive bar with bungee-style shots and legendary rowdy energy, full marina views",4.3,f(false,false,true,false,false,true,false,false),"https://gigglingmarlin.com",22.8905,-109.9106,"bar"),
+    // ── San José del Cabo — Fine Dining & Farm-to-Table ───────────────────
+    v("Flora Farms","Farm-to-Table","Los Cabos' most beloved dining destination — foothills of the Sierra Laguna, organic farm with 60+ crops, seasonal menus cooked over fire, fairy lights and rustic charm, celebrity magnet, reserve weeks ahead",4.8,f(false,false,false,true,true,false,true,true),"https://flora-farms.com",23.0600,-109.7500),
+    v("Acre Restaurant","Mexican Contemporary","MICHELIN Bib Gourmand — palm canopy jungle setting, sustainable philosophy, Chef David Fajardo's seasonal menu with herbs from their own farm, kampachi linguine with garden pesto, craft cocktails, stunning design",4.7,f(true,false,true,false,false,false,true,false),"https://acreloscabos.com",23.0700,-109.7600),
+    v("Don Sanchez","Modern Mexican","Art District cornerstone in a 200-year-old building — theatrical cooking presentation, local Baja ingredients, great tequila and mezcal list, perfect for the Thursday Art Walk night",4.7,f(false,false,true,false,true,false,true,false),"https://donsanchezrestaurant.com",23.0540,-109.6990),
+    v("Lumbre","Live-Fire Mexican","Cobblestone streets of SJD — almost everything over the live fire grill, crispy octopus tacos, zarandeado-style butterflied fish, piano bar upstairs for nightcap, Michelin-cited",4.7,f(true,false,true,false,false,true,true,false),"https://lumbrecabo.com",23.0540,-109.6990),
+    v("NAO","Japanese-Peruvian Fusion","New intimate home in SJD after cult following at El Merkado — tiraditos, nigiri with bold sauces, Nikkei tradition meets Baja ingredients, minimalist design with open kitchen bar seating, best date night in SJD",4.7,f(false,true,true,false,false,false,true,false),"https://naoloscabos.com",23.0540,-109.6980),
+    v("Agua by Larbi at One&Only Palmilla","Mediterranean Mexican Fusion","One&Only's oceanfront restaurant — Chef Larbi Dahrouch, celebrity magnet, world-class Mediterranean and Mexican fusion, sophisticated setting on the Sea of Cortez, one of the hardest tables in Los Cabos",4.8,f(false,false,false,true,true,false,true,true),"https://oneandonlypalmilla.com/dining/agua",23.0140,-109.7240),
+    v("Metate","Mexican Grill","MICHELIN Bib Gourmand — Corridor spot serving tacos and generous grilled meats on a lively patio, excellent value, locals and savvy travelers",4.6,f(true,false,false,true,false,false,false,false),"https://metateloscabos.com",22.9600,-109.8500),
+    v("Los Tamarindos","Organic Farm Dining","19th-century farmhouse organic farm outside SJD — seasonal menus from their own land, cooking classes, rustic charm, love letter to Baja ingredients, a true countryside escape from the resort corridor",4.7,f(false,false,false,true,false,false,false,true),"https://lostamarindos.com",23.0700,-109.7600),
+    v("La Lupita","Mexican Street Food Elevated","SJD art district mezcalería — best upscale street food in Cabo, tacos, sopes, mezcal flights, vibrant Thursday Art Walk stop, everything housemade",4.6,f(false,true,true,false,false,false,false,false),"https://lalupitacabo.com",23.0540,-109.6990),
+    v("Jazmin's","Mexican","SJD historic district cultural dining — vibrant local atmosphere, Thursday Art Walk essential stop, authentic regional Mexican",4.5,f(false,false,false,true,false,false,false,false),"https://jazmins.com",23.0540,-109.6990),
   ],
 
   "Barcelona": [
@@ -2125,13 +2168,13 @@ function App() {
                       fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
                       fontWeight: isActive ? 500 : 400,
                       background: isActive
-                        ? (isLyons ? "#ebebeb" : isA16z ? "#fdf0d9" : "#dbeafe")
+                        ? "#dbeafe"
                         : (isLyons ? "#f5f5f5" : isA16z ? "#fdf8ef" : "transparent"),
                       border: `0.5px solid ${isActive
-                        ? (isLyons ? "#999999" : isA16z ? "#cf7f00" : "#3b82f6")
+                        ? "#3b82f6"
                         : (isLyons ? "#d1d1d1" : isA16z ? "#e8c47a" : "#ddd")}`,
                       color: isActive
-                        ? (isLyons ? "#111111" : isA16z ? "#7a4a00" : "#1d4ed8")
+                        ? "#1d4ed8"
                         : (isLyons ? "#666666" : isA16z ? "#9a5f00" : "#666"),
                     }}>
                     {c === "Lyons NYC" ? "⭐ Lyons NYC" : c}
@@ -2149,9 +2192,9 @@ function App() {
                     style={{
                       fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
                       fontWeight: isActive ? 500 : 400,
-                      background: isActive ? (isA16z ? "#fdf0d9" : "#dbeafe") : (isA16z ? "#fdf8ef" : "transparent"),
-                      border: `0.5px solid ${isActive ? (isA16z ? "#cf7f00" : "#3b82f6") : (isA16z ? "#e8c47a" : "#ddd")}`,
-                      color: isActive ? (isA16z ? "#7a4a00" : "#1d4ed8") : (isA16z ? "#9a5f00" : "#666"),
+                      background: isActive ? "#dbeafe" : (isA16z ? "#fdf8ef" : "transparent"),
+                      border: `0.5px solid ${isActive ? "#3b82f6" : (isA16z ? "#e8c47a" : "#ddd")}`,
+                      color: isActive ? "#1d4ed8" : (isA16z ? "#9a5f00" : "#666"),
                     }}>
                     {c}
                   </button>
@@ -2206,13 +2249,13 @@ function App() {
                       fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
                       fontWeight: isActive ? 500 : 400,
                       background: isActive
-                        ? (isLyons ? "#ebebeb" : isA16z ? "#fdf0d9" : "#dbeafe")
+                        ? "#dbeafe"
                         : (isLyons ? "#f5f5f5" : isA16z ? "#fdf8ef" : "transparent"),
                       border: `0.5px solid ${isActive
-                        ? (isLyons ? "#999999" : isA16z ? "#cf7f00" : "#3b82f6")
+                        ? "#3b82f6"
                         : (isLyons ? "#d1d1d1" : isA16z ? "#e8c47a" : "#ddd")}`,
                       color: isActive
-                        ? (isLyons ? "#111111" : isA16z ? "#7a4a00" : "#1d4ed8")
+                        ? "#1d4ed8"
                         : (isLyons ? "#666666" : isA16z ? "#9a5f00" : "#666"),
                     }}>
                     {c === "Lyons NYC" ? "⭐ Lyons NYC" : c}{hasUpdates && <span style={{ display:"inline-block", width:6, height:6, borderRadius:99, background:"#1D9E75", marginLeft:5, verticalAlign:"middle", marginTop:-2 }} />}
@@ -2231,9 +2274,9 @@ function App() {
                     style={{
                       fontSize:13, padding:"5px 12px", borderRadius:99, cursor:"pointer",
                       fontWeight: isActive ? 500 : 400,
-                      background: isActive ? (isA16z ? "#fdf0d9" : "#dbeafe") : (isA16z ? "#fdf8ef" : "transparent"),
-                      border: `0.5px solid ${isActive ? (isA16z ? "#cf7f00" : "#3b82f6") : (isA16z ? "#e8c47a" : "#ddd")}`,
-                      color: isActive ? (isA16z ? "#7a4a00" : "#1d4ed8") : (isA16z ? "#9a5f00" : "#666"),
+                      background: isActive ? "#dbeafe" : (isA16z ? "#fdf8ef" : "transparent"),
+                      border: `0.5px solid ${isActive ? "#3b82f6" : (isA16z ? "#e8c47a" : "#ddd")}`,
+                      color: isActive ? "#1d4ed8" : (isA16z ? "#9a5f00" : "#666"),
                     }}>
                     {c}{hasUpdates && <span style={{ display:"inline-block", width:6, height:6, borderRadius:99, background:"#1D9E75", marginLeft:5, verticalAlign:"middle", marginTop:-2 }} />}
                   </button>
