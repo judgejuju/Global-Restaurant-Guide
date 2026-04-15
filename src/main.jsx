@@ -35,6 +35,7 @@ const FILTERS = [
   { key:"quiet", label:"Quiet" },
   { key:"privateClub", label:"Private Club" },
   { key:"sushi", label:"Sushi" },
+  { key:"coffee", label:"☕ Coffee" },
 ]
 
 const TAG_COLORS = {
@@ -48,6 +49,7 @@ const TAG_COLORS = {
   quiet:       { bg:"#F1EFE8", color:"#5F5E5A", label:"Quiet" },
   privateClub: { bg:"#F0E6FB", color:"#6B21A8", label:"Private Club" },
   sushi:       { bg:"#FFF3E0", color:"#E65100", label:"Sushi" },
+  coffee:      { bg:"#FDF6EC", color:"#7B4F2E", label:"☕ Coffee" },
 }
 
 const STATUS_COLORS = {
@@ -125,6 +127,16 @@ const INITIAL_DATA = {
     v("Sushi Of Gari","Japanese Omakase","UES icon since 1997, legendary sautéed tomato over buttery salmon piece",4.6,f(false,false,false,true,true,false,false,true,false,true),"https://sushiofgari.com",40.7741,-73.9595,"sushi"),
     v("Blue Ribbon Sushi","Japanese","Late-night sushi institution, chefs' favorite after-shift spot",4.6,f(false,false,false,true,true,false,false,false,false,true),"https://blueribbonrestaurants.com",40.7255,-74.0020,"sushi"),
     v("Sugarfish","Japanese","LA's omakase gift to NYC, accessibly priced, multiple Manhattan locations",4.5,f(false,false,false,true,false,false,false,false,false,true),"https://sugarfishsushi.com",40.7397,-73.9897,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Café Leon Dore","Café","Nolita — attached to ultra-hip Aimé Leon Dore boutique, Greek-inspired freddo cappuccino and freddo espresso, cult following of fashion creatives, lines out the door, most stylish café in NYC",4.7,f(false,false,true,false,true,false,false,false),"https://aimeleondore.com/pages/cafe-leon-dore",40.7231,-73.9954,"coffee"),
+    v("SEY Coffee","Specialty Roaster","Bushwick micro-roastery, Nordic-style light roasts, watch roasting through glass wall, Aeropress brews, gratuity-free Scandinavian model, cardamom buns, best specialty coffee in NYC",4.8,f(false,true,true,false,false,false,false,true),"https://seycoffee.com",40.7061,-73.9276,"coffee"),
+    v("Maman","French Café","Multiple locations — French-inspired all-day café, honey lavender latte, kouign-maman pastries, laptop-free foster-conversation vibe, great for a casual breakfast meeting",4.6,f(false,false,true,false,false,false,false,true),"https://mamannyc.com",40.7219,-74.0046,"coffee"),
+    v("Hi-Collar","Japanese Kissaten","East Village — kissaten-style café by day, sake bar by night, siphon-brewed coffee, Japanese hot cakes, pork katsu sandwiches, rock garden seating, one of NYC's most unique café experiences",4.7,f(false,false,true,false,false,false,false,true),"https://hi-collar.com",40.7265,-73.9841,"coffee"),
+    v("Felix Roasting Co.","Specialty Coffee","SoHo — espresso in a wine glass with tonic water, house-made non-dairy milks, proprietary syrups, heater-filled outdoor seating, beautiful design-forward space",4.6,f(false,false,true,false,false,false,false,false),"https://felixroastingco.com",40.7236,-74.0023,"coffee"),
+    v("Black Fox Coffee","Specialty Coffee","FiDi — World Barista Championship competitors on staff, sleek spacious downtown café, great for a financial district business meeting, multiple local roasters",4.7,f(false,false,true,false,false,false,false,true),"https://blackfoxcoffee.com",40.7074,-74.0113,"coffee"),
+    v("Devoción","Colombian Roaster","Williamsburg — 15-day farm-to-cup Colombian beans, stunning greenhouse interior with living plant wall, single-origin pour-overs, best coffee sourcing story in NYC",4.7,f(false,false,true,false,false,false,false,false),"https://devocion.com",40.7145,-73.9574,"coffee"),
+    v("La Cabra","Danish Café","NoHo — Copenhagen import, high-end pour-overs, famous cardamom buns, minimalist Nordic aesthetic, beloved by tech workers and coffee aficionados",4.6,f(false,false,true,false,false,false,false,true),"https://lacabra.dk",40.7267,-73.9940,"coffee"),
   ],
 
   "Miami": [
@@ -191,6 +203,16 @@ const INITIAL_DATA = {
     v("Gekko","Japanese Steakhouse","Bad Bunny and David Grutman's celebrity Japanese steakhouse, sushi and wagyu",4.6,f(false,false,true,false,true,false,true,false,false,true),"https://gekkomiami.com",25.7908,-80.1360,"sushi"),
     v("Sushi Azabu Miami","Japanese","Outstanding traditional sushi, hidden counter, Miami Beach",4.6,f(false,false,false,false,false,false,true,true,false,true),"https://sushiazabu.com/miami",25.7908,-80.1340,"sushi"),
     v("Nobu Miami Beach","Japanese-Peruvian","The original celebrity sushi destination, Nobu Matsuhisa classic",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/miami-beach",25.7814,-80.1300,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Panther Coffee","Specialty Roaster","Wynwood / Multiple locations — Miami's defining specialty coffee brand, single-origin pour-overs, bright industrial Wynwood flagship perfect for creative meetings, the café that put Miami on the specialty coffee map",4.7,f(false,false,true,false,false,false,false,true),"https://panthercoffee.com",25.7989,-80.1998,"coffee"),
+    v("Zak the Baker","Jewish Bakery Café","Wynwood — wood-fired breads, rugelach, challah French toast, excellent coffee, stunning industrial space, one of Miami's most beloved all-day cafés and great for a creative-area meeting",4.7,f(false,false,true,false,true,false,false,false),"https://zakthebaker.com",25.7989,-80.1998,"coffee"),
+    v("Café La Trova","Cuban Coffee & Culture","Little Havana — world-class cocktail bar that also does exceptional Cuban coffee, cafecito and cortadito done perfectly, vibrant cultural experience",4.8,f(false,false,true,false,true,true,false,false),"https://cafelatrova.com",25.7650,-80.2360,"coffee"),
+    v("Eternity Coffee Roasters","Specialty Roaster","Wynwood / Brickell — Miami-grown roaster, exceptional single-origin espresso, sleek café spaces, excellent Brickell location for a business coffee meeting",4.6,f(false,false,true,false,false,false,false,true),"https://eternitycoffee.com",25.7617,-80.1918,"coffee"),
+    v("Vice City Bean","Specialty Coffee","Coconut Grove / Coral Gables — Miami institution, expertly sourced beans, relaxed neighborhood café feel, excellent choice for a Coral Gables meeting",4.6,f(false,false,false,true,false,false,false,true),"https://vicecitybean.com",40.7231,-73.9954,"coffee"),
+    v("Café Bastian","French Café","Design District — Parisian-style café in one of Miami's most chic neighborhoods, excellent espresso, beautiful outdoor seating, great for a design district meeting",4.6,f(false,false,true,false,true,false,false,false),"https://cafebastian.com",25.8100,-80.1900,"coffee"),
+    v("Ironside Coffee","All-Day Café","Little River — neighborhood anchor in Miami's hottest emerging arts district, great coffee, excellent food, casual and creative for meetings",4.6,f(false,true,true,false,false,false,false,true),"https://ironsidemiami.com",25.8200,-80.1900,"coffee"),
+    v("Gigi","Asian Coffee & Food","Wynwood — Japanese-inspired specialty coffee bar, matcha, hojicha, and inventive espresso drinks, beautiful minimal design, perpetual buzz",4.6,f(false,true,true,false,false,false,false,false),"https://gigimiami.com",25.7989,-80.1998,"coffee"),
   ],
 
   "LA/WeHo": [
@@ -242,6 +264,16 @@ const INITIAL_DATA = {
     v("Sushi Park","Japanese Omakase","Hidden rooftop omakase on Sunset Strip — Taylor Swift, Beyoncé, the Kardashians all keep it secret, no salad/no tempura/no 'trendy sushi' sign at the door, pure outstanding quality",4.7,f(false,false,false,true,true,false,true,false,false,true),"https://sushiparkla.com",34.0917,-118.3770,"sushi","West Hollywood"),
     v("Nobu Malibu","Japanese-Peruvian","Oceanfront Nobu on PCH — celebrity central, stunning Malibu setting, sashimi tacos",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/malibu",34.0195,-118.6789,"sushi","Los Angeles"),
     v("Sushi Zo","Japanese Omakase","Pure omakase experience — beautifully fresh fish, artful preparation, West LA institution",4.7,f(false,false,false,true,false,false,true,true,false,true),"https://sushizo.us",34.0195,-118.4912,"sushi","Los Angeles"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Alfred Coffee","Specialty Café","Multiple WeHo / LA locations — the Angeleno Instagram café institution, chagaccino, iced vanilla latte, great vegan burritos, seasonal specials, multiple beautiful locations",4.6,f(false,false,true,false,true,false,false,false),"https://alfred.la",34.0836,-118.3819,"coffee"),
+    v("Café Tondo","Mexican-Inspired Café","Chinatown — neon-lit Streamline Modern building under train tracks, Mexico City coffee culture, conchas, chilaquiles, daytime café becomes wine bar and nightlife spot at night",4.7,f(false,true,true,false,false,false,false,false),"https://cafetondo.com",34.0622,-118.2344,"coffee"),
+    v("Dayglow","Specialty Coffee Lab","NoHo — LA import from NYC, range of beans from roasters around the world, inventive drinks like The Morning Show, transforms into cocktail bar Niteglow at night",4.7,f(false,true,true,false,false,false,false,false),"https://dayglow.coffee",34.1016,-118.3249,"coffee"),
+    v("Go Get Em Tiger","Specialty Roaster","Multiple LA locations — GGET is LA's finest specialty roaster, milk bar-style counters, perfect espresso, beautiful Larchmont flagship ideal for a Hancock Park meeting",4.7,f(false,false,true,false,false,false,false,true),"https://gget.com",34.0769,-118.3273,"coffee"),
+    v("Maru Coffee","Japanese-Inspired","Los Feliz / Silver Lake — serene minimalist aesthetic, excellent matcha and espresso, Japanese sensibility, great for quiet focused morning work or a calm meeting",4.6,f(false,false,true,false,false,false,false,true),"https://marucoffee.com",34.0866,-118.2948,"coffee"),
+    v("Café Gratitude","Organic All-Day Café","Arts District / Venice — plant-based all-day café with excellent coffee, vibrant and energetic, beautiful space, celebrity sightings, great for a casual healthful meeting",4.5,f(false,false,true,false,true,false,false,false),"https://cafegratitude.com",34.0400,-118.2300,"coffee"),
+    v("Highly Likely","Neighborhood Café","West Adams — specialty coffee, Ok Great (Mexican Coke, espresso, cardamom bitters), breakfast until 3pm, airy open setting, one of LA's trendiest neighborhood spots",4.7,f(false,true,true,false,false,false,false,false),"https://highlylikely.la",34.0122,-118.3273,"coffee"),
+    v("Blue Bottle Coffee","Specialty Roaster","Venice / Silver Lake — Bay Area import, meticulous pour-overs, New Orleans iced coffee, beautiful light-filled Venice café perfect for a Westside meeting",4.6,f(false,false,true,false,false,false,false,true),"https://bluebottlecoffee.com",33.9906,-118.4714,"coffee"),
   ],
 
   "Las Vegas": [
@@ -280,6 +312,14 @@ const INITIAL_DATA = {
     v("Kame Japanese Cuisine","Japanese Omakase","Intimate omakase at Resorts World, outstanding quality and sourcing",4.8,f(false,true,false,false,false,false,true,true,false,true),"https://rwlasvegas.com/restaurant/kame",36.1271,-115.1641,"sushi"),
     v("Zuma Las Vegas","Japanese Robatayaki","Rooftop Japanese at the Cosmopolitan, celebrity scene and serious robata",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://zumarestaurant.com/zuma-las-vegas",36.1097,-115.1740,"sushi"),
     v("Sushi Hiro","Japanese Omakase","Off-Strip intimate omakase, best value sushi in Vegas known to locals",4.7,f(false,false,false,true,false,false,true,true,false,true),"https://sushihiro.com",36.1200,-115.1400,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("PublicUs","All-Day Café","Downtown Arts District — Vegas's coolest all-day café and neighborhood restaurant, excellent coffee, avocado toast, beautiful design, best meeting spot off the Strip",4.7,f(false,false,true,false,false,false,false,true),"https://publicuslv.com",36.1714,-115.1428,"coffee"),
+    v("Mothership Coffee Roasters","Specialty Roaster","Henderson / Downtown — Vegas's premier specialty roaster, exceptional single-origin beans, clean minimalist café, professional setting for a business meeting",4.7,f(false,false,true,false,false,false,false,true),"https://mothershipcoffee.com",36.1000,-115.1400,"coffee"),
+    v("Vesta Coffee Roasters","Specialty Roaster","Arts District — Las Vegas born-and-raised roaster, excellent seasonal espresso, spacious and welcoming, one of the best off-Strip coffee spots",4.6,f(false,false,true,false,false,false,false,true),"https://vestacoffee.com",36.1714,-115.1428,"coffee"),
+    v("Alchemy Coffee","Italian-Inspired Café","Summerlin — charming Italian-landscape-themed café, smoked lox bagel, beautiful frappe drinks, specialty coffee, excellent for a Summerlin business coffee",4.6,f(false,false,true,false,false,false,false,true),"https://alchemycoffeelv.com",36.1428,-115.3200,"coffee"),
+    v("Sambalatte Torrefazione","Italian Espresso","Boca Park / Summerlin — Italian-style espresso bar and torrefazione, European café culture with Nevada sunshine, excellent cortado",4.6,f(false,false,true,false,false,false,false,true),"https://sambalatte.com",36.1714,-115.2900,"coffee"),
+  ],
 
   "San Francisco": [
     v("Quince","California Italian","Three Michelin stars, Michael Tusk's seasonal masterpiece",4.9,f(true,false,false,true,false,false,true,true),"https://quincerestaurant.com",37.7956,-122.4059),
@@ -353,6 +393,16 @@ const INITIAL_DATA = {
     v("Sushi Ran","Japanese","Legendary Bay Area sushi in Sausalito, exceptional sake selection",4.7,f(false,false,false,true,false,false,false,true,false,true),"https://sushiran.com",37.8590,-122.4863,"sushi"),
     v("Chotto Matte","Japanese-Peruvian","Nikkei cuisine in a stunning multi-floor Embarcadero space, lively and buzzy",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://chotto-matte.com/san-francisco",37.7955,-122.3927,"sushi"),
     v("Zentarou","Japanese Omakase","Inner Sunset spa-like sanctuary, buttery toro, A5 wagyu with gold leaf and caviar",4.6,f(false,false,false,false,false,false,true,true,false,true),"https://zentarou.com",37.7618,-122.4648,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Sightglass Coffee","Specialty Roaster","SoMa — SF's most stunning café, soaring industrial warehouse space, exceptional house roasts, excellent for a creative business meeting, the gold standard of SF coffee",4.8,f(false,false,true,false,false,false,false,true),"https://sightglasscoffee.com",37.7749,-122.4028,"coffee"),
+    v("Ritual Coffee Roasters","Specialty Roaster","Mission / Hayes Valley — SF specialty coffee pioneer, single-origin pour-overs, bright and welcoming spaces, consistent quality that set the standard for Bay Area coffee",4.7,f(false,false,false,true,false,false,false,true),"https://ritualcoffee.com",37.7615,-122.4174,"coffee"),
+    v("Blue Bottle Coffee","Specialty Roaster","Multiple SF locations — the café that helped define modern third-wave coffee culture globally, New Orleans iced coffee, meticulous pour-overs, iconic Ferry Building location",4.6,f(false,false,false,true,false,false,false,true),"https://bluebottlecoffee.com",37.7955,-122.3937,"coffee"),
+    v("Andytown Coffee Roasters","Specialty Roaster","Outer Sunset — cult-favorite Snowy Plover (sparkling water, Riondo Prosecco, house coffee), fog-belt neighborhood gem, beautiful seasonal drinks, loyally local SF institution",4.7,f(false,false,true,false,false,false,false,true),"https://andytownsf.com",37.7535,-122.5067,"coffee"),
+    v("Paper Son Coffee","Asian-Inspired Café","Dogpatch — multi-roaster lineup prioritizing local roasters, creative Asian-inspired drinks (pandan aerocano, guava pillow coffee soda, cardamom cappuccino), immigrant story behind every cup",4.7,f(false,true,true,false,false,false,false,false),"https://papersoncoffee.com",37.7610,-122.3889,"coffee"),
+    v("The Mill","All-Day Café","Divisadero — Four Barrel / Josey Baker Bread collaboration, legendary thick-cut toast, spacious and airy, excellent spot for a relaxed business meeting or long work session",4.6,f(false,false,true,false,false,false,false,true),"https://themillsf.com",37.7762,-122.4384,"coffee"),
+    v("Tartine Manufactory","Bakery & Coffee","Mission — James Beard Award-winning bakery with exceptional coffee program, Danishes, croissants, and country loaves, beautiful industrial space, perpetual buzz",4.7,f(false,false,true,false,true,false,false,false),"https://tartinebakery.com/manufactory",37.7622,-122.4119,"coffee"),
+    v("Equator Coffees","Specialty Roaster","Multiple SF locations — certified B Corp, sustainable sourcing, excellent espresso, professional space at Fillmore great for casual meetings",4.6,f(false,false,false,true,false,false,false,true),"https://equatorcoffees.com",37.7987,-122.4355,"coffee"),
   ],
 
   "Chicago": [
@@ -382,6 +432,16 @@ const INITIAL_DATA = {
     v("Arami","Japanese","Intimate West Town Japanese, outstanding omakase and izakaya",4.7,f(false,false,false,true,false,false,true,true,false,true),"https://aramichicago.com",41.8914,-87.6772,"sushi"),
     v("Juno","Japanese Omakase","Lincoln Park omakase counter, excellent quality for the price",4.6,f(false,false,false,false,false,false,true,true,false,true),"https://junochicago.com",41.9264,-87.6404,"sushi"),
     v("Momotaro","Japanese","Boka Restaurant Group's stunning River North Japanese",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://momotarochicago.com",41.8914,-87.6522,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Intelligentsia Coffee","Specialty Roaster","Millennium Park / Wicker Park — original pioneer of direct-trade specialty coffee, pour-overs and espresso of exceptional quality, beautiful light-filled flagship, ideal for a polished business coffee",4.7,f(false,false,false,true,false,false,false,true),"https://intelligentsiacoffee.com",41.8826,-87.6233,"coffee"),
+    v("Sawada Coffee","Latte Art","West Loop — world barista champion Hiroshi Sawada's café inside Green Street Smoked Meats, Military Latte topped with matcha foam, some of the best latte art in America",4.8,f(false,true,true,false,true,false,false,false),"https://sawadacoffee.com",41.8826,-87.6498,"coffee"),
+    v("Metric Coffee","Specialty Roaster","Fulton Market — micro-roastery in a working warehouse, exceptional single-origin roasts, minimalist café with serious coffee chops, great for West Loop business meetings",4.7,f(false,false,true,false,false,false,false,true),"https://metriccoffee.com",41.8863,-87.6564,"coffee"),
+    v("Dark Matter Coffee","Quirky Roaster","Multiple locations — Chicago's most original coffee brand, cosmic-themed, excellent single origins, Osmium flagship is the most beautiful café in the city",4.7,f(false,false,true,false,false,false,false,false),"https://darkmattercoffee.com",41.9006,-87.6780,"coffee"),
+    v("Café Integral","Nicaraguan Coffee","River North — all beans from Nicaragua, owner personally knows the farmers, distinct terroir-driven flavor unlike anything else, intimate and stylish",4.6,f(false,false,true,false,false,false,false,true),"https://cafeintegral.com",40.7265,-73.9841,"coffee"),
+    v("Ipsento 606","Neighborhood Café","Wicker Park — beloved community hangout on the 606 trail, excellent seasonal drinks, horchata latte, warm welcoming energy, great for laptop work or casual meetings",4.6,f(false,false,true,false,false,false,false,true),"https://ipsento.com",41.9104,-87.6780,"coffee"),
+    v("Heritage Bicycles","Café & Bike Shop","Lakeview — artisan coffee meets vintage bicycle culture, exposed brick, communal tables, exceptional beans from top roasters, ideal casual meeting spot",4.6,f(false,false,true,false,false,false,false,true),"https://heritagebikes.com",41.9418,-87.6533,"coffee"),
+    v("Limitless Coffee","Specialty Café","Streeterville — sleek tech-forward café, great espresso, spacious and professional, popular with business crowd, excellent for downtown Chicago meetings",4.5,f(false,false,true,false,false,false,false,true),"https://limitlesscoffee.com",41.8947,-87.6209,"coffee"),
   ],
 
   "Boston": [
@@ -426,6 +486,16 @@ const INITIAL_DATA = {
     v("Uni","Japanese Sashimi Bar","One Michelin star, sashimi bar inside Eliot Hotel, Back Bay gem",4.7,f(true,false,false,false,true,false,true,true,false,true),"https://uniboston.com",42.3508,-71.0858,"sushi"),
     v("Oishii Boston","Japanese Omakase","Acclaimed omakase, South End, consistently excellent",4.7,f(false,false,false,true,false,false,true,true,false,true),"https://oishiiboston.com",42.3413,-71.0703,"sushi"),
     v("Ebisuya","Japanese","Medford Japanese institution, locals-only secret, outstanding quality",4.6,f(false,false,false,true,false,false,false,true,false,true),"https://ebisuyarestaurant.com",42.4184,-71.1063,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("George Howell Coffee","Specialty Roaster","Multiple locations — Boston's most acclaimed specialty roaster, meticulous single-origin brews, pioneer of third-wave coffee in New England, Godfrey Hotel location ideal for business meetings",4.8,f(false,false,true,false,false,false,false,true),"https://georgehowellcoffee.com",42.3601,-71.0589,"coffee"),
+    v("Broadsheet Coffee Roasters","Specialty Roaster","Cambridge / Boston — Nordic-influenced micro-roastery, exceptional pour-overs, beautiful minimalist space, beloved by Harvard/MIT crowd, great for a Cambridge business coffee",4.7,f(false,false,true,false,false,false,false,true),"https://broadsheetcoffee.com",42.3736,-71.1190,"coffee"),
+    v("Ogawa Coffee","Japanese Café","Downtown / Back Bay — Kyoto-based import, Japanese precision coffee methods, beautiful interiors, matcha and cold brew, one of Boston's most stylish café spaces",4.7,f(false,false,true,false,false,false,false,true),"https://ogawacoffeeusa.com",42.3552,-71.0643,"coffee"),
+    v("Thinking Cup","Specialty Coffee","Multiple Boston locations — Stumptown beans, excellent espresso, cozy and welcoming, excellent pastries, the most popular coffee stop in Boston Common area",4.6,f(false,false,false,true,false,false,false,true),"https://thinkingcup.com",42.3551,-71.0639,"coffee"),
+    v("Render Coffee","All-Day Café","South End — beautifully designed neighborhood café, seasonal drinks, excellent sandwiches, creative community vibe, one of the South End's favorite hangouts",4.6,f(false,false,true,false,false,false,false,true),"https://rendercoffee.com",42.3421,-71.0768,"coffee"),
+    v("Gracenote Coffee","Specialty Roaster","Leather District — small-batch roasting, precise espresso program, sleek minimal aesthetic, excellent pre-meeting coffee near South Station",4.7,f(false,false,true,false,false,false,false,true),"https://gracenotecoffee.com",42.3516,-71.0531,"coffee"),
+    v("Area Four","Bakery & Coffee","MIT / Cambridge — wood-fired bakery with outstanding coffee, enormous pastries and excellent sandwiches, great for Kendall Square / MIT area meetings",4.6,f(false,false,true,false,false,false,false,true),"https://areafour.com",42.3621,-71.0888,"coffee"),
+    v("Tatte Bakery & Café","Israeli Bakery Café","Multiple locations — Israeli-inspired all-day café, shakshuka, burekas, tahini cookies, beautiful design, very popular for casual meetings throughout Boston",4.6,f(false,false,true,false,true,false,false,false),"https://tattebakery.com",42.3601,-71.0589,"coffee"),
   ],
 
   "Washington DC": [
@@ -486,6 +556,16 @@ const INITIAL_DATA = {
     v("Masako","Japanese Omakase","Acclaimed new DC omakase counter — exceptional fish sourcing, one of the most talked-about new sushi experiences in the city",4.7,f(false,true,false,false,false,false,true,true,false,true),"https://masakodc.com",38.9008,-77.0295,"sushi"),
     v("Himitsu","Japanese","Petworth neighborhood omakase, Michelin Bib Gourmand — creative and fun, best value omakase in DC",4.7,f(false,false,true,false,false,false,true,false,false,true),"https://himitsud.com",38.9547,-77.0221,"sushi"),
     v("Nobu Washington DC","Japanese-Peruvian","Georgetown Nobu — celebrity sushi in a beautiful space, great for a political dinner with out-of-town guests",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/washington-dc",38.9047,-77.0595,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Compass Coffee","DC Roaster","Multiple DC locations — DC's hometown specialty roaster, bright and welcoming cafés throughout the city, excellent espresso and seasonal drinks, great for Capitol Hill or downtown meetings",4.6,f(false,false,true,false,false,false,false,true),"https://compasscoffee.com",38.9040,-77.0394,"coffee"),
+    v("La Cosecha Café Unido","Colombian Café","Union Market — first US location of Panama's beloved Café Unido, Latin American specialty coffee culture, stunning space inside La Cosecha food hall, excellent for a Shaw / NoMa meeting",4.7,f(false,true,true,false,false,false,false,true),"https://cafeunido.com",38.9069,-76.9969,"coffee"),
+    v("Slipstream","All-Day Café","Logan Circle — DC's most celebrated café, two floors, spectacular seasonal espresso menu, excellent food, ideal for a stylish Logan Circle meeting",4.7,f(false,false,true,false,false,false,false,true),"https://slipstreamdc.com",38.9122,-77.0314,"coffee"),
+    v("Wydown Coffee","Specialty Coffee","14th Street / Georgetown — precise specialty coffee, beautiful neighborhood spaces, popular with the professional DC crowd, excellent for pre-meeting caffeine",4.6,f(false,false,true,false,false,false,false,true),"https://wydowncoffee.com",38.9204,-77.0319,"coffee"),
+    v("Peregrine Espresso","Specialty Roaster","Capitol Hill / Penn Quarter — DC specialty pioneer, single-origin espresso, clean minimalist aesthetic, excellent for a Capitol Hill area meeting",4.7,f(false,false,true,false,false,false,false,true),"https://peregrineespresso.com",38.8894,-77.0033,"coffee"),
+    v("Lost Sock Roasters","Specialty Coffee","Columbia Heights — quirky beloved neighborhood roaster, excellent single-origins, community-centric, cozy tables great for a low-key working meeting",4.6,f(false,false,true,false,false,false,false,true),"https://lostsockroasters.com",38.9280,-77.0319,"coffee"),
+    v("The Coffee Bar","All-Day Café","Shaw / 14th Street — beautifully designed DC café, serious espresso program, excellent sandwiches and pastries, great Bluetooth-speaker vibe for casual meetings",4.6,f(false,false,true,false,false,false,false,true),"https://thecoffeebardc.com",38.9122,-77.0314,"coffee"),
+    v("Jolt N Bolt","Neighborhood Café","Dupont Circle — laid-back Dupont institution, strong coffee, mismatched furniture, neighborhood characters, unpretentious and charming all-day spot",4.5,f(false,false,false,true,false,false,false,true),"https://joltnboltcoffee.com",38.9096,-77.0434,"coffee"),
   ],
 
   "Scottsdale": [
@@ -523,6 +603,13 @@ const INITIAL_DATA = {
     v("Sushi Roku","Japanese","Celebrity-friendly sushi, always a scene in Old Town",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://sushiroku.com",33.4948,-111.9232,"sushi"),
     v("Hana Japanese Eatery","Japanese Omakase","Best omakase in Arizona, intimate and brilliant",4.7,f(false,false,false,false,false,false,true,true,false,true),"https://hanajapanese.com",33.4973,-112.0804,"sushi"),
     v("Nobu Scottsdale","Japanese-Peruvian","Scottsdale's celebrity sushi destination, Fashion Square",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/scottsdale",33.5092,-111.8993,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Berdena's","Specialty Café","Old Town Scottsdale — bright tiled interior, honey lavender latte, cardamom rose latte, beautiful pastries, one of the most Instagrammable cafés in Arizona",4.7,f(false,false,true,false,false,false,false,false),"https://berdenascoffee.com",33.4942,-111.9261,"coffee"),
+    v("Press Coffee","Arizona Roaster","Multiple Scottsdale locations — Arizona's most acclaimed specialty roaster, excellent espresso, bright welcoming cafés, ideal for a Scottsdale business meeting",4.7,f(false,false,true,false,false,false,false,true),"https://presscoffee.com",33.4942,-111.9261,"coffee"),
+    v("Giant Coffee","Design-Forward Café","Downtown Phoenix / Scottsdale — stunning industrial space, excellent espresso program, beloved by the creative professional community",4.6,f(false,false,true,false,false,false,false,true),"https://giantcoffee.com",33.4484,-112.0740,"coffee"),
+    v("Cartel Coffee Lab","Specialty Roaster","Old Town / Multiple — Phoenix-born roaster, excellent single-origin espresso, serious coffee culture, great for a relaxed Old Town meeting",4.7,f(false,false,true,false,false,false,false,true),"https://cartelcoffeelab.com",33.4942,-111.9261,"coffee"),
+    v("Sip Coffee House","Neighborhood Café","North Scottsdale — warm neighborhood café, excellent seasonal drinks, comfortable seating ideal for client meetings or a long work session",4.5,f(false,false,false,true,false,false,false,true),"https://sipcoffeehouse.com",33.6236,-111.9261,"coffee"),
   ],
 
   "Napa": [
@@ -691,6 +778,13 @@ const INITIAL_DATA = {
     v("Robin Menlo Park","Japanese Omakase","Peninsula outpost of SF's acclaimed Hayes Valley omakase",4.7,f(false,false,true,false,true,false,true,false,false,true),"https://robinomakase.com/menlo-park",37.4527,-122.1822,"sushi"),
     v("Naomi Sushi","Japanese","Long-standing Japanese institution in Menlo Park",4.4,f(false,false,false,true,false,false,false,false,false,true),"https://naomisushi.com",37.4527,-122.1822,"sushi"),
     v("Sushi Sus","Japanese Omakase","Best omakase counter in Palo Alto area, excellent fish",4.6,f(false,false,false,false,false,false,true,true,false,true),"https://sushisus.com",37.4440,-122.1610,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Philz Coffee","Specialty Coffee","Multiple Peninsula locations — Phil Jaber's beloved SF Bay institution, hand-crafted pour-over blends, Mint Mojito iced coffee cult classic, Silicon Valley's power-meeting café",4.6,f(false,false,true,false,false,false,false,true),"https://philzcoffee.com",37.4530,-122.1817,"coffee"),
+    v("Red Rock Coffee","Neighborhood Café","Mountain View — beloved Peninsula institution, acoustic live music, community tables, excellent espresso, great for a casual Sand Hill / University Ave meeting",4.6,f(false,false,false,true,true,false,false,true),"https://redrockcoffee.org",37.3861,-122.0839,"coffee"),
+    v("Coupa Café","Venezuelan Coffee","Multiple Palo Alto / Menlo Park — Venezuelan-inspired café, cacao-infused drinks, beautiful Stanford-adjacent locations, the unofficial outdoor meeting room of Silicon Valley VCs",4.6,f(false,false,true,false,true,false,false,true),"https://coupacafe.com",37.4419,-122.1430,"coffee"),
+    v("Verve Coffee Roasters","Specialty Roaster","Palo Alto — Santa Cruz's acclaimed roaster brings exceptional single-origin espresso to the Peninsula, bright modern space, professional and ideal for a business coffee",4.7,f(false,false,true,false,false,false,false,true),"https://vervecoffee.com",37.4419,-122.1430,"coffee"),
+    v("Dana Street Roasting Co.","Local Roaster","Mountain View — downtown Mountain View institution, house-roasted beans, warm neighborhood energy, excellent for a tech-area morning meeting",4.5,f(false,false,false,true,false,false,false,true),"https://danastreetroasting.com",37.3861,-122.0839,"coffee"),
   ],
 
   "Palo Alto": [
@@ -717,6 +811,12 @@ const INITIAL_DATA = {
     v("Nobu Palo Alto","Japanese-Peruvian","Nobu's Peninsula outpost — tech celebrity sushi, always a scene",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/palo-alto",37.4480,-122.1601,"sushi"),
     v("Sushi Sus","Japanese Omakase","Intimate omakase counter — best sushi in Palo Alto, exceptional fish sourcing",4.6,f(false,false,false,false,false,false,true,true,false,true),"https://sushisus.com",37.4440,-122.1610,"sushi"),
     v("Fuki Sushi","Japanese","Palo Alto Japanese institution since 1972 — tech industry power lunch staple",4.4,f(false,false,false,true,true,false,false,false,false,true),"https://fukisushi.com",37.4480,-122.1591,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Coupa Café at SAP Garden","Venezuelan Coffee","University Ave — VC row's unofficial meeting room, Venezuelan-inspired cacao drinks, always buzzing with founders and investors, the best-known power-coffee spot on the Peninsula",4.6,f(false,false,true,false,true,false,false,true),"https://coupacafe.com",37.4461,-122.1598,"coffee"),
+    v("Verve Coffee Roasters","Specialty Roaster","University Ave — exceptional single-origin espresso from Santa Cruz's best roaster, sleek modern Palo Alto space, professional and polished for business meetings",4.7,f(false,false,true,false,false,false,false,true),"https://vervecoffee.com",37.4461,-122.1598,"coffee"),
+    v("Philz Coffee","Specialty Coffee","Multiple Palo Alto locations — hand-crafted pour-over blends, beloved Silicon Valley institution, Mint Mojito iced coffee, comfortable for long meetings",4.6,f(false,false,true,false,false,false,false,true),"https://philzcoffee.com",37.4461,-122.1598,"coffee"),
+    v("Peet's Coffee","Bay Area Roaster","University Ave — the grandfather of Bay Area specialty coffee, precise espresso, comfortable seating, classic stop for a professional pre-meeting coffee",4.4,f(false,false,false,true,false,false,false,true),"https://peets.com",37.4461,-122.1598,"coffee"),
   ],
 
   "Santa Monica": [
@@ -746,6 +846,13 @@ const INITIAL_DATA = {
     v("Nobu Malibu","Japanese-Peruvian","Oceanfront Nobu on PCH, celebrity central, stunning setting",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/malibu",34.0195,-118.6789,"sushi"),
     v("Sugarfish Santa Monica","Japanese Omakase","LA's best-value omakase, multiple locations, always outstanding",4.5,f(false,false,false,true,false,false,false,false,false,true),"https://sugarfishsushi.com",34.0175,-118.4922,"sushi"),
     v("Sushi Zo Santa Monica","Japanese Omakase","Pure omakase experience, beautifully fresh fish",4.7,f(false,false,false,true,false,false,true,true,false,true),"https://sushizo.us",34.0195,-118.4912,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Alfred Coffee","Specialty Café","Montana Ave — the most stylish café on the Westside, celeb-spotted, chagaccino, seasonal lattes, beautiful outdoor seating perfect for a relaxed Santa Monica meeting",4.6,f(false,false,true,false,true,false,false,false),"https://alfred.la",34.0375,-118.4914,"coffee"),
+    v("Blue Bottle Coffee","Specialty Roaster","Rose Ave — Bay Area specialty standard-bearer, pour-overs, New Orleans iced coffee, light airy Venice-adjacent space, great for a relaxed Westside meeting",4.6,f(false,false,true,false,false,false,false,true),"https://bluebottlecoffee.com",33.9906,-118.4714,"coffee"),
+    v("Menotti's Coffee Stop","Abbot Kinney Café","Abbot Kinney — Venice's most beloved coffee spot, excellent espresso, ocean-breeze patio, creative neighborhood crowd",4.6,f(false,false,true,false,false,false,false,false),"https://menottis.com",33.9879,-118.4680,"coffee"),
+    v("Dogtown Coffee","Venice Institution","Rose / Lincoln — Venice's original surf-culture café, excellent beans, huge portions, casual outdoor energy, great pre-beach or creative meeting spot",4.5,f(false,false,false,true,false,false,false,false),"https://dogtowncoffee.com",33.9906,-118.4714,"coffee"),
+    v("Intelligentsia Coffee","Specialty Roaster","Silver Lake — Chicago's acclaimed roaster brought west, beautiful Sunset Junction café, precise espresso, great for a Silver Lake or Echo Park business coffee",4.7,f(false,false,true,false,false,false,false,true),"https://intelligentsiacoffee.com",34.0866,-118.2720,"coffee"),
   ],
 
 
@@ -1087,6 +1194,13 @@ const INITIAL_DATA = {
     v("Lost Weekend","Retro Bar & Arcade","Downtown WPB fan favorite — arcade games, shuffleboard, pool tables, tacos, retro vibe, the fun casual alternative to upscale Clematis",4.4,f(false,false,true,false,false,false,false,false),"https://lostweekendwpb.com",26.7148,-80.0541,"bar"),
     // ── Private Clubs ─────────────────────────────────────────────────────
     v("The Breakers Ocean Club","Private Members Club","The Breakers Hotel's iconic private club — dining, beach, golf, and spa facilities at one of America's most celebrated resort properties",4.7,f(false,false,false,true,true,false,true,true,true),"https://thebreakers.com",26.7041,-80.0338,"private club"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Maman","French Café","CityPlace — NYC-born French-inspired café, pastries, tartines, excellent espresso, honey lavender latte, beautiful in WPB's premier shopping plaza, good for a casual business coffee",4.6,f(false,false,true,false,false,false,false,true),"https://mamannyc.com",26.7148,-80.0537,"coffee"),
+    v("Subculture Coffee","Specialty Roaster","Downtown WPB / Palm Beach — WPB's most celebrated specialty roaster, excellent single-origin pour-overs, sleek café space, ideal for a Clematis Street business meeting",4.7,f(false,false,true,false,false,false,false,true),"https://subculturecoffee.com",26.7148,-80.0541,"coffee"),
+    v("Voltaire Coffee & Cocktails","All-Day Café","West Palm Beach — beautiful café by day, wine and cocktails by evening, thoughtfully designed space, great for a morning or afternoon meeting",4.6,f(false,false,true,false,false,false,false,true),"https://voltairewpb.com",26.7148,-80.0541,"coffee"),
+    v("Oceano Coffee","Beachside Café","Palm Beach — beautiful oceanfront café, excellent espresso, fresh pastries, stunning views, the most scenic coffee meeting spot in the Palm Beaches",4.6,f(false,false,true,false,false,false,false,false),"https://oceanocoffee.com",26.7041,-80.0358,"coffee"),
+    v("Celis Produce","Farm Stand Café","West Palm Beach — beloved local institution, cold-pressed juices alongside excellent coffee, wellness-forward all-day café, great for a healthy breakfast meeting",4.6,f(false,false,true,false,false,false,false,true),"https://celisproduce.com",26.7148,-80.0541,"coffee"),
   ],
 
 
@@ -1116,6 +1230,13 @@ const INITIAL_DATA = {
     v("Yasu Omakase Fort Lauderdale","Japanese Omakase","Intimate omakase counter, Fort Lauderdale's finest sushi experience",4.7,f(false,false,false,false,false,false,true,true,false,true),"https://yasuomakase.com",26.1192,-80.1375,"sushi"),
     v("Steak 954 Sushi Bar","Japanese","W Hotel's acclaimed sushi bar, excellent nigiri alongside steaks",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://steak954.com",26.1226,-80.1040,"sushi"),
     v("Nobu Fort Lauderdale","Japanese-Peruvian","Nobu's Broward outpost, celebrity sushi destination",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/fort-lauderdale",26.1192,-80.1375,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Subculture Coffee","Specialty Roaster","Las Olas — Fort Lauderdale outpost of WPB's best roaster, excellent espresso, beautiful Las Olas location ideal for a business coffee",4.7,f(false,false,true,false,false,false,false,true),"https://subculturecoffee.com",26.1201,-80.1390,"coffee"),
+    v("Bunnie Cakes","Bakery Café","Wynwood / FLL — gorgeous vegan bakery café, beautiful cupcakes and pastries, excellent coffee, stunning Instagram-worthy space",4.6,f(false,false,true,false,false,false,false,false),"https://bunniecakes.com",26.1192,-80.1375,"coffee"),
+    v("POUR Coffee and Provisions","All-Day Café","Victoria Park — neighborhood gem, excellent espresso, provisions and pastries, comfortable tables for meetings in a residential-chic setting",4.6,f(false,false,true,false,false,false,false,true),"https://pourlauderdale.com",26.1270,-80.1328,"coffee"),
+    v("Brew Urban Café","Specialty Coffee","Flagler Village — Flagler Village arts district anchor, excellent single-origin coffee, creative community vibe, perfect for an arts district meeting",4.5,f(false,false,true,false,false,false,false,true),"https://brewurbancafe.com",26.1378,-80.1395,"coffee"),
+    v("Rosetta Bakery","Italian Bakery Café","Multiple FLL locations — Italian-style bakery with excellent espresso, bomboloni, beautiful pastries, European café energy great for a client meeting",4.6,f(false,false,true,false,false,false,false,true),"https://rosettabakery.com",26.1192,-80.1375,"coffee"),
   ],
 
   "Cabo": [
@@ -1159,6 +1280,11 @@ const INITIAL_DATA = {
     v("Los Tamarindos","Organic Farm Dining","19th-century farmhouse organic farm outside SJD — seasonal menus from their own land, cooking classes, rustic charm, love letter to Baja ingredients, a true countryside escape from the resort corridor",4.7,f(false,false,false,true,false,false,false,true),"https://lostamarindos.com",23.0700,-109.7600),
     v("La Lupita","Mexican Street Food Elevated","SJD art district mezcalería — best upscale street food in Cabo, tacos, sopes, mezcal flights, vibrant Thursday Art Walk stop, everything housemade",4.6,f(false,true,true,false,false,false,false,false),"https://lalupitacabo.com",23.0540,-109.6990),
     v("Jazmin's","Mexican","SJD historic district cultural dining — vibrant local atmosphere, Thursday Art Walk essential stop, authentic regional Mexican",4.5,f(false,false,false,true,false,false,false,false),"https://jazmins.com",23.0540,-109.6990),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Baja Beans Roasting Co.","Specialty Roaster","San José del Cabo — Baja's best specialty roaster, house-roasted Mexican and Central American beans, beautiful Arte District café, excellent for a Los Cabos morning meeting",4.7,f(false,false,true,false,false,false,false,true),"https://bajabeans.com",23.0545,-109.6981,"coffee"),
+    v("Café Todos Santos","Artisan Café","Todos Santos — charming colonial-era café in the magical Pueblo Mágico nearby, excellent espresso, beautiful courtyard, worth the drive",4.7,f(false,false,true,false,false,false,false,false),"https://cafetodossantos.com",23.4441,-110.2274,"coffee"),
+    v("Holy Tamale","All-Day Café","Cabo San Lucas — beloved Cabo expat institution, great coffee and breakfast, the go-to morning meeting spot for locals and visitors",4.5,f(false,false,false,true,false,false,false,true),"https://holytamalecabo.com",22.8905,-109.9167,"coffee"),
   ],
 
   "Barcelona": [
@@ -1174,6 +1300,13 @@ const INITIAL_DATA = {
     v("Koy Shunka","Japanese Omakase","One Michelin star, Barcelona's finest omakase, exceptional Japanese technique",4.8,f(true,false,false,false,false,false,true,true,false,true),"https://koyshunka.com",41.3841,-2.1768,"sushi"),
     v("Shunka","Japanese","Koy Shunka's casual sibling, outstanding quality",4.6,f(false,false,false,true,false,false,true,false,false,true),"https://koyshunka.com/shunka",41.3841,-2.1758,"sushi"),
     v("Nobu Barcelona","Japanese-Peruvian","Celebrity sushi at Nobu's Barcelona outpost",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/barcelona",41.3921,-2.1638,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Nomad Coffee","Specialty Roaster","El Born — Barcelona's most acclaimed specialty roaster, exceptional single-origin espresso, the café that put Barcelona on the specialty coffee map",4.8,f(false,false,true,false,false,false,false,true),"https://nomadcoffee.es",41.3841,-2.1786,"coffee"),
+    v("Satan's Coffee Corner","Specialty Coffee","Gothic Quarter — beloved and brilliantly named hidden gem, exceptional espresso, tiny and quirky, a cult-favorite Barcelona experience",4.7,f(false,true,true,false,false,false,false,false),"https://satanscoffee.com",41.3818,-2.1734,"coffee"),
+    v("Cafés El Magnífico","Specialty Roaster","El Born — roasting in Barcelona since 1919, exceptional house blends, beautiful historic shop, espresso made with decades of craft",4.7,f(false,false,false,true,false,false,false,false),"https://cafeselmagnific.com",41.3841,-2.1786,"coffee"),
+    v("Federal Café","Australian Café","Sant Antoni — Australian brunch-café culture, excellent flat whites, avocado toast, beautiful space, great for a professional breakfast meeting",4.6,f(false,false,true,false,false,false,false,true),"https://federalcafe.es",41.3784,-2.1654,"coffee"),
+    v("Syra Coffee","Specialty Café","Eixample — Barcelona specialty roaster and café, beautiful Eixample location, excellent for a business coffee in the upscale shopping district",4.6,f(false,false,true,false,false,false,false,true),"https://syracoffee.com",41.3877,-2.1686,"coffee"),
   ],
 
   "Cannes": [
@@ -1200,6 +1333,11 @@ const INITIAL_DATA = {
     v("Nobu Cannes","Japanese-Peruvian","Nobu's Festival season outpost, celebrity sushi on the Croisette",4.6,f(false,false,true,false,true,false,true,false,false,true),"https://noburestaurants.com/cannes",43.5490,-7.0186,"sushi"),
     v("Matsuhisa Cannes","Japanese","Nobu Matsuhisa's intimate Cannes sushi counter, exceptional quality",4.7,f(false,false,false,true,true,false,true,true,false,true),"https://matsuhisarestaurants.com/cannes",43.5490,-7.0196,"sushi"),
     v("Kinugawa Cannes","Japanese","Chic Japanese from the acclaimed Paris brand, Riviera outpost",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://kinugawa.fr",43.5508,-7.0186,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Café Carlton","Grand Café","La Croisette — legendary Art Deco café terrace at the InterContinental Carlton, prime people-watching on the Croisette, perfect espresso, the classic Cannes coffee experience",4.6,f(false,false,false,true,true,false,false,false),"https://sofitel-legend-old-cataract.com",43.5504,7.0174,"coffee"),
+    v("Café Roma","Local Favorite","Old Town — beloved Cannes institution in the Suquet old town, excellent espresso, morning croissants, authentic French café atmosphere away from tourist crowds",4.5,f(false,false,false,true,false,false,false,true),"https://caferoma-cannes.com",43.5504,7.0147,"coffee"),
+    v("Coffee & Cot","Specialty Coffee","Central Cannes — Cannes's best specialty espresso bar, excellent single-origin beans, light and welcoming space, ideal for a Cannes film festival business coffee",4.6,f(false,false,true,false,false,false,false,true),"https://coffeecot.com",43.5510,7.0174,"coffee"),
   ],
 
   "London": [
@@ -1226,6 +1364,16 @@ const INITIAL_DATA = {
     v("Kiku","Japanese","Mayfair Japanese institution since 1978, outstanding sashimi",4.7,f(false,false,false,true,true,false,false,true,false,true),"https://kikurestaurant.co.uk",51.5104,-0.1464,"sushi"),
     v("Nobu London","Japanese-Peruvian","The original London Nobu, Mayfair celebrity institution",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/london",51.5084,-0.1454,"sushi"),
     v("Sexy Fish London","Asian","Harvey Nichols-adjacent sushi and celebrity scene",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://sexyfish.com",51.5104,-0.1434,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Monmouth Coffee","Specialty Roaster","Borough Market / Covent Garden — London specialty coffee pioneer since 1978, exceptional single-origin brews, Borough Market location is a London institution, queue worth every minute",4.8,f(false,false,false,true,false,false,false,true),"https://monmouthcoffee.co.uk",51.5055,-0.0910,"coffee"),
+    v("Ozone Coffee Roasters","Specialty Roaster","Shoreditch — New Zealand import, exceptional roasting, beautiful industrial café in Shoreditch, excellent for a creative East London meeting",4.7,f(false,false,true,false,false,false,false,true),"https://ozonecoffee.co.uk",51.5255,-0.0814,"coffee"),
+    v("WatchHouse","Specialty Coffee","Bermondsey / Multiple — London's coolest coffee brand, stunning historic spaces, Bermondsey flagship in a Victorian watch factory, excellent espresso",4.7,f(false,true,true,false,false,false,false,true),"https://watchhouse.com",51.4997,-0.0797,"coffee"),
+    v("Caravan","All-Day Café","King's Cross / Multiple — New Zealand-inspired roasting and brunch, open kitchen, excellent seasonal coffee, great for a Kings Cross business meeting",4.6,f(false,false,true,false,false,false,false,true),"https://caravanrestaurants.co.uk",51.5319,-0.1243,"coffee"),
+    v("Milk Beach","Australian Café","Soho / Queens Park — Australian coffee culture transplanted to London, flat whites, avocado toast, excellent brunch, beautiful brunch meetings",4.6,f(false,false,true,false,false,false,false,true),"https://milkbeach.com",51.5141,-0.1342,"coffee"),
+    v("Allpress Espresso","New Zealand Roaster","Dalston / Shoreditch — New Zealand roasting tradition, exceptional espresso, industrial East London space, excellent for a Shoreditch creative meeting",4.6,f(false,false,true,false,false,false,false,true),"https://allpressespresso.com",51.5464,-0.0634,"coffee"),
+    v("Attendant","Hidden Café","Fitzrovia / Multiple — in a converted Victorian public toilet (really!), beautiful design, exceptional espresso, most unique café space in London",4.7,f(false,true,true,false,false,false,false,false),"https://the-attendant.com",51.5196,-0.1405,"coffee"),
+    v("Café Leon Dore London","Fashion Café","Soho — Aimé Leon Dore's London outpost on Broadwick St, Greek freddo cappuccino, fashion crowd, one of the trendiest café experiences in the world",4.7,f(false,false,true,false,true,false,false,false),"https://aimeleondore.com",51.5141,-0.1342,"coffee"),
   ],
 
   "Milan": [
@@ -1243,6 +1391,13 @@ const INITIAL_DATA = {
     v("Iyo","Japanese Omakase","One Michelin star, Milan's best omakase, exceptional quality and sourcing",4.8,f(true,false,false,false,false,false,true,true,false,true),"https://iyo.it",45.4629,-9.1781,"sushi"),
     v("Osaka","Japanese","Milan's most beloved traditional Japanese restaurant",4.6,f(false,false,false,true,false,false,false,true,false,true),"https://osakaristorante.it",45.4659,-9.1891,"sushi"),
     v("Nobu Milan","Japanese-Peruvian","Nobu's Milan outpost, celebrity sushi in the fashion capital",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/milan",45.4659,-9.1921,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Pasticceria Marchesi","Historic Pastry Café","Via Monte Napoleone — 1824 Milanese pastry institution acquired by Prada, magnificent historic interiors, impeccable espresso and pastries, most glamorous café in Milan",4.8,f(false,false,false,true,true,false,false,false),"https://pasticceriamarchesi.com",45.4679,9.1949,"coffee"),
+    v("Caffè Cova","Historic Café","Via Monte Napoleone — 1817 Milanese café institution near Teatro alla Scala, beautiful belle époque interiors, panettone, the quintessential Milanese espresso experience",4.7,f(false,false,false,true,true,false,false,false),"https://caffecova.com",45.4679,9.1949,"coffee"),
+    v("Ceresio 7","Rooftop Café","Porta Garibaldi — Dsquared2's stunning rooftop pool café, two pools, panoramic city views, one of Milan's most stylish all-day experiences",4.7,f(false,false,true,false,true,false,false,false),"https://ceresio7.com",45.4843,9.1768,"coffee"),
+    v("Orsonero Coffee","Specialty Roaster","Brera — Milan's finest specialty coffee roaster, exceptional single-origin espresso, beautiful Brera space, professional for a design district meeting",4.7,f(false,false,true,false,false,false,false,true),"https://orsonero.it",45.4774,9.1868,"coffee"),
+    v("Fondazione Prada Bar Luce","Design Café","PRADA Foundation — Wes Anderson-designed café inside the Fondazione Prada, pastel Milanese décor, excellent coffee and pastries, most Instagrammable café in Europe",4.7,f(false,true,true,false,true,false,false,false),"https://fondazioneprada.org",45.4494,9.1943,"coffee"),
   ],
 
   "Paris": [
@@ -1284,6 +1439,16 @@ const INITIAL_DATA = {
     v("Akami","Japanese Omakase","One Michelin star, outstanding omakase in the Marais, exceptional fish",4.8,f(true,false,true,false,false,false,true,true,false,true),"https://akami.fr",48.8568,-2.3556,"sushi"),
     v("Isami","Japanese","Paris's most celebrated traditional sushi, Île Saint-Louis institution",4.7,f(false,false,false,true,false,false,true,true,false,true),"https://isami-paris.com",48.8516,-2.3536,"sushi"),
     v("Nobu Paris","Japanese-Peruvian","Nobu's elegant Paris outpost, celebrity sushi",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/paris",48.8668,-2.3296,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Café de Flore","Iconic Café","Saint-Germain — 1887 literary institution, Sartre and Simone de Beauvoir's table, perfect café crème, the most famous café in the world",4.7,f(false,false,false,true,true,false,false,false),"https://cafedeflore.fr",48.8542,-2.3329,"coffee"),
+    v("Télescope","Specialty Coffee","1st Arrondissement — Paris specialty coffee pioneer, exceptional single-origin espresso, tiny and beautiful near the Palais Royal, great for a Right Bank meeting",4.7,f(false,false,true,false,false,false,false,true),"https://telescopecafe.com",48.8637,-2.3386,"coffee"),
+    v("Coutume Café","Specialty Roaster","Saint-Germain — Australian influence on Paris coffee, exceptional beans, beautiful Saint-Germain space, light and airy, ideal for a Left Bank business meeting",4.7,f(false,false,true,false,false,false,false,true),"https://coutumecafe.com",48.8524,-2.3230,"coffee"),
+    v("Café de la Paix","Grand Café","Opera — 1862 Haussmann-era grand café at the Grand Hotel, gilded interiors, impeccable service, one of Paris's most opulent café experiences",4.6,f(false,false,false,true,true,false,false,false),"https://cafedelapaix.fr",48.8711,-2.3317,"coffee"),
+    v("Fragments","Specialty Coffee","Marais — acclaimed Marais specialty café, excellent roasters, minimalist design, quiet and excellent for a Marais business coffee",4.6,f(false,false,true,false,false,false,false,true),"https://fragmentscafe.fr",48.8577,-2.3508,"coffee"),
+    v("Boot Café","Tiny Gem","Marais — 10-seat café inside a tiny former cobbler's shop in the Marais, excellent espresso, standing-room-only queues, most charming café in Paris",4.7,f(false,true,true,false,false,false,false,false),"https://bootcafe.com",48.8577,-2.3508,"coffee"),
+    v("Ten Belles","Specialty Coffee","Canal Saint-Martin — pioneer of Paris specialty coffee, excellent beans and brewing, beautiful Canal setting, great for a cool-Paris meeting",4.7,f(false,false,true,false,false,false,false,true),"https://tenbelles.com",48.8694,-2.3622,"coffee"),
+    v("Café Kitsuné","Fashion Café","Palais Royal — Maison Kitsuné's iconic café in the Palais Royal gardens, matcha latte, fox cookies, fashion crowd, one of the most stylish café settings in the world",4.7,f(false,false,true,false,true,false,false,false),"https://kitsune.fr/pages/cafes",48.8640,-2.3369,"coffee"),
   ],
 
   "Mykonos": [
@@ -1312,6 +1477,10 @@ const INITIAL_DATA = {
     v("Nobu Mykonos Omakase","Japanese-Peruvian Omakase","Glamorous clifftop Nobu omakase experience, jet-set island sushi",4.8,f(false,false,true,false,true,false,true,false,false,true),"https://noburestaurants.com/mykonos",37.4467,-25.3289,"sushi"),
     v("Matsuhisa Mykonos","Japanese Omakase","Nobu Matsuhisa's intimate Belvedere Hotel counter, best sushi on the island",4.7,f(false,false,true,false,true,false,true,false,false,true),"https://belvedere.com/matsuhisa-mykonos",37.4464,-25.3313,"sushi"),
     v("Zuma Mykonos","Japanese Robatayaki","Seasonal Zuma outpost at Santa Marina, stunning robatayaki",4.6,f(false,false,true,false,true,false,true,false,false,true),"https://zumarestaurant.com/zuma-mykonos",37.4501,-25.3443,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Lakki Village Café","Island Café","Mykonos Town — charming whitewashed café in the iconic Mykonos labyrinthine streets, excellent Greek freddo cappuccino, traditional pastries",4.5,f(false,false,true,false,false,false,false,false),"https://mykonoscafe.com",37.4467,25.3289,"coffee"),
+    v("Scarpa Bar","Café Bar","Little Venice — Mykonos's most romantic café terrace, perched on Little Venice waterfront, perfect freddo espresso as boats drift past",4.6,f(false,false,true,false,true,false,false,false),"https://scarpabar.com",37.4467,25.3289,"coffee"),
   ],
 
   "Seoul": [
@@ -1358,6 +1527,16 @@ const INITIAL_DATA = {
     v("Cobbler","Cocktail Bar","Seochon. Warm atmosphere, tell-the-bartender-your-flavors concept. Strawberry cobbler is the signature",4.7,f(false,false,true,false,false,false,false,false),"https://www.instagram.com/cobbler_seoul",37.5820,126.9750,"bar"),
     v("Pine and Co","Cocktail Bar","Futuristic R&D lab aesthetic, molecular cocktails, Asia's 50 Best Bars entry, Gangnam",4.7,f(false,true,true,false,false,false,true,false),"https://www.instagram.com/pineandco_seoul",37.5246,127.0430,"bar"),
     v("Bar Jangsaeng","Cocktail Bar","Gangnam. Korean ingredient cocktails, exceptional service, knowledgeable English-speaking team",4.7,f(false,false,true,false,false,false,false,false),"https://www.instagram.com/bar_jangsaeng",37.5246,127.0430,"bar"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Fritz Coffee Company","Specialty Roaster","Mapo-gu — Seoul's most beloved specialty roaster, impeccable single-origin espresso, beautiful Mapo café, world-class quality coffee",4.8,f(false,false,true,false,false,false,false,true),"https://fritzco.kr",37.5490,126.9258,"coffee"),
+    v("Ediya Coffee","K-Coffee Chain","Multiple locations — Korea's dominant premium coffee chain, decent espresso at every corner, excellent for an on-the-go Seoul meeting coffee",4.3,f(false,false,false,true,false,false,false,true),"https://ediya.com",37.5500,126.9905,"coffee"),
+    v("Café Onion","Aesthetic Café","Anguk / Seongsu — stunning converted hanok and industrial spaces, matcha soft serve and seasonal drinks, the most photographed café spaces in Seoul",4.7,f(false,true,true,false,false,false,false,false),"https://cafeonion.com",37.5791,126.9856,"coffee"),
+    v("Anthracite Coffee Roasters","Specialty Roaster","Hongdae / Hannam — roasting in a former shoe factory, beautiful industrial spaces, exceptional espresso, professional and creative, great for a Hannam business meeting",4.7,f(false,false,true,false,false,false,false,true),"https://anthracitecoffee.com",37.5520,126.9236,"coffee"),
+    v("Granhand","Lifestyle Café","Mapo / Seongsu — curated lifestyle brand café, beautiful objects, excellent coffee and teas, minimalist Seoul luxury, one of Korea's most design-forward café experiences",4.7,f(false,true,true,false,false,false,false,false),"https://granhand.com",37.5459,126.9258,"coffee"),
+    v("Cafe Bora","Purple Latte Café","Insadong — famous for the purple sweet potato latte and dusting, Instagram sensation, consistently delicious, essential Seoul café experience",4.6,f(false,true,true,false,false,false,false,false),"https://cafebora.com",37.5725,126.9846,"coffee"),
+    v("Mesh Coffee","Specialty Coffee","Gangnam — Gangnam specialty coffee leader, exceptional espresso, professional space popular with business community, excellent for a Gangnam meeting",4.6,f(false,false,true,false,false,false,false,true),"https://meshcoffee.kr",37.5028,127.0265,"coffee"),
+    v("Take Urban","Design Café","Seongsu-dong — Seongsu's coolest design-forward café, excellent coffee, beautiful minimalist industrial space in Seoul's Brooklyn",4.6,f(false,true,true,false,false,false,false,false),"https://takeurban.com",37.5445,127.0559,"coffee"),
   ],
 
   "Martha's Vineyard": [
@@ -1884,9 +2063,10 @@ const CATEGORY_LABELS = {
   "private club": "Private Clubs",
   rooftop: "Rooftop Bars",
   f1: "🏎️ F1 Miami Grand Prix",
+  coffee: "☕ Coffee & Cafés",
 }
 
-const CATEGORY_ORDER = ["f1","restaurant","sushi","bar","nightclub","rooftop","private club"]
+const CATEGORY_ORDER = ["f1","restaurant","sushi","bar","nightclub","rooftop","private club","coffee"]
 
 function StarRating({ val }) {
   return (
@@ -1923,6 +2103,7 @@ function StatusBadge({ status }) {
 
 function VenueCard({ v: venue, rank }) {
   const isF1 = venue.category === "f1"
+  const isCoffee = venue.category === "coffee"
   if (isF1) {
     return (
       <div style={{ background: venue.name.includes("Hotspot") ? "#fff" : "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)", border:"0.5px solid #e53935", borderRadius:12, padding:"16px 18px", display:"flex", flexDirection:"column", gap:6 }}>
@@ -1944,19 +2125,24 @@ function VenueCard({ v: venue, rank }) {
     )
   }
   return (
-    <div style={{ background:"#fff", border:`0.5px solid ${venue.status ? "#378ADD":"#e5e5e5"}`, borderRadius:12, padding:"14px 16px", display:"flex", flexDirection:"column", gap:4, position:"relative" }}>
+    <div style={{ background: isCoffee ? "#FFFDF9" : "#fff", border:`0.5px solid ${venue.status ? "#378ADD": isCoffee ? "#E8CFA0" : "#e5e5e5"}`, borderRadius:12, padding:"14px 16px", display:"flex", flexDirection:"column", gap:4, position:"relative" }}>
       {venue.status && <div style={{ position:"absolute", top:10, right:10 }}><StatusBadge status={venue.status} /></div>}
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:8, paddingRight: venue.status ? 110:0 }}>
         <div style={{ display:"flex", alignItems:"flex-start", gap:8 }}>
           <span style={{ fontSize:11, color:"#ccc", fontWeight:500, minWidth:18, paddingTop:3 }}>#{rank}</span>
           <div>
             <a href={venue.url} target="_blank" rel="noopener noreferrer" style={{ fontSize:15, fontWeight:500, color:"#111", textDecoration:"none" }}>{venue.name}</a>
-            <div style={{ fontSize:12, color:"#666", marginTop:1 }}>{venue.type}</div>
+            <div style={{ fontSize:12, color: isCoffee ? "#7B4F2E" : "#666", marginTop:1 }}>{venue.type}</div>
           </div>
         </div>
         <StarRating val={venue.stars} />
       </div>
       <p style={{ fontSize:13, color:"#555", margin:"0 0 0 26px", lineHeight:1.5 }}>{venue.desc}</p>
+      {isCoffee && venue.quiet && (
+        <div style={{ fontSize:11, color:"#7B4F2E", background:"#FDF6EC", border:"0.5px solid #E8CFA0", borderRadius:99, padding:"2px 10px", marginTop:2, marginLeft:26, lineHeight:1.8, display:"inline-block", alignSelf:"flex-start", fontWeight:500 }}>
+          💼 Good for Meetings
+        </div>
+      )}
       {venue.privateDining && (
         <div style={{ fontSize:12, color:"#6B21A8", background:"#F0E6FB", borderRadius:6, padding:"6px 10px", marginTop:2, marginLeft:26, lineHeight:1.5 }}>
           🍽 Private Dining: {venue.privateDining}
@@ -1976,6 +2162,8 @@ const MAP_COLORS = {
   bar:            { pin:"#0F6E56", label:"Bars" },
   rooftop:        { pin:"#185FA5", label:"Rooftop Bars" },
   "private club": { pin:"#6B21A8", label:"Private Clubs" },
+  nightclub:      { pin:"#C2185B", label:"Nightlife" },
+  coffee:         { pin:"#7B4F2E", label:"Coffee & Cafés" },
   f1:             { pin:"#e53935", label:"F1" },
 }
 
@@ -2143,7 +2331,11 @@ function App() {
   }, [])
 
   const allVenues = (data[city] || []).filter(venue => {
-    const matchFilter = activeFilters.length === 0 || activeFilters.every(f => venue[f])
+    const matchFilter = activeFilters.length === 0 || activeFilters.every(f => {
+      if (f === "sushi") return venue.category === "sushi"
+      if (f === "coffee") return venue.category === "coffee"
+      return venue[f]
+    })
     const matchSearch = search === "" || venue.name.toLowerCase().includes(search.toLowerCase()) || venue.type.toLowerCase().includes(search.toLowerCase())
     return matchFilter && matchSearch
   })
