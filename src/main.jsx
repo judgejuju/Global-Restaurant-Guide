@@ -163,7 +163,6 @@ const INITIAL_DATA = {
     v("Carbone Miami","Italian-American","The Miami outpost of the NYC icon, same energy",4.7,f(false,false,true,false,true,false,true,false),"https://carbonemiami.com",25.7908,-80.1370),
     v("Maty's","Peruvian","Chef Valerie Chang's Michelin-starred Peruvian, one of Miami's most acclaimed",4.7,f(true,false,true,false,false,false,true,false),"https://matysmiami.com",25.7908,-80.1340),
     v("GAIA Miami","Greek-Mediterranean","Dubai's acclaimed concept lands in South of Fifth, exceptional seafood",4.7,f(false,true,true,false,true,false,true,false),"https://gaiasof.com",25.7667,-80.1370),
-    v("Claudie","French Riviera","One of Miami's best 2025 openings, Riviera-inspired, evolving dinner menu",4.7,f(false,true,true,false,false,false,true,true),"https://claudiemiami.com",25.7908,-80.1380),
     v("Mutra","Israeli","Strip mall exterior hides an extraordinary intimate Israeli kitchen, soulful and transporting",4.7,f(false,true,true,false,false,false,true,true),"https://mutrami.com",25.8660,-80.1870),
     v("Las' Lap","Caribbean","Kwame Onwuachi's Miami Caribbean dining moment, chef's most personal project",4.7,f(false,true,true,false,true,false,true,false),"https://laslap.com",25.7908,-80.1370),
     v("KYU Miami","Asian-American","Wood-fired Asian BBQ, Wynwood's best restaurant",4.7,f(false,false,true,false,true,false,true,false),"https://kyurestaurants.com",25.8014,-80.1990),
@@ -677,6 +676,14 @@ const INITIAL_DATA = {
     v("Downtown Joe's","Brewpub","Downtown Napa riverfront brewpub since 1993, outdoor patio on the river",4.3,f(false,false,false,true,false,true,false,false),"https://downtownjoes.com",38.2985,-122.2852,"bar"),
     v("The Bar at Bardessono","Bar","Yountville boutique hotel bar, beautiful outdoor fire pits",4.5,f(false,false,false,true,false,false,false,true),"https://bardessono.com",38.4057,-122.3647,"bar"),
     v("Morimoto Napa","Japanese","Iron Chef's dramatic Napa outpost, outstanding sushi and robata",4.6,f(false,false,true,false,true,false,false,false,false,true),"https://morimotonapa.com",38.2975,-122.2852,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Ritual Coffee Roasters","Specialty Roaster","Oxbow Public Market — SF's acclaimed roaster brings exceptional pour-overs to Napa's best food hall, perfect pre-winery fuel or casual meeting in the Oxbow",4.7,f(false,false,true,false,false,false,false,true),"https://ritualcoffee.com",38.2975,-122.2862,"coffee"),
+    v("Napa Valley Coffee Roasting Co.","Local Roaster","Downtown Napa / Multiple — Napa Valley's beloved local roaster since 1985, house-roasted beans, relaxed downtown locations, great for a wine country business coffee",4.6,f(false,false,false,true,false,false,false,true),"https://napavalleycoffee.com",38.2975,-122.2862,"coffee"),
+    v("Sweetie Pies","Bakery Café","Downtown Napa — Napa's favorite all-day bakery café, excellent espresso, famous cinnamon rolls and seasonal pastries, lovely outdoor patio ideal for a casual morning meeting",4.7,f(false,false,true,false,false,false,false,true),"https://sweetiepies.com",38.2975,-122.2862,"coffee"),
+    v("Oxbow Cheese & Wine Merchant","All-Day Café","Oxbow Public Market — wine and cheese purveyor that also does exceptional coffee and morning provisions, beautiful market setting, great for a quick power breakfast",4.6,f(false,false,true,false,false,false,false,true),"https://oxbowpublicmarket.com",38.2975,-122.2862,"coffee"),
+    v("Ca'Momi Osteria Caffè","Italian Café","Downtown Napa — Italian-style coffee bar and osteria, exceptional espresso and cappuccino, pastries and light bites, brings true Italian café culture to wine country",4.6,f(false,false,true,false,false,false,false,true),"https://camomiosteria.com",38.2975,-122.2862,"coffee"),
+    v("Farmstead at Long Meadow Ranch","Ranch Café","St. Helena adjacent — all-day café and breakfast at one of Napa Valley's most beautiful ranch properties, farm-sourced food, exceptional coffee, ideal for a scenic morning meeting",4.7,f(false,false,true,false,false,false,false,true),"https://longmeadowranch.com/eat-drink",38.5030,-122.4680,"coffee"),
   ],
 
   "St. Helena": [
@@ -696,6 +703,12 @@ const INITIAL_DATA = {
     v("Ana's Cantina","Bar & Mexican","St. Helena's beloved dive bar and cantina, cold margaritas and local characters",4.4,f(false,false,false,true,true,false,false,false),"https://anacantina.com",38.5076,-122.4700,"bar"),
     v("Meadowood Croquet Lawn Bar","Bar","Meadowood resort's outdoor evening drinks, stunning setting",4.6,f(false,false,false,true,true,false,false,true),"https://meadowood.com",38.5012,-122.4892,"bar"),
     v("Kōen","Japanese Omakase","St. Helena's intimate omakase counter, outstanding wine country sushi experience",4.6,f(false,false,false,false,false,false,true,true,false,true),"https://koen-sthelena.com",38.5076,-122.4700,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Napa Valley Coffee Roasting Co.","Local Roaster","St. Helena — the wine country roaster's Main Street outpost, house-roasted beans, cozy and casual, the go-to morning coffee stop for St. Helena locals and winery visitors",4.6,f(false,false,false,true,false,false,false,true),"https://napavalleycoffee.com",38.5030,-122.4680,"coffee"),
+    v("Model Bakery","Artisan Bakery Café","Main Street St. Helena — James Beard Award-winning English muffins and exceptional pastries, excellent coffee, Oprah-famous, perpetual line but completely worth it",4.8,f(false,false,true,false,true,false,false,false),"https://themodelbakery.com",38.5030,-122.4680,"coffee"),
+    v("Farmstead at Long Meadow Ranch","Ranch Café","St. Helena — all-day café at a stunning working ranch, farm-sourced breakfast and lunch, exceptional coffee, beautiful outdoor setting ideal for a wine country meeting",4.7,f(false,false,true,false,false,false,false,true),"https://longmeadowranch.com/eat-drink",38.5030,-122.4680,"coffee"),
+    v("Vallergas Farmstand Café","Local Café","St. Helena — beloved wine country market café, great morning coffee, fresh pastries and sandwiches, neighborhood gathering spot with a locals-only feel",4.5,f(false,false,false,true,false,false,false,true),"https://vallergas.com",38.5030,-122.4680,"coffee"),
   ],
 
   "Healdsburg": [
@@ -714,6 +727,13 @@ const INITIAL_DATA = {
     v("Shed","Californian","Fermentation bar and café, local food system champion",4.5,f(false,false,true,false,false,false,false,true),"https://healdsburgshed.com",38.6110,-122.8688),
     v("Harmon Guest House Sushi","Japanese","Boutique hotel's intimate omakase-inspired sushi counter",4.5,f(false,false,true,false,false,false,true,true,false,true),"https://harmonguesthouse.com",38.6110,-122.8688,"sushi"),
     v("Willi's Seafood & Raw Bar","Seafood & Sushi","Healdsburg seafood and sushi, lively patio, excellent fish",4.5,f(false,false,true,false,false,false,false,false,false,true),"https://willisseafood.net",38.6360,-122.8748,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Flying Goat Coffee","Specialty Roaster","Healdsburg Plaza — Sonoma County's most acclaimed specialty roaster, exceptional single-origin pour-overs, beautiful plaza-facing café, the definitive Healdsburg coffee stop",4.8,f(false,false,true,false,false,false,false,true),"https://flyinggoatcoffee.com",38.6110,-122.8688,"coffee"),
+    v("Shed Café","Farm-to-Table Café","Healdsburg — stunning fermentation bar and all-day café inside the SHED marketplace, farm-sourced dishes alongside excellent coffee, one of wine country's most beautiful café spaces",4.7,f(false,false,true,false,true,false,false,true),"https://healdsburgshed.com",38.6110,-122.8688,"coffee"),
+    v("Costeaux French Bakery","French Bakery Café","Downtown Healdsburg — beloved French bakery since 1923, exceptional croissants and pastries, excellent espresso, Healdsburg institution and great morning meeting spot",4.6,f(false,false,false,true,false,false,false,true),"https://costeaux.com",38.6110,-122.8688,"coffee"),
+    v("Noble Folk Ice Cream & Pie Bar","Café & Sweets","Healdsburg — the social hub of downtown Healdsburg, excellent coffee alongside house-made pies and small-batch ice cream, warm and welcoming gathering spot",4.7,f(false,false,true,false,false,false,false,false),"https://thenoblefolk.com",38.6110,-122.8688,"coffee"),
+    v("Chalkboard Café","Hotel Café","Hotel Les Mars — café service at Healdsburg's most elegant boutique hotel, excellent espresso and pastries in a beautifully designed space",4.6,f(false,false,true,false,true,false,false,true),"https://chalkboardrestaurant.com",38.6110,-122.8688,"coffee"),
   ],
 
   "Calistoga": [
@@ -734,6 +754,12 @@ const INITIAL_DATA = {
     v("Tank Garage Winery","Wine Bar","Gas station wine bar, cool Calistoga hangout",4.5,f(false,false,true,false,false,false,false,false),"https://tankgaragewinery.com",38.5796,-122.5795,"bar"),
     v("Hydro Bar & Grill","Bar","Calistoga's classic local bar in a historic building — terrific bar food, great burgers and ribs, live music some nights, neighborhood watering hole since forever",4.2,f(false,false,false,true,false,true,false,false),"https://hydrobarandgrill.com",38.5786,-122.5795,"bar"),
     v("Auro Sushi Counter","Japanese","Four Seasons' intimate Japanese counter, exceptional sourcing",4.7,f(false,false,false,false,false,false,true,true,false,true),"https://auronapavalley.com",38.5788,-122.5803,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Yo El Rey Roastery","Specialty Roaster","Downtown Calistoga — Calistoga's beloved local roaster, single-origin beans from Latin America, bright and welcoming café space, casual and perfect for a wine country morning",4.7,f(false,false,true,false,false,false,false,true),"https://yoelreyroastery.com",38.5786,-122.5795,"coffee"),
+    v("Sam's General Store","All-Day Café","Inside the 1862 Sam Brannan cottage — coffees and pastries in Calistoga's most charming historic setting, egg sandwiches, avocado toast, original Gold Rush-era building",4.6,f(false,false,true,false,false,false,false,false),"https://samsgeneralstore.com",38.5796,-122.5795,"coffee"),
+    v("Café Sarafornia","Breakfast Café","Calistoga locals' favorite diner-café — hearty breakfasts, strong coffee, eggs and pancakes in an unpretentious setting beloved by the whole valley",4.5,f(false,false,false,true,false,false,false,true),"https://cafesarafornia.com",38.5786,-122.5795,"coffee"),
+    v("Hydro Bar & Grill","All-Day Café","Downtown Calistoga — casual all-day spot for coffee and light bites, outdoor patio seating, relaxed wine country energy",4.4,f(false,false,false,true,false,false,false,true),"https://hydrobarandgrill.com",38.5786,-122.5795,"coffee"),
   ],
 
   "Sonoma": [
@@ -753,6 +779,13 @@ const INITIAL_DATA = {
     v("Murphy's Irish Pub","Pub","Sonoma Square pub, live music, local hangout",4.2,f(false,false,false,true,false,true,false,false),"https://sonomamurphys.com",38.2928,-122.4581,"bar"),
     v("Hana Restaurant","Japanese","Rohnert Park outstanding Japanese, best in Sonoma County",4.6,f(false,false,false,true,false,false,false,true,false,true),"https://hanaJapanese.com",38.3398,-122.7011,"sushi"),
     v("Ramen Gaijin","Japanese Ramen & Sushi","Sebastopol's outstanding ramen and izakaya-style sushi",4.5,f(false,false,true,false,false,false,false,false,false,true),"https://ramengaijin.com",38.4018,-122.8261,"sushi"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Café La Haye","Artisan Café","Sonoma Plaza — beloved local institution for morning coffee and pastries, intimate and charming, steps from the historic plaza, Sonoma's most reliable breakfast meeting spot",4.6,f(false,false,true,false,false,false,false,true),"https://cafelahaye.com",38.2919,-122.4580,"coffee"),
+    v("The Coffee Garden","Plaza Café","Sonoma Plaza — perfectly situated on the plaza, excellent espresso and pastries, outdoor seating with plaza views, the classic Sonoma morning ritual for locals and visitors",4.6,f(false,false,false,true,false,false,false,true),"https://thecoffeegardensonoma.com",38.2919,-122.4580,"coffee"),
+    v("Basque Boulangerie Café","French Bakery","Sonoma Plaza — French bakery and café institution since 1990, exceptional croissants and pastries, strong espresso, perpetually packed on weekend mornings, worth the wait",4.7,f(false,false,false,true,false,false,false,false),"https://basqueboulangerie.com",38.2919,-122.4580,"coffee"),
+    v("Sunflower Caffe","All-Day Café","Sonoma — charming all-day café with garden patio, excellent house-roasted coffee, wine country breakfast fare, perfect for a relaxed outdoor morning meeting",4.5,f(false,false,true,false,false,false,false,true),"https://sunflowercaffe.com",38.2919,-122.4580,"coffee"),
+    v("Café Citti","Italian Café","Kenwood — beloved Sonoma Valley roadside Italian café, strong espresso, focaccia sandwiches, rustic and charming stop between wineries",4.5,f(false,false,false,true,false,false,false,false),"https://cafecitti.com",38.4147,-122.5488,"coffee"),
   ],
 
   "Menlo Park": [
@@ -835,7 +868,7 @@ const INITIAL_DATA = {
     v("Huckleberry Café","American","Santa Monica's best bakery and all-day café",4.6,f(false,false,false,true,false,false,false,false),"https://huckleberrycafe.com",34.0175,-118.4832),
     v("Openaire","Mediterranean","Kinney Hotel's stunning glass-retractable-roof restaurant",4.6,f(false,false,true,false,true,false,false,false),"https://openairela.com",34.0195,-118.4912),
     // Bars
-    v("Élephante","Rooftop Italian Bar","SM's most iconic rooftop — coastal Italian on top of the Laemmle theater, Pacific Ocean sunset views, John Legend and Chrissy Teigen regular, book the Sunset Room weeks ahead",4.7,f(false,false,true,false,true,false,true,false),"https://elephanterestaurants.com",34.0178,-118.4914,"rooftop"),
+    v("Élephante","Italian","SM's most iconic rooftop terrace restaurant — coastal Italian atop the Laemmle theater, Pacific Ocean sunset views, John Legend and Chrissy Teigen regular, housemade pasta, wood-fired dishes, book the Sunset Room weeks ahead",4.7,f(false,false,true,false,true,false,true,false),"https://elephanterestaurants.com",34.0178,-118.4914),
     v("The Penthouse at Huntley Hotel","Rooftop Bar & Restaurant","18th-floor rooftop atop the Huntley — panoramic Pacific and city views, glass elevator entrance, beach cabanas, celebrity crowd, best sunset views in Santa Monica, coastal California menu",4.6,f(false,false,true,false,true,false,false,false),"https://penthouserestaurant.com",34.0168,-118.4908,"rooftop"),
     v("AJA Vineyards Wine Bar","Wine Tasting Room","Santa Monica's first and only winery tasting room — family-owned Malibu Coast estate wines, intimate and chic, 2 blocks from the pier, flights and bottles, hidden gem locals keep secret",4.6,f(false,false,true,false,false,false,false,true),"https://ajavineyards.com",34.0168,-118.4914,"bar"),
     v("Father's Office","Gastropub","Best craft beer bar in LA with legendary blue cheese burger",4.6,f(false,false,false,true,true,false,false,false),"https://fathersoffice.com",34.0175,-118.4832,"bar"),
@@ -1160,6 +1193,15 @@ const INITIAL_DATA = {
     v("Esters Wine Shop & Bar","Wine Bar","Outstanding natural wine bar on Pico Blvd — independent makers, local California producers, moody candlelit evening vibe, great people-watching from the big open windows",4.6,f(false,false,true,false,false,false,false,true),"https://esterswine.com",34.0025,-118.4730,"bar"),
     v("The Other Room","Craft Cocktail Bar","Heart of Abbot Kinney — excellent spirits list, dark and intimate, Venice's best craft cocktail bar for a quiet serious drink",4.5,f(false,false,false,true,false,false,false,false),"https://theotherroom.com",33.9906,-118.4719,"bar"),
     v("Hinano Cafe","Dive Bar","Jim Morrison's favorite Venice haunt since 1962 — sawdust floors, pool tables, jukebox, legendary burger, opens at 8am, live bands Friday and Saturday, the most authentic dive bar in Venice",4.3,f(false,false,false,true,false,true,false,false),"https://hinanocafevenice.com",33.9775,-118.4730,"bar"),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Menotti's Coffee Stop","Venice Institution","Abbot Kinney Blvd — Venice's most beloved coffee spot, exceptional espresso, ocean-breeze sidewalk seating, creative neighborhood crowd, the unofficial Abbot Kinney living room",4.7,f(false,false,true,false,true,false,false,false),"https://menottis.com",33.9879,-118.4680,"coffee"),
+    v("Gjusta","Bakery & Coffee","Abbot Kinney area — Venice's beloved perpetually-buzzed bakery also does excellent coffee alongside the city's best bread and pastries, celebrity-spotted, essential Venice morning",4.7,f(false,false,true,false,true,false,false,false),"https://gjusta.com",33.9901,-118.4710,"coffee"),
+    v("Blue Bottle Coffee","Specialty Roaster","Rose Ave — Bay Area's acclaimed specialty roaster, meticulous pour-overs and New Orleans iced coffee, beautiful airy Venice space, good for a relaxed Westside meeting",4.6,f(false,false,true,false,false,false,false,true),"https://bluebottlecoffee.com",33.9906,-118.4714,"coffee"),
+    v("Intelligentsia Coffee","Specialty Roaster","Abbot Kinney Blvd — Chicago's acclaimed roaster came west, precise espresso, beautiful Venice flagship café with outdoor patio, great for a meeting on one of LA's coolest streets",4.7,f(false,false,true,false,false,false,false,true),"https://intelligentsiacoffee.com",33.9879,-118.4714,"coffee"),
+    v("Dogtown Coffee","Surf Café","Rose / Lincoln — Venice's original surf-culture café, excellent strong coffee, huge portions, outdoor energy, the most authentically Venice café experience",4.5,f(false,false,false,true,false,false,false,false),"https://dogtowncoffee.com",33.9887,-118.4730,"coffee"),
+    v("Café Gratitude Venice","Organic All-Day Café","Rose Ave — plant-based all-day café with excellent coffee, vibrant and beautiful space, celebrity sightings, great casual meeting spot steps from the beach",4.5,f(false,false,true,false,true,false,false,false),"https://cafegratitude.com/venice",33.9906,-118.4714,"coffee"),
+    v("Alfred Coffee","Specialty Café","Abbot Kinney Blvd — the Angeleno Instagram café institution, chagaccino, famed iced vanilla latte, seasonal specials, one of the most stylish café stops in LA",4.6,f(false,false,true,false,true,false,false,false),"https://alfred.la",33.9879,-118.4714,"coffee"),
   ],
 
 
@@ -1576,6 +1618,13 @@ const INITIAL_DATA = {
     v("Donovans Reef at Nancys","Outdoor Bar","Oak Bluffs harbor views. Dirty Banana frozen cocktails, margaritas at sunset",4.5,f(false,false,false,true,false,false,false,false),"https://nancysaquinnah.com",41.4559,-70.5600,"bar"),
     v("Morning Glory Farm","Farm Stand","Edgartown iconic farm-to-table since 1975. Baked breads, pies, heirloom tomatoes, seasonal produce",4.7,f(false,false,false,true,false,false,false,false),"https://morninggloryfarm.com",41.3580,-70.5413),
     v("Biscuits","Breakfast","Oak Bluffs breakfast cult. Cod cake benedict with Old Bay hollandaise, whole-roasted potatoes. Always a crowd",4.7,f(false,true,true,false,false,false,false,false),"https://www.instagram.com/biscuits_mv",41.4559,-70.5587),
+  
+    // ── Coffee & Cafés ───────────────────────────────────────────────────
+    v("Mocha Mott's","Island Institution","Vineyard Haven — the most beloved coffee shop on Martha's Vineyard, house-roasted beans, excellent espresso drinks, cozy and bustling with islanders year-round",4.7,f(false,false,false,true,false,false,false,true),"https://mochamotts.com",41.4535,-70.5993,"coffee"),
+    v("Chilmark Coffee Company","Farm Stand Café","Chilmark — quintessential up-island coffee experience, seasonal operation, beautiful pastoral setting, excellent coffee and baked goods, an MV summer ritual",4.7,f(false,false,true,false,false,false,false,false),"https://chilmarkcoffee.com",41.3501,-70.7393,"coffee"),
+    v("Espresso Love","Edgartown Café","Edgartown — charming downtown Edgartown café, excellent espresso, fresh pastries and sandwiches, steps from the harbor and ideal for a morning meeting",4.6,f(false,false,true,false,false,false,false,true),"https://espressolovemv.com",41.3932,-70.5134,"coffee"),
+    v("Bittersweet","All-Day Café","Oak Bluffs — beloved island café and café bar, great coffee, fresh seasonal food, warm welcoming energy loved by locals and visitors alike",4.6,f(false,false,true,false,false,false,false,true),"https://bittersweetmv.com",41.4535,-70.5993,"coffee"),
+    v("Vineyard Vines Café","Seasonal Café","Edgartown — classic Vineyard morning stop, excellent pastries and coffee, outdoor seating on one of the island's prettiest streets",4.5,f(false,false,false,true,false,false,false,false),"https://vineyardvinescafe.com",41.3932,-70.5134,"coffee"),
   ],
   "Lyons NYC": [
     // Restaurants & Fine Dining
