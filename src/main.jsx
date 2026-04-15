@@ -18,7 +18,7 @@ const US_CITIES = [
   "Sonoma","St. Helena","Venice CA","Washington DC","West Palm Beach","Lyons NYC"
 ]
 const INTL_CITIES = [
-  "Barcelona","Cabo Mexico","Cannes","London","Milan","Mykonos","Paris","Seoul"
+  "Barcelona","Cabo","Cannes","London","Milan","Mykonos","Paris","Seoul"
 ]
 const CITIES = [...US_CITIES, ...INTL_CITIES]
 
@@ -1001,7 +1001,7 @@ const INITIAL_DATA = {
     v("Nobu Fort Lauderdale","Japanese-Peruvian","Nobu's Broward outpost, celebrity sushi destination",4.5,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/fort-lauderdale",26.1192,-80.1375,"sushi"),
   ],
 
-  "Cabo Mexico": [
+  "Cabo": [
     // ── Cabo San Lucas — Fine Dining & Luxury ─────────────────────────────
     v("Sunset Monalisa","Mediterranean","Perched on a cliff above the Pacific with panoramic views of El Arco at Land's End — voted one of the top 5 coolest restaurants in the world, chef Héctor Morales, private ocean terrace, mandatory sunset reservation, Jazz on the Rocks piano bar upstairs",4.8,f(false,false,true,false,true,true,true,true),"https://sunsetmonalisa.com",22.8905,-109.9167),
     v("El Farallon","Mexican Seafood","The Resort at Pedregal's cliffside seafood sanctuary — carved into the rocks overlooking the Pacific, stocked daily with freshest local catch, lobster, grilled fish with fresh salsas, one of the most dramatic dinner settings in Mexico",4.8,f(false,false,false,true,true,false,true,true),"https://resortatpedregal.com/dining/el-farallon",22.8790,-109.9380),
