@@ -154,6 +154,9 @@ const INITIAL_DATA = {
     v("Zuma Miami","Japanese","Rooftop Japanese robatayaki, Brickell scene",4.6,f(false,false,true,false,true,false,false,false),"https://zumarestaurant.com/zuma-miami",25.7681,-80.1919),
     v("Swan","Mediterranean","Pharrell's restaurant, the celebrity magnet of Design District",4.5,f(false,false,true,false,true,false,false,false),"https://swanandbar.com",25.8112,-80.1876),
     v("Komodo","Asian","Three-floor Asian restaurant and nightlife destination",4.5,f(false,false,true,false,true,true,false,false),"https://komodo-miami.com",25.7681,-80.1930),
+    v("Red Phone Booth Miami","Speakeasy","Brickell — enter through an antique British phone booth with a secret code, Prohibition-era decor, craft cocktails and cigars, one of Miami's most theatrical bar experiences",4.5,f(false,true,true,false,true,false,false,false),"https://redphoneboothbar.com/miami",25.7617,-80.1918,"bar"),
+    v("Dante's HiFi","Vinyl Speakeasy","Wynwood — ranked #78 North America's 50 Best Bars 2025, Japanese-inspired vinyl listening bar, mezcal cocktails, curated vinyl sessions, state-of-the-art sound, reservation required",4.7,f(false,true,true,false,false,true,false,false),"https://danteshifi.com",25.7989,-80.1998,"bar"),
+    v("Mezcalista","Mezcal Speakeasy","Hidden behind Como Como at Moxy South Beach — 100+ mezcals on copper shelves, private tasting room, velvet-draped, expert mezcaliers guide you through agave spirits",4.6,f(false,true,true,false,true,false,false,false),"https://mezcalista.com",25.7743,-80.1340,"bar"),
     v("Joe's Stone Crab","Seafood","Miami institution since 1913, must-visit October–May",4.6,f(false,false,false,true,true,false,true,false),"https://joesstonecrab.com",25.7731,-80.1349),
     v("Prime 112","Steakhouse","The OG South Beach steakhouse, impossible tables",4.6,f(false,false,true,false,true,false,true,false),"https://prime112.com",25.7731,-80.1359),
     v("Mandolin Aegean Bistro","Greek","Design District Greek gem, beautiful garden patio",4.6,f(false,false,true,false,false,false,false,true),"https://mandolinmiami.com",25.8112,-80.1856),
@@ -208,6 +211,9 @@ const INITIAL_DATA = {
     v("Tower Bar at Sunset Tower Hotel","Hotel Bar","Sunset Strip's most storied hotel bar — Art Deco 1929 building, Marilyn Monroe, Jean Harlow, Sinatra all lived here, stresses-out agents, Olsen twins, enraged agents — legendary scene",4.5,f(false,false,false,true,true,false,false,true),"https://sunsettowerhotel.com",34.0927,-118.3870,"bar","West Hollywood"),
     v("Skybar at Mondrian","Rooftop Pool Bar","Rande Gerber's iconic 1996 pool bar — A-list party history, ivy-covered open-air pavilion, world-class DJs, best views of WeHo",4.4,f(false,false,true,false,true,true,false,false),"https://sbe.com/nightlife/skybar",34.0917,-118.3870,"rooftop","West Hollywood"),
     v("Employees Only WeHo","Cocktail Bar","Prohibition-style cocktails next to Delilah — head here after dinner for the perfect nightcap",4.5,f(false,false,true,false,true,false,false,false),"https://employeesonlyla.com",34.0855,-118.3730,"bar","West Hollywood"),
+    v("Del Monte Speakeasy","Speakeasy","Venice Beach — actual 100-year-old speakeasy in the basement of Townhouse bar, genuine Prohibition-era hideaway, burlesque and jazz live shows, classic cocktails, most authentic speakeasy in LA",4.6,f(false,true,true,false,true,true,false,false),"https://townhousevenice.com",33.9901,-118.4710,"bar"),
+    v("Apotheke LA","Speakeasy","DTLA — sister to the NYC speakeasy icon, enter through an unmarked door, medicinal-inspired cocktails with organic herbs and botanicals, moody apothecary aesthetic, categorized as euphorics/stress relievers/aphrodisiacs",4.5,f(false,true,true,false,false,false,false,false),"https://apothekela.com",34.0411,-118.2480,"bar"),
+    v("Mírate","Cocktail Bar","Los Feliz — ranked #12 North America's 50 Best Bars 2025, boundary-pushing Mexican-inspired cocktail program, intimate and exceptional",4.8,f(false,true,true,false,false,false,true,false),"https://miratela.com",34.1050,-118.2700,"bar"),
     // ── LA Classics & Broader ─────────────────────────────────────────────
     v("Baldi at Waldorf Astoria","Tuscan Steakhouse","Edoardo Baldi's Beverly Hills debut (2025) — olive-wood fired steaks, spectacular room at Waldorf Astoria",4.8,f(false,true,true,false,true,false,true,true),"https://baldibeverlyhills.com",34.0736,-118.3980,"restaurant","Los Angeles"),
     v("Bestia","Italian","Arts District anchor — wood-fired and perpetually buzzy, charcuterie, house-made pastas",4.7,f(false,false,true,false,true,false,true,false),"https://bestiala.com",34.0411,-118.2327,"restaurant","Los Angeles"),
@@ -245,6 +251,9 @@ const INITIAL_DATA = {
     v("Mastro's Ocean Club","Steakhouse","Crystal clear seafood and steaks, Crystals",4.6,f(false,false,true,false,true,false,false,false),"https://mastrosrestaurants.com/restaurant/ocean-club-las-vegas",36.1055,-115.1756),
     v("The Chandelier","Cocktail Bar","Cosmopolitan's three-story cocktail bar, iconic Vegas",4.6,f(false,false,true,false,true,false,false,false),"https://cosmopolitanlasvegas.com/restaurants/the-chandelier",36.1097,-115.1740,"bar"),
     v("Rosina","Cocktail Bar","Cosmopolitan's chic cocktail lounge, beautiful design",4.5,f(false,false,true,false,true,false,false,true),"https://cosmopolitanlasvegas.com/restaurants/rosina",36.1097,-115.1750,"bar"),
+    v("The Laundry Room","Speakeasy","Downtown Las Vegas — gold standard US speakeasy (5 shakers), only 22 guests, reservation + puzzle code to enter, custom cocktails based on personal questionnaire, inside Commonwealth bar, VIP lounge with moving eye painting, Sinatra had his laundry done in this building",4.8,f(false,true,true,false,true,false,true,true),"https://laundryroombars.com",36.1712,-115.1427,"bar"),
+    v("The Ski Lodge at Cosmopolitan","Speakeasy","Inside Cosmopolitan — Peggy's Best Speakeasy of 2024, next to Superfrico, apres ski theme from Bar-Gyu in Hokkaido, shot-ski cocktails, fantastically committed theme, unassuming gold skier on the door",4.6,f(false,true,true,false,true,false,false,false),"https://cosmopolitanlasvegas.com",36.1097,-115.1740,"bar"),
+    v("Ghost Donkey","Speakeasy","Cosmopolitan food court secret — soundproof door with just a donkey marking it, pink lights and mezcal party inside, tequila and fiesta theme, one of the most fun hidden bars in Vegas",4.5,f(false,true,true,false,true,false,false,false),"https://ghostdonkey.com/las-vegas",36.1097,-115.1740,"bar"),
     // Sushi
     v("Kame Japanese Cuisine","Japanese Omakase","Intimate omakase at Resorts World, outstanding quality and sourcing",4.8,f(false,true,false,false,false,false,true,true,false,true),"https://rwlasvegas.com/restaurant/kame",36.1271,-115.1641,"sushi"),
     v("Nobu at Caesars","Japanese-Peruvian","Strip celebrity sushi, Nobu Matsuhisa's classic menu",4.7,f(false,false,true,false,true,false,false,false,false,true),"https://noburestaurants.com/las-vegas",36.1162,-115.1747,"sushi"),
@@ -285,6 +294,9 @@ const INITIAL_DATA = {
     v("Side A","American","Former fine-dining chef Parker Brown's casual Mission gem, short rib gnocchi",4.6,f(false,true,false,false,false,true,false,true),"https://sideasf.com",37.7583,-122.4095),
     v("Pacific Union Club","Private Members Club","SF's most prestigious private club, Nob Hill Flood Mansion",4.7,f(false,false,false,true,true,false,true,true,true),"https://pacificunionclub.org",37.7918,-122.4146,"private club"),
     v("The Battery","Private Members Club","SF's premier private social club, tech and finance elite",4.7,f(false,false,false,true,true,false,true,true,true),"https://thebatterysf.com",37.7930,-122.3981,"private club"),
+    v("Bourbon & Branch","Prohibition Speakeasy","Tenderloin — authentic 1920s speakeasy space, reservation + password required, 90-minute limit, no phones, whispered conversations under gold tin ceilings, Wilson & Wilson detective agency hidden inside is the city's most secretive bar",4.6,f(false,true,false,true,false,false,true,true),"https://bourbonbranch.com",37.7831,-122.4150,"bar"),
+    v("Moongate Lounge","Speakeasy","Above Michelin-starred Mr. Jiu's in Chinatown — enter through the moon-marked door at the top of the back staircase, deep blues and reds, mid-century Chinatown revival, seasonal cocktails like Awakening of Insects with pisco and snap peas",4.7,f(false,true,true,false,false,false,true,false),"https://moongatelounge.com",37.7956,-122.4059,"bar"),
+    v("The Pawn Shop","Speakeasy","Mission Street hidden bar — pick up the golden phone outside to speak to the Pawn Master, haggle over a trinket to get buzzed in, tropical tapas bar inside, low-ABV cocktails, one of SF's most fun speakeasy entrances",4.6,f(false,true,true,false,false,false,false,false),"https://thepawnshopsf.com",37.7631,-122.4194,"bar"),
     v("Trick Dog","Cocktail Bar","Rotating thematic menus, SF craft cocktail icon, Mission",4.6,f(false,false,false,true,false,false,false,false),"https://trickdogbar.com",37.7618,-122.4148,"bar"),
     v("Barbarossa","Cocktail Bar","Moody cinematic cocktail bar, FiDi, one of SF's most beautiful rooms",4.7,f(false,false,true,false,true,false,false,true),"https://barbarossalounge.com",37.7930,-122.3991,"bar"),
     v("Moongate Lounge","Chinese Cocktail Bar","Mister Jiu's stunning cocktail lounge, Chinatown, lantern-lit and magical",4.7,f(false,false,true,false,true,false,false,false),"https://moongate.com",37.7946,-122.4077,"bar"),
@@ -314,6 +326,9 @@ const INITIAL_DATA = {
 
   "Chicago": [
     v("Alinea","Avant-garde","Three Michelin stars, Grant Achatz's theatrical masterpiece",4.9,f(true,false,false,true,true,false,true,true),"https://alinearestaurant.com",41.9138,-87.6506),
+    v("The Office","Speakeasy","Hidden below The Aviary — only 4 barstools, reservation-only 60-minute Office Hour with 2 bespoke cocktails and snacks, Grant Achatz's most secretive creation, Dealer's Choice lets bartenders craft to your taste",4.8,f(true,true,false,false,false,false,true,true),"https://theaviary.com/the-office",41.8835,-87.6478,"bar"),
+    v("The Drifter","Speakeasy","Green Door Tavern basement — genuine Prohibition-era speakeasy, knock on the bookcase door, cocktail menu on tarot cards, contortionists and belly dancers performing nightly",4.6,f(false,true,true,false,false,true,false,false),"https://thedrifterchicago.com",41.8866,-87.6352,"bar"),
+    v("Bordel","Cabaret Speakeasy","Bucktown — hidden door right of Black Bull tapas, flamenco Saturdays, burlesque and live performances, creative cocktails, 10-year speakeasy cabaret institution",4.6,f(false,true,true,false,true,true,false,false),"https://bordelchicago.com",41.9098,-87.6748,"bar"),
     v("Smyth","Contemporary American","Two Michelin stars, John Shields' inventive tasting menu",4.8,f(true,false,true,false,false,false,true,true),"https://smythandtheloyalist.com",41.8914,-87.6522),
     v("Ever","Contemporary American","Two Michelin stars, Curtis Duffy's stunning restaurant",4.8,f(true,false,false,false,false,false,true,true),"https://restaurantever.com",41.8836,-87.6390),
     v("Oriole","Contemporary American","Two Michelin stars, intimate and extraordinary",4.8,f(true,false,false,false,false,false,true,true),"https://oriolechicago.com",41.8836,-87.6380),
@@ -419,6 +434,9 @@ const INITIAL_DATA = {
     v("Off The Record","Bar","Hay-Adams Hotel — 'the place to be seen and not heard,' moody underground bar below the White House, political portraits on every wall, best martinis and Manhattans",4.5,f(false,false,false,true,true,false,false,true),"https://hayadams.com/dining/off-the-record",38.8987,-77.0375,"bar"),
     v("Jack Rose Dining Saloon","Whiskey Bar","Adams Morgan whiskey institution — 2,700 bottles, three floors, rooftop with DC skyline views",4.6,f(false,false,false,true,true,false,false,false),"https://jackrosediningsaloon.com",38.9217,-77.0381,"bar"),
     v("The Round Robin Bar","Cocktail Bar","Willard InterContinental — the 'Oval Office of Bars,' crafting cocktails for DC's elite since 1847, Henry Clay introduced the mint julep here in 1850",4.6,f(false,false,false,true,true,false,false,true),"https://washington.intercontinental.com/dining/round-robin",38.8987,-77.0345,"bar"),
+    v("Allegory","Speakeasy","Eaton Hotel — ranked #45 North America's 50 Best Bars 2025, whimsical literary-themed cocktail bar with hidden speakeasy energy, fairy tale and folklore inspire every drink, one of DC's most inventive bar programs",4.7,f(false,true,true,false,false,false,true,false),"https://eatonworkshop.com/dc/eat-drink/allegory",38.9008,-77.0281,"bar"),
+    v("Silver Lyan","Speakeasy","Rosewood Washington DC — ranked #48 North America's 50 Best Bars 2025, Ryan Chetiyawardana's acclaimed cocktail den below the hotel, theatrical drinks and intimate underground atmosphere",4.7,f(false,true,true,false,true,false,true,false),"https://rosewoodhotels.com/washington-dc/dining/silver-lyan",38.9007,-77.0595,"bar"),
+    v("Service Bar","Cocktail Speakeasy","Shaw neighborhood — ranked #23 North America's 50 Best Bars 2025, outstanding cocktail program celebrating American drinking culture, friendly unpretentious neighborhood vibe that punches way above its weight",4.7,f(false,true,true,false,false,false,false,false),"https://servicebardc.com",38.9127,-77.0221,"bar"),
     v("Immigrant Food","Global Street Food","Penn Quarter political-meets-global dining, buzzy bar scene",4.4,f(false,false,true,false,false,false,false,false),"https://immigrantfood.com",38.8967,-77.0255),
     // ── Private Clubs ─────────────────────────────────────────────────────
     v("Metropolitan Club","Private Members Club","One of DC's oldest and most prestigious private clubs — senators, cabinet members, Supreme Court justices",4.6,f(false,false,false,true,true,false,true,true,true),"https://metropolitanclubdc.org",38.9028,-77.0395,"private club"),
@@ -431,6 +449,8 @@ const INITIAL_DATA = {
 
   "Scottsdale": [
     v("Bourbon Steak","Steakhouse","Michael Mina's acclaimed steakhouse, butter-poached cuts",4.8,f(false,false,true,false,true,false,true,true),"https://michaelmina.net/restaurants/bourbon-steak-scottsdale",33.5092,-111.8983),
+    v("Talavera at Four Seasons Scottsdale","Spanish Mediterranean","Four Seasons Troon North — one of Arizona's most celebrated fine dining restaurants, stunning desert views, warm Spanish Mediterranean cuisine, exceptional wine program",4.8,f(false,false,false,true,true,false,true,true),"https://fourseasons.com/scottsdale/dining/talavera",33.6800,-111.8600),
+    v("Prado at Montelucia","Spanish Mediterranean","Omni Scottsdale Resort — elegant dining at the base of Camelback Mountain, Spanish-influenced menu, sophisticated setting, extensive wine list",4.7,f(false,false,false,true,true,false,false,true),"https://omniscottsdaleresort.com/dining/prado",33.5292,-111.9703),
     v("FnB","Arizona Cuisine","Charleen Badman's James Beard-winning farm-to-table",4.8,f(false,false,false,true,false,false,false,true),"https://fnbrestaurant.com",33.4943,-111.9254),
     v("Kai","Native American","Only Native American-owned AAA Five Diamond restaurant",4.8,f(false,false,false,true,false,false,true,true),"https://wildhorsepass.com/kai",33.3012,-111.9462),
     v("Virtù Honest Craft","Mediterranean","James Beard nominated, intimate Old Town gem",4.7,f(false,false,true,false,false,false,true,true),"https://virtuhonestcraft.com",33.4953,-111.9264),
@@ -467,6 +487,7 @@ const INITIAL_DATA = {
   "Napa": [
     v("The French Laundry","Contemporary American","Thomas Keller's three-star temple, the pinnacle of American dining, Yountville",4.9,f(true,false,false,true,true,false,true,true),"https://frenchlaundry.com",38.4044,-122.3647),
     v("Auro at Four Seasons","Contemporary American","Three consecutive Michelin stars, Chef Rogelio Garcia, Calistoga",4.9,f(true,true,false,false,false,false,true,true),"https://auronapavalley.com",38.5788,-122.5803),
+    v("The Restaurant at Meadowood","American Contemporary","Three Michelin stars — most celebrated dining in Napa Valley, Christopher Kostow's extraordinary seasonal tasting menu, opulent resort setting in St. Helena, one of America's best restaurants",4.9,f(true,false,false,true,false,false,true,true),"https://meadowood.com/restaurant",38.5076,-122.4700),
     v("La Toque","French","One Michelin star, Ken Frank's elegant downtown Napa landmark",4.7,f(true,false,false,true,false,false,true,true),"https://latoque.com",38.2985,-122.2862),
     v("Bouchon Bistro","French Bistro","Thomas Keller's charming Yountville French bistro",4.7,f(false,false,false,true,true,false,false,true),"https://bouchonbistro.com",38.4047,-122.3640),
     v("Ad Hoc","American","Thomas Keller's family-style comfort food, Yountville",4.7,f(false,false,false,true,false,false,false,false),"https://adhocrestaurant.com",38.4055,-122.3647),
@@ -589,6 +610,8 @@ const INITIAL_DATA = {
 
   "Sonoma": [
     v("The Girl & The Fig","French Country","Sonoma Square staple, James Beard nominated, beloved",4.7,f(false,false,false,true,false,false,false,true),"https://thegirlandthefig.com",38.2918,-122.4581),
+    v("Café La Haye","California Contemporary","Sonoma Plaza's most acclaimed fine dining — intimate 50-seat gem, seasonal market cuisine, James Beard-nominated, book weeks ahead, the best dinner in Sonoma town",4.8,f(false,false,false,true,false,false,true,true),"https://cafelahaye.com",38.2920,-122.4580),
+    v("Wit & Wisdom at MacArthur Place","American","Sonoma's most elegant hotel restaurant — farm-to-table seasonal menu, beautiful garden setting at MacArthur Place Inn, exceptional wine list from local producers",4.6,f(false,false,false,true,false,false,false,true),"https://macarthurplace.com/dining",38.2920,-122.4590),
     v("Cafe La Haye","Californian","Sonoma Square tiny gem, James Beard nominated",4.7,f(false,false,false,true,false,false,true,true),"https://cafelahaye.com",38.2918,-122.4571),
     v("Glen Ellen Star","Californian","Ari Weiswasser's Glen Ellen wood-fired gem",4.7,f(false,false,true,false,false,false,true,true),"https://glenellenstar.com",38.3598,-122.5241),
     v("LaSalette","Portuguese","Unique Portuguese flavors in wine country",4.6,f(false,false,false,false,false,false,false,true),"https://lasalette-restaurant.com",38.2920,-122.4575),
@@ -605,14 +628,25 @@ const INITIAL_DATA = {
   ],
 
   "Menlo Park": [
-    v("Madera","Contemporary American","Rosewood Sand Hill's acclaimed restaurant, VC crowd",4.8,f(false,false,true,false,true,false,true,true),"https://rosewoodhotels.com/en/sand-hill-menlo-park/dining/madera",37.4133,-122.1978),
-    v("Village Pub","Californian","Woodside one Michelin star, beautiful fine dining pub",4.7,f(true,false,false,true,true,false,true,true),"https://thevillagepub.net",37.4307,-122.2548),
+    v("Madera at Rosewood Sand Hill","California Contemporary","Rosewood Sand Hill's acclaimed restaurant — stunning Santa Cruz Mountain views, seasonal farm-to-table, elegant terrace dining, Silicon Valley power lunch destination, exceptional wine program",4.8,f(false,false,true,false,true,false,true,true),"https://rosewoodhotels.com/en/sand-hill/dining/madera",37.4193,-122.2021),
+    v("Village Pub","Californian","Woodside — one Michelin star, beautiful fine dining pub, Santa Cruz Mountain views, the Peninsula's most romantic dinner",4.7,f(true,false,false,true,true,false,true,true),"https://thevillagepub.net",37.4307,-122.2548),
     v("LB Steak","Steakhouse","Peninsula power dining, Sand Hill Road scene",4.6,f(false,false,true,false,true,false,false,false),"https://lbsteak.com",37.4531,-122.1819),
     v("Refuge","Sandwiches & Beer","Legendary pastrami and craft beer, local institution",4.7,f(false,false,false,true,false,false,false,false),"https://refugemenlopark.com",37.4527,-122.1822),
     v("Flea St. Cafe","California Cuisine","Farm-to-table pioneer, Jesse Ziff Cool's legacy",4.6,f(false,false,false,true,false,false,false,true),"https://fleastreetcafe.com",37.4489,-122.1851),
-    v("Camper","Californian","Beloved Menlo Park seasonal American",4.5,f(false,false,true,false,false,false,true,false),"https://campermenlpark.com",37.4527,-122.1822),
+    v("Camper","Californian","Beloved Menlo Park seasonal American",4.5,f(false,false,true,false,false,false,true,false),"https://campermenlopark.com",37.4527,-122.1822),
     v("Donato Enoteca","Italian","Redwood City Italian wine bar, outstanding cicchetti",4.6,f(false,false,false,true,false,false,false,true),"https://donatoenoteca.com",37.4922,-122.2227),
-    v("Bucks of Woodside","American","Iconic Silicon Valley power breakfast diner",4.3,f(false,false,false,true,true,false,false,false),"https://buckswoodside.com",37.4307,-122.2548),
+    v("Buck's Restaurant","American","Woodside — legendary Silicon Valley power breakfast diner since 1991, famous for deals done over pancakes, spacious outdoor seating, fish tacos a local favorite",4.4,f(false,false,false,true,true,false,false,false),"https://buckswoodside.com",37.4307,-122.2548),
+    v("Alice's Restaurant","Breakfast & American","Woodside — iconic roadside spot with 4.7K reviews, amazing food and atmosphere, beloved by cyclists and hikers heading into the hills, super friendly staff",4.6,f(false,false,false,true,false,false,false,false),"https://alicesrestaurant.com",37.3774,-122.2272),
+    v("Village Bakery","Bakery & Café","Woodside — beloved neighborhood bakery, exceptional pastries, breads and coffee, cozy village atmosphere, a Woodside morning essential",4.6,f(false,false,false,true,false,false,false,false),"https://villagebakery.com",37.4307,-122.2548),
+    v("Oak + Violet","California New American","Park James Hotel, 1400 El Camino Real — Michelin-recognized Chef Joseph Humphrey, upscale farm-to-table with genuine hospitality, live jazz most nights, romantic candlelit patio, beef tartare with pecans, miso black cod, curated cocktails and wine list",4.5,f(false,false,true,false,true,true,true,true),"https://oakandviolet.com",37.4527,-122.1822),
+    v("Selby's","American Fine Dining","3001 El Camino Real, Redwood City — Michelin Star, sister to Village Pub, old Hollywood glamour with 75 pieces of original art, Beef Wellington, Dover sole meunière, 20,000-bottle wine list, prix fixe $78pp, tableside martini cart, the Peninsula's most opulent special-occasion restaurant",4.6,f(true,false,false,true,true,false,true,true),"https://selbysrestaurant.com",37.4807,-122.2050),
+    v("The Mountain House","Coastal Countryside American","13808 Skyline Blvd, Woodside — historic red cabin nestled in the Santa Cruz Mountain redwoods since the 1900s, three-course prix fixe featuring game meats (elk, venison, bison), wood-burning fireplace, all-glass forest room, one of the most magical and unique dining settings in California",4.5,f(false,false,false,true,false,false,true,true),"https://themountainhouse.com",37.3580,-122.2630),
+    v("Rossotti's Alpine Inn","Beer Garden","3915 Alpine Rd — historic Portola Valley beer garden since 1852, casual outdoor tables, delicious food and great drinks, fun outdoor atmosphere, local institution",4.6,f(false,false,false,true,false,false,false,false),"https://alpineinn.com",37.3720,-122.2200,"bar"),
+    v("Parkside Grille","Californian","884 Portola Rd, Portola Valley — fantastic ambiance, food execution and service, neighborhood gem tucked in the hills",4.6,f(false,false,false,true,false,false,false,true),"https://parksidegrille.com",37.3750,-122.2220),
+    v("Portola Bistro","Italian","3130 Alpine Rd, Portola Valley — great atmosphere, delicious food, super friendly staff in a charming bistro setting",4.3,f(false,false,false,true,false,false,false,false),"https://portolabistro.com",37.3720,-122.2200),
+    v("Hibari","Japanese","3130 Alpine Rd, Portola Valley — incredibly fresh ingredients, excellent service, intimate Japanese dining in a beautiful setting",4.8,f(false,false,false,true,false,false,true,true),"https://hibaripa.com",37.3720,-122.2200),
+    v("TAVERNA","Greek","3130 Alpine Rd, Portola Valley — exceptional quality food, incomparable customer service, rustic Greek in a beautiful hill setting",4.5,f(false,false,false,true,false,false,false,false),"https://tavernaportolav.com",37.3720,-122.2200),
+    v("The Sand Hill Kitchen","American","Menlo Park — welcoming and friendly staff, excellent food, neighborhood café loved by locals and Sand Hill Road crowd alike",4.8,f(false,false,false,true,false,false,false,false),"https://sandhillkitchen.com",37.4527,-122.1822),
     v("Robin Menlo Park","Japanese Omakase","Peninsula outpost of SF's acclaimed Hayes Valley omakase",4.7,f(false,false,true,false,true,false,true,false,false,true),"https://robinomakase.com/menlo-park",37.4527,-122.1822,"sushi"),
     v("Naomi Sushi","Japanese","Long-standing Japanese institution in Menlo Park",4.4,f(false,false,false,true,false,false,false,false,false,true),"https://naomisushi.com",37.4527,-122.1822,"sushi"),
     v("Sushi Sus","Japanese Omakase","Best omakase counter in Palo Alto area, excellent fish",4.6,f(false,false,false,false,false,false,true,true,false,true),"https://sushisus.com",37.4440,-122.1610,"sushi"),
@@ -956,6 +990,9 @@ const INITIAL_DATA = {
   ],
   "Venice CA": [
     v("Felix Trattoria","Italian","Best pizza in LA, Venetian-style, acclaimed by all",4.7,f(false,false,true,false,true,false,true,false),"https://felixla.com",33.9906,-118.4709),
+    v("Gjusta","Bakery Deli","Venice institution — perpetual celebrity lines, best bread and tinned fish in LA, essential stop on Abbot Kinney",4.6,f(false,false,false,true,true,false,false,false),"https://gjusta.com",33.9901,-118.4710),
+    v("Tasting Kitchen","California American","Abbot Kinney institution — intimate, ingredient-driven California cooking, excellent natural wine list, warm neighborhood vibe",4.6,f(false,false,false,true,false,false,true,true),"https://thetastingkitchen.com",33.9890,-118.4660),
+    v("Del Monte Speakeasy","Speakeasy","Actual 100-year-old speakeasy in the basement of Townhouse bar — genuine Prohibition-era hideaway, burlesque and jazz shows, classic cocktails, the most authentic speakeasy in LA",4.6,f(false,true,true,false,true,true,false,false),"https://townhousevenice.com",33.9901,-118.4710,"bar"),
     v("Gjelina","California","Venice institution, farm-to-table, always packed",4.7,f(false,false,false,true,true,false,true,false),"https://gjelina.com",33.9905,-118.4714),
     v("Gjusta","Bakery/Deli","Celebrity hangout bakery and deli, perpetual lines",4.7,f(false,false,false,true,true,false,false,false),"https://gjusta.com",33.9901,-118.4710),
     v("The Tasting Kitchen","California","Seasonal California, intimate Abbott Kinney",4.5,f(false,false,false,true,false,false,false,true),"https://thetastingkitchen.com",33.9905,-118.4700),
@@ -970,6 +1007,9 @@ const INITIAL_DATA = {
 
   "West Palm Beach": [
     v("Buccan","Small Plates","Palm Beach's best restaurant, Clay Conley's flagship",4.8,f(false,false,true,false,true,false,true,false),"https://buccanpalmbeach.com",26.7041,-80.0378),
+    v("Imoto","Japanese","Buccan's upscale Asian sister — intimate omakase-style dining, outstanding sushi and Japanese small plates in a chic setting",4.6,f(false,false,true,false,true,false,false,true),"https://imotopalmbeach.com",26.7041,-80.0378,"sushi"),
+    v("The Blind Monk","Wine Bar Speakeasy","Downtown WPB — intimate wine bar with hidden speakeasy energy, exceptional natural wine list, small plates, gathering spot for the city's food cognoscenti",4.6,f(false,false,true,false,false,false,false,true),"https://theblindmonk.com",26.7180,-80.0540,"bar"),
+    v("Red Light Palm Beach","Speakeasy","West Palm Beach — moody Prohibition-era atmosphere, craft cocktails, intimate and stylish, one of WPB's best hidden bars",4.5,f(false,true,true,false,false,false,false,false),"https://redlightpalmbeach.com",26.7200,-80.0534,"bar"),
     v("Cafe Boulud Palm Beach","French","Daniel Boulud's Brazilian Court outpost",4.7,f(false,false,false,true,true,false,true,true),"https://cafeboulud.com/palmbeach",26.7041,-80.0358),
     v("Meat Market Palm Beach","Steakhouse","Upscale steakhouse on Worth Avenue, power scene",4.6,f(false,false,true,false,true,false,false,false),"https://meatmarket.net",26.7153,-80.0534),
     v("HMF at The Breakers","American","The Breakers Hotel's spectacular bar and restaurant",4.7,f(false,false,false,true,true,false,false,true),"https://thebreakers.com/dining/hmf",26.7041,-80.0348),
@@ -987,6 +1027,8 @@ const INITIAL_DATA = {
   "Fort Lauderdale": [
     v("Louie Bossi's","Italian","Lively Italian on Las Olas, fresh pasta and great energy",4.6,f(false,false,true,false,false,true,false,false),"https://louiebossi.com",26.1192,-80.1375),
     v("Steak 954","Steakhouse","W Hotel's dramatic steakhouse with jellyfish tank wall",4.6,f(false,false,true,false,true,false,false,false),"https://steak954.com",26.1226,-80.1040),
+    v("Café Martorano","Italian","Steve Martorano's legendary Philadelphia-style Italian — celebrity favorite, Frank Sinatra plays all night, family-recipe pasta and meatballs, the loudest most fun Italian in South Florida",4.6,f(false,false,true,false,true,true,false,false),"https://cafemartorano.com",26.1224,-80.1373),
+    v("Prohibition Bar","Speakeasy","Fort Lauderdale 1920s-themed speakeasy — craft cocktails, upstairs lounge and dance club, beloved bachelor party stop, great atmosphere and live entertainment",4.4,f(false,true,true,false,true,true,false,false),"https://prohibitionbar.com",26.1224,-80.1447,"bar"),
     v("Burlock Coast","American Coastal","Ritz-Carlton Fort Lauderdale's acclaimed restaurant",4.7,f(false,false,true,false,true,false,false,true),"https://burlockcoast.com",26.1226,-80.1030),
     v("Casa D'Angelo","Italian","Old-school Italian fine dining, Angelo Elia's flagship",4.6,f(false,false,false,true,true,false,false,true),"https://casa-d-angelo.com",26.1566,-80.1220),
     v("Olio e Limone","Italian","South Florida's finest upscale Italian",4.6,f(false,false,false,true,true,false,false,true),"https://olioelimone.com",26.1192,-80.1385),
@@ -1245,6 +1287,8 @@ const INITIAL_DATA = {
 
   "Martha's Vineyard": [
     v("Detente","American Seasonal","Edgartown's best restaurant since 2005. Twinkle-lit courtyard, Menemsha lobster risotto, minimal-intervention wine list",4.8,f(false,false,true,false,false,false,false,true),"https://detentevineyard.com",41.3882,-70.5133),
+    v("Bettini at Harbor View Hotel","Fine Dining","Edgartown's most photogenic fine dining — Edgartown Lighthouse views, lobster risotto, wagyu Wellington, white-glove service, request a window table at sunset",4.7,f(false,false,false,true,false,false,true,true),"https://harborviewhotel.com/dining/bettini",41.3900,-70.5140),
+    v("The Sweet Life Café","New American","Oak Bluffs gem — sourcing direct from local farmers and fishermen, magical garden patio with fairy lights, seasonal and seafood forward, sea scallops and gnocchi with anchovy crumble",4.7,f(false,false,false,true,false,false,true,true),"https://sweetlifemv.com",41.4550,-70.5590),
     v("19 Raw","Raw Bar / Seafood","Best raw bar on island. Local oysters, Lobster Caviar Slider, dry-aged steaks, cozy patio",4.7,f(false,false,true,false,false,false,false,false),"https://19rawoysterbar.com",41.3882,-70.5130),
     v("Atria","American","Two dining experiences: elegant upstairs in 19th-century Captain's Home; leopard-print Brick Cellar for legendary burgers. Wok-fried 2-lb lobster",4.7,f(false,false,true,false,true,false,false,false),"https://atriamv.com",41.3882,-70.5133),
     v("Atlantic Fish and Chop House","Seafood & Steaks","Edgartown Harbor waterfront, whole branzino, wagyu, black truffle lobster mac. Turns into nightclub at 10pm",4.6,f(false,false,true,false,false,true,false,false),"https://atlanticrestaurantmv.com",41.3882,-70.5130),
@@ -1632,6 +1676,7 @@ const PDR_DATA = {
     "Sushi Ran": "Contact restaurant for private events (Sausalito).",
   },
   "Menlo Park": {
+    "Madera at Rosewood Sand Hill": "Two private dining rooms with private terraces and fireplaces. Lemon Room: up to 10 guests. Orange Room: up to 14–16 guests. Both overlook Santa Cruz mountains. events@rosewoodhotels.com",
     "Madera": "Two private dining rooms with private terraces and fireplaces. Lemon Room: up to 10 guests. Orange Room: up to 14–16 guests. Both overlook Santa Cruz mountains. events@rosewoodhotels.com",
     "Village Pub": "Three private dining rooms + outdoor veranda. Rooms accommodate 12, 24, and 48. Full buyout up to 120. thevillagepub.net/private-dining",
     "LB Steak": "Chef's Table: 18 guests. Meritage Room (PDR with French chandelier + stone fireplace): 36 guests. Contact: jegi@lbsteak.com / 408.244.1180",
@@ -1642,7 +1687,18 @@ const PDR_DATA = {
     "Robin Menlo Park": "Private dining room seats up to 7 (exclusive omakase experience, one seating/night, $309pp). Full restaurant buyout also available. robinomakase.com/events",
     "Naomi Sushi": "Contact restaurant directly for private event options.",
     "Sushi Sus": "Intimate omakase counter; contact for full buyout.",
-    "Bucks of Woodside": "Iconic power breakfast diner; no dedicated PDR. Contact for large group seating.",
+    "Buck's Restaurant": "Iconic Silicon Valley power breakfast diner; no dedicated PDR. Contact for large group seating arrangements. buckswoodside.com",
+    "Parkside Grille": "Multiple private spaces under 800-year-old redwoods. Guest Room (seated dinner): up to 25 guests. Paved Patio (standing reception): up to 35 guests. Combined both spaces: up to 60 seated / 80 standing. parksidegrille.com/events",
+    "Portola Bistro": "Contact restaurant directly for group and private dining options. 3130 Alpine Rd #350, Portola Valley.",
+    "Hibari": "Intimate kappo-style dining room with 6-seat sushi bar and 22-seat dining room. Contact for full buyout. (650) 656-9243. 3130 Alpine Rd #240, Portola Valley.",
+    "Alice's Restaurant": "Casual roadside diner; no private dining room. Contact for large group seating. alicesrestaurant.com",
+    "TAVERNA": "Group dining up to 24 guests family-style at Portola Valley location. Private events limited to Palo Alto location — contact for buyout. tavernaportolavalley.net/group-dining",
+    "Rossotti's Alpine Inn": "Historic outdoor beer garden; casual setting ideal for informal large groups. Contact directly for group reservations. alpineinn.com",
+    "The Sand Hill Kitchen": "Casual neighborhood café; contact directly for group dining options.",
+    "Village Bakery": "Bakery/café format; no private dining room. Great for catering and takeaway orders for group events.",
+    "Oak + Violet": "Park James Hotel venue — banquet and event space available, full bar, outdoor patio with fire pits, indoor fireplace. Contact: (650) 304-3880 / parkjameshotel.com/dining",
+    "Selby's": "Extensive private dining options tailored to specific needs — multiple rooms, full buyout available. Contact events team directly. selbysrestaurant.com / 3001 El Camino Real, Redwood City.",
+    "The Mountain House": "Private room available for groups. Indoor fireplace dining room, all-glass forest room, and outdoor firepit. Contact directly for private event bookings. (650) 851-8541 / info@themountainhouse.com / themountainhouse.com",
   },
   "Seoul": {
     "Mingles": "Private dining available for exclusive events; contact restaurant. restaurant-mingles.com",
@@ -2099,8 +2155,9 @@ function App() {
                 </button>
               ))}
             </div>
-            <div style={{ marginTop:10 }}>
+            <div style={{ marginTop:10, display:"flex", alignItems:"center", gap:10 }}>
               <span style={{ fontSize:12, color:"#aaa" }}>{allVenues.length} venue{allVenues.length !== 1 ? "s":""}</span>
+              {city === "Menlo Park" && <span style={{ fontSize:12, color:"#888", fontStyle:"italic" }}>includes Woodside & Portola Valley</span>}
             </div>
           </div>
           {allVenues.length === 0 ? (
