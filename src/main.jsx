@@ -2157,7 +2157,7 @@ function App() {
             </div>
             <div style={{ marginTop:10, display:"flex", alignItems:"center", gap:10 }}>
               <span style={{ fontSize:12, color:"#aaa" }}>{allVenues.length} venue{allVenues.length !== 1 ? "s":""}</span>
-              {city === "Menlo Park" && <span style={{ fontSize:12, color:"#888", fontStyle:"italic" }}>includes Woodside & Portola Valley</span>}
+              {city === "Menlo Park" && <span style={{ fontSize:12, color:"#888", fontStyle:"italic" }}>includes Woodside, Portola Valley & Redwood City</span>}
             </div>
           </div>
           {allVenues.length === 0 ? (
