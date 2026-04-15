@@ -1671,6 +1671,20 @@ Object.entries(PDR_DATA).forEach(([city, venues]) => {
 })
 // ─────────────────────────────────────────────────────────────────────────────
 
+// Patch LA/WeHo neighborhood labels
+if (INITIAL_DATA["LA/WeHo"]) {
+  const wehoSet = new Set([
+    "Somni","Ardor","Sushisamba West Hollywood","Darling","Ladyhawk","Andys","Marvito","Coucou",
+    "Merois","Catch LA","Craig's","Cecconi's West Hollywood","Night + Market WeHo","Horses",
+    "Dan Tana's","Delilah","Tower Bar at Sunset Tower Hotel","Skybar at Mondrian",
+    "Employees Only WeHo","Sushi Park"
+  ])
+  INITIAL_DATA["LA/WeHo"] = INITIAL_DATA["LA/WeHo"].map(v => ({
+    ...v,
+    neighborhood: wehoSet.has(v.name) ? "West Hollywood" : "Los Angeles"
+  }))
+}
+
 
 const CATEGORY_LABELS = {
   restaurant: "Restaurants",
